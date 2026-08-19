@@ -10,8 +10,6 @@ FabroGym se utiliza **como proyecto base seleccionado para la PE5 de aula**. El 
 
 Esta conformación corresponde únicamente a la actividad PE5 y **no modifica la autoría ni la composición del proyecto FabroGym original**.
 
-**Repositorio público del proyecto base:** https://github.com/amorad35/FabroGym_ISR401
-
 **Commit de referencia del proyecto base:** `f7c9524023ef3156026b4dd1fe82f0b85cd62b22` (17-08-2026). Se cita únicamente como punto de referencia del proyecto seleccionado; no se atribuye a los tres integrantes de la PE5.
 
 ## Entregables incluidos
