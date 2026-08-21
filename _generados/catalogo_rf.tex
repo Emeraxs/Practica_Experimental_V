@@ -1,0 +1,638 @@
+\begin{reqbox}{RF-AUT-01 - Autenticar usuario}
+\begin{tabularx}{\textwidth}{>{\bfseries}p{3.2cm}Y}
+Tipo y prioridad & Requisito funcional - Must \\
+Actor & Personal autorizado \\
+Fuente & EV-ENTR02-07 \\
+Enunciado & El sistema deberá permitir iniciar y cerrar sesión mediante credenciales individuales no biométricas. \\
+Caso de uso & CU-01 \\
+Clases / proceso & Usuario; Rol; Permiso; EventoAuditoria; P-01 Controlar acceso \\
+Estado & Aprobado en baseline v2.0 \\
+\end{tabularx}
+\textbf{Criterio BDD:} Dado un usuario con credenciales válidas, cuando inicie sesión, entonces el sistema deberá autenticarlo y habilitar únicamente las opciones permitidas para su rol; cuando cierre sesión, deberá invalidar la sesión activa.
+
+\textbf{Trazas:} HU-01; CP-01; MU-01.
+\end{reqbox}
+
+
+\begin{reqbox}{RF-AUT-02 - Aplicar permisos por rol}
+\begin{tabularx}{\textwidth}{>{\bfseries}p{3.2cm}Y}
+Tipo y prioridad & Requisito funcional - Must \\
+Actor & Administrador \\
+Fuente & EV-ENTR02-07;EV-ENTR03-06;EV-ENTR08-04 \\
+Enunciado & El sistema deberá autorizar cada operación según los roles Superadministrador, Dueño, Recepcionista, Instructor y Cliente, y deberá denegar por defecto toda operación no asignada. \\
+Caso de uso & CU-02 \\
+Clases / proceso & Usuario; Rol; Permiso; EventoAuditoria; P-01 Controlar acceso \\
+Estado & Aprobado en baseline v2.0 \\
+\end{tabularx}
+\textbf{Criterio BDD:} Dado un usuario autenticado con un rol definido, cuando intente ejecutar una operación, entonces el sistema deberá permitirla solo si el permiso está asignado a ese rol y deberá denegarla en caso contrario.
+
+\textbf{Trazas:} HU-02; CP-02; MU-22;MU-32.
+\end{reqbox}
+
+
+\begin{reqbox}{RF-AUT-03 - Auditar cambios criticos}
+\begin{tabularx}{\textwidth}{>{\bfseries}p{3.2cm}Y}
+Tipo y prioridad & Requisito funcional - Should \\
+Actor & Administrador \\
+Fuente & EV-ENTR02-04;EV-ENTR02-07;EV-ENTR03-06 \\
+Enunciado & El sistema deberá registrar eventos de auditoría para cambios críticos en pagos, ventas, inventario, membresías, precios y permisos, incluyendo actor, fecha, acción, valor anterior y valor nuevo. \\
+Caso de uso & CU-20 \\
+Clases / proceso & Usuario; Rol; Permiso; EventoAuditoria; P-01 Controlar acceso \\
+Estado & Aprobado en baseline v2.0 \\
+\end{tabularx}
+\textbf{Criterio BDD:} Dado un cambio crítico confirmado, cuando el sistema lo registre, entonces deberá conservar en auditoría el actor, fecha, acción, valor anterior y valor nuevo asociados al cambio.
+
+\textbf{Trazas:} HU-20; CP-20; MU-25.
+\end{reqbox}
+
+
+\begin{reqbox}{RF-CLI-01 - Registrar cliente minimo}
+\begin{tabularx}{\textwidth}{>{\bfseries}p{3.2cm}Y}
+Tipo y prioridad & Requisito funcional - Must \\
+Actor & Recepcionista \\
+Fuente & EV-ENTR01-02;EV-ENTR02-02;EV-ENTR03-02;EV-ENTR08-01 \\
+Enunciado & El sistema deberá registrar un cliente con código interno, nombre de uso y un medio de contacto, sin recopilar datos de salud, biometría, dirección domiciliaria ni imagen corporal. \\
+Caso de uso & CU-03 \\
+Clases / proceso & Cliente; Membresia; Pago; Asistencia; P-02 Gestionar clientes \\
+Estado & Aprobado en baseline v2.0 \\
+\end{tabularx}
+\textbf{Criterio BDD:} Dado un formulario con código interno, nombre de uso y al menos un medio de contacto válido, cuando Recepción confirme el registro, entonces el sistema deberá crear un único cliente y no deberá solicitar datos de salud, biometría, dirección domiciliaria ni imagen corporal.
+
+\textbf{Trazas:} HU-03; CP-03; MU-12*;MU-37*.
+\end{reqbox}
+
+
+\begin{reqbox}{RF-CLI-02 - Buscar y consultar cliente}
+\begin{tabularx}{\textwidth}{>{\bfseries}p{3.2cm}Y}
+Tipo y prioridad & Requisito funcional - Must \\
+Actor & Recepcionista \\
+Fuente & EV-ENTR02-03;EV-ENTR02-08;EV-ENTR08-05 \\
+Enunciado & El sistema deberá buscar clientes por código, nombre normalizado o contacto y deberá mostrar membresía, último pago, asistencia y novedades de acuerdo con los permisos del usuario. \\
+Caso de uso & CU-04 \\
+Clases / proceso & Cliente; Membresia; Pago; Asistencia; P-02 Gestionar clientes \\
+Estado & Aprobado en baseline v2.0 \\
+\end{tabularx}
+\textbf{Criterio BDD:} Dado un criterio de búsqueda válido, cuando Recepción consulte un cliente, entonces el sistema deberá devolver las coincidencias y mostrar únicamente membresía, último pago, asistencia y novedades autorizadas por el rol.
+
+\textbf{Trazas:} HU-04; CP-04; MU-11;MU-36.
+\end{reqbox}
+
+
+\begin{reqbox}{RF-CLI-03 - Actualizar o reactivar sin duplicar}
+\begin{tabularx}{\textwidth}{>{\bfseries}p{3.2cm}Y}
+Tipo y prioridad & Requisito funcional - Must \\
+Actor & Recepcionista \\
+Fuente & EV-ENTR02-02;EV-ENTR03-02;EV-ENTR04-01;EV-ENTR05-02 \\
+Enunciado & El sistema deberá actualizar o reactivar un registro existente y deberá advertir coincidencias antes de crear un cliente nuevo. \\
+Caso de uso & CU-05 \\
+Clases / proceso & Cliente; Membresia; Pago; Asistencia; P-02 Gestionar clientes \\
+Estado & Aprobado en baseline v2.0 \\
+\end{tabularx}
+\textbf{Criterio BDD:} Dado que existe un cliente coincidente por código o contacto, cuando Recepción intente registrar o reactivar el perfil, entonces el sistema deberá advertir la coincidencia y permitir actualizar o reactivar el registro existente sin crear un duplicado.
+
+\textbf{Trazas:} HU-05; CP-05; MU-11;MU-36.
+\end{reqbox}
+
+
+\begin{reqbox}{RF-MEM-01 - Configurar planes y promociones}
+\begin{tabularx}{\textwidth}{>{\bfseries}p{3.2cm}Y}
+Tipo y prioridad & Requisito funcional - Must \\
+Actor & Administrador \\
+Fuente & EV-ENTR02-01;EV-ENTR04-01 \\
+Enunciado & El sistema deberá administrar el nombre, duración, precio, vigencia y estado de los planes y promociones. \\
+Caso de uso & CU-06 \\
+Clases / proceso & Membresia; Plan; Promocion; P-03 Gestionar membresías \\
+Estado & Aprobado en baseline v2.0 \\
+\end{tabularx}
+\textbf{Criterio BDD:} Dado un usuario autorizado y los datos obligatorios de un plan o promoción, cuando guarde la configuración, entonces el sistema deberá conservar nombre, duración, precio, vigencia y estado y deberá mostrar el registro actualizado.
+
+\textbf{Trazas:} HU-06; CP-06; MU-68.
+\end{reqbox}
+
+
+\begin{reqbox}{RF-MEM-02 - Activar o renovar membresia}
+\begin{tabularx}{\textwidth}{>{\bfseries}p{3.2cm}Y}
+Tipo y prioridad & Requisito funcional - Must \\
+Actor & Recepcionista \\
+Fuente & EV-ENTR01-02;EV-ENTR02-04;EV-ENTR03-01;EV-ENTR04-03 \\
+Enunciado & El sistema deberá activar o renovar una membresía calculando las fechas de inicio y vencimiento a partir de un plan vigente y un pago confirmado. \\
+Caso de uso & CU-07 \\
+Clases / proceso & Membresia; Plan; Promocion; P-03 Gestionar membresías \\
+Estado & Aprobado en baseline v2.0 \\
+\end{tabularx}
+\textbf{Criterio BDD:} Dado un plan vigente y un pago confirmado, cuando Recepción active o renueve la membresía, entonces el sistema deberá calcular y guardar las fechas de inicio y vencimiento según la duración del plan.
+
+\textbf{Trazas:} HU-07; CP-07; MU-14;MU-39.
+\end{reqbox}
+
+
+\begin{reqbox}{RF-MEM-03 - Consultar vigencia}
+\begin{tabularx}{\textwidth}{>{\bfseries}p{3.2cm}Y}
+Tipo y prioridad & Requisito funcional - Must \\
+Actor & Personal autorizado \\
+Fuente & EV-ENTR01-03;EV-ENTR02-03;EV-ENTR03-03;EV-ENTR08-02 \\
+Enunciado & El sistema deberá mostrar el estado, plan, fecha de inicio y fecha de vencimiento de la membresía. \\
+Caso de uso & CU-08 \\
+Clases / proceso & Membresia; Plan; Promocion; P-03 Gestionar membresías \\
+Estado & Aprobado en baseline v2.0 \\
+\end{tabularx}
+\textbf{Criterio BDD:} Dado un cliente con membresía registrada, cuando un usuario autorizado consulte su vigencia, entonces el sistema deberá mostrar estado, plan, fecha de inicio y fecha de vencimiento de la membresía seleccionada.
+
+\textbf{Trazas:} HU-08; CP-08; MU-13;MU-38;MU-63(F).
+\end{reqbox}
+
+
+\begin{reqbox}{RF-MEM-04 - Alertar vencimientos}
+\begin{tabularx}{\textwidth}{>{\bfseries}p{3.2cm}Y}
+Tipo y prioridad & Requisito funcional - Must \\
+Actor & Recepcionista \\
+Fuente & EV-ENTR01-03;EV-ENTR05-02;EV-ENTR07-02 \\
+Enunciado & El sistema deberá listar diariamente las membresías que vencen en los próximos tres días y las membresías vencidas, sin enviar mensajes externos automáticamente. \\
+Caso de uso & CU-09 \\
+Clases / proceso & Membresia; Plan; Promocion; P-03 Gestionar membresías \\
+Estado & Aprobado en baseline v2.0 \\
+\end{tabularx}
+\textbf{Criterio BDD:} Dado que existen membresías próximas a vencer o vencidas, cuando se ejecute la consulta diaria, entonces el sistema deberá separar las que vencen dentro de tres días de las ya vencidas y no deberá enviar mensajes externos de forma automática.
+
+\textbf{Trazas:} HU-09; CP-09; MU-10;MU-13;MU-38.
+\end{reqbox}
+
+
+\begin{reqbox}{RF-PAG-01 - Registrar pago y comprobante}
+\begin{tabularx}{\textwidth}{>{\bfseries}p{3.2cm}Y}
+Tipo y prioridad & Requisito funcional - Must \\
+Actor & Recepcionista \\
+Fuente & EV-ENTR01-02;EV-ENTR02-04;EV-ENTR03-04;EV-ENTR07-02;EV-ENTR08-03 \\
+Enunciado & El sistema deberá registrar monto, concepto, medio, referencia y fecha de un pago, y deberá generar un comprobante interno. \\
+Caso de uso & CU-10 \\
+Clases / proceso & Pago; Comprobante; Cliente; P-04 Gestionar pagos \\
+Estado & Aprobado en baseline v2.0 \\
+\end{tabularx}
+\textbf{Criterio BDD:} Dado un pago con monto, concepto, medio, referencia y fecha válidos, cuando Recepción confirme el registro, entonces el sistema deberá guardar el pago y generar un comprobante interno vinculado al cliente.
+
+\textbf{Trazas:} HU-10; CP-10; MU-15;MU-16;MU-40;MU-41.
+\end{reqbox}
+
+
+\begin{reqbox}{RF-PAG-02 - Resolver pago pendiente}
+\begin{tabularx}{\textwidth}{>{\bfseries}p{3.2cm}Y}
+Tipo y prioridad & Requisito funcional - Should \\
+Actor & Administrador \\
+Fuente & EV-ENTR02-04;EV-ENTR03-04;EV-ENTR07-07 \\
+Enunciado & El sistema deberá permitir confirmar, rechazar o corregir un pago pendiente, conservando el motivo y el registro de auditoría. \\
+Caso de uso & CU-21 \\
+Clases / proceso & Pago; Comprobante; Cliente; P-04 Gestionar pagos \\
+Estado & Aprobado en baseline v2.0 \\
+\end{tabularx}
+\textbf{Criterio BDD:} Dado un pago con estado pendiente, cuando un Administrador lo confirme, rechace o corrija, entonces el sistema deberá actualizar el estado y conservar el motivo y la evidencia de auditoría de la decisión.
+
+\textbf{Trazas:} HU-21; CP-21; MU-15;MU-40.
+\end{reqbox}
+
+
+\begin{reqbox}{RF-ASI-01 - Registrar asistencia}
+\begin{tabularx}{\textwidth}{>{\bfseries}p{3.2cm}Y}
+Tipo y prioridad & Requisito funcional - Must \\
+Actor & Recepcionista \\
+Fuente & EV-ENTR02-03;EV-ENTR03-03;EV-ENTR04-02;EV-ENTR07-07;EV-ENTR08-02 \\
+Enunciado & El sistema deberá registrar asistencia mediante código QR como flujo normal y deberá disponer de registro manual como contingencia autorizada, conservando método, responsable, fecha y motivo. \\
+Caso de uso & CU-11 \\
+Clases / proceso & Asistencia; Cliente; Turno; P-05 Controlar asistencia \\
+Estado & Aprobado en baseline v2.0 \\
+\end{tabularx}
+\textbf{Criterio BDD:} Dado un cliente identificado, cuando Recepción registre la asistencia por QR, entonces el sistema deberá guardar fecha, hora y método QR; si se utiliza contingencia manual, deberá exigir responsable y motivo.
+
+\textbf{Trazas:} HU-11; CP-11; MU-20;MU-30*;MU-46;MU-47*.
+\end{reqbox}
+
+
+\begin{reqbox}{RF-ASI-02 - Consultar asistencia}
+\begin{tabularx}{\textwidth}{>{\bfseries}p{3.2cm}Y}
+Tipo y prioridad & Requisito funcional - Must \\
+Actor & Personal autorizado \\
+Fuente & EV-ENTR03-01;EV-ENTR07-01;EV-ENTR08-05;EV-ENTR09-06 \\
+Enunciado & El sistema deberá filtrar asistencias por cliente, fecha y turno, y deberá mostrar los conteos operativos correspondientes. \\
+Caso de uso & CU-12 \\
+Clases / proceso & Asistencia; Cliente; Turno; P-05 Controlar asistencia \\
+Estado & Aprobado en baseline v2.0 \\
+\end{tabularx}
+\textbf{Criterio BDD:} Dado un filtro por cliente, fecha o turno, cuando un usuario autorizado consulte asistencias, entonces el sistema deberá mostrar únicamente los registros que cumplan el filtro y los conteos correspondientes.
+
+\textbf{Trazas:} HU-12; CP-12; MU-20;MU-46;MU-56;MU-65(F).
+\end{reqbox}
+
+
+\begin{reqbox}{RF-INV-01 - Administrar productos}
+\begin{tabularx}{\textwidth}{>{\bfseries}p{3.2cm}Y}
+Tipo y prioridad & Requisito funcional - Must \\
+Actor & Administrador \\
+Fuente & EV-ENTR01-01;EV-ENTR02-05 \\
+Enunciado & El sistema deberá registrar productos con código, nombre, precio, unidad, stock mínimo y estado. \\
+Caso de uso & CU-13 \\
+Clases / proceso & Producto; Categoria; Proveedor; MovimientoStock; P-06 Gestionar inventario \\
+Estado & Aprobado en baseline v2.0 \\
+\end{tabularx}
+\textbf{Criterio BDD:} Dado un producto con código, nombre, precio, unidad, stock mínimo y estado válidos, cuando el Administrador confirme el registro, entonces el sistema deberá guardar el producto y permitir su consulta posterior.
+
+\textbf{Trazas:} HU-13; CP-13; MU-19;MU-28;MU-44*;MU-45*.
+\end{reqbox}
+
+
+\begin{reqbox}{RF-INV-02 - Registrar movimientos de stock}
+\begin{tabularx}{\textwidth}{>{\bfseries}p{3.2cm}Y}
+Tipo y prioridad & Requisito funcional - Must \\
+Actor & Personal autorizado \\
+Fuente & EV-ENTR01-04;EV-ENTR04-04;EV-ENTR07-03 \\
+Enunciado & El sistema deberá registrar entradas y ajustes de inventario con cantidad, motivo, responsable y saldo resultante. \\
+Caso de uso & CU-14 \\
+Clases / proceso & Producto; Categoria; Proveedor; MovimientoStock; P-06 Gestionar inventario \\
+Estado & Aprobado en baseline v2.0 \\
+\end{tabularx}
+\textbf{Criterio BDD:} Dado un producto existente y un movimiento válido, cuando un usuario autorizado registre una entrada o ajuste, entonces el sistema deberá actualizar el saldo y conservar cantidad, motivo, responsable y saldo resultante.
+
+\textbf{Trazas:} HU-14; CP-14; MU-69.
+\end{reqbox}
+
+
+\begin{reqbox}{RF-VEN-01 - Registrar venta}
+\begin{tabularx}{\textwidth}{>{\bfseries}p{3.2cm}Y}
+Tipo y prioridad & Requisito funcional - Must \\
+Actor & Recepcionista \\
+Fuente & EV-ENTR02-05;EV-ENTR03-01;EV-ENTR04-04;EV-ENTR07-03;EV-ENTR08-03 \\
+Enunciado & El sistema deberá registrar una venta con sus ítems y medio de pago, y deberá descontar las existencias en la misma transacción. \\
+Caso de uso & CU-15 \\
+Clases / proceso & Venta; DetalleVenta; Producto; Pago; P-07 Registrar ventas \\
+Estado & Aprobado en baseline v2.0 \\
+\end{tabularx}
+\textbf{Criterio BDD:} Dado que todos los ítems de una venta tienen stock suficiente, cuando Recepción confirme la venta, entonces el sistema deberá registrar la venta y descontar las existencias en una única transacción; si falla una operación, no deberá aplicar cambios parciales.
+
+\textbf{Trazas:} HU-15; CP-15; MU-18;MU-27;MU-42;MU-43.
+\end{reqbox}
+
+
+\begin{reqbox}{RF-INV-03 - Alertar stock y rotacion}
+\begin{tabularx}{\textwidth}{>{\bfseries}p{3.2cm}Y}
+Tipo y prioridad & Requisito funcional - Should \\
+Actor & Administrador \\
+Fuente & EV-ENTR01-04;EV-ENTR02-05;EV-ENTR05-04;EV-ENTR06-04 \\
+Enunciado & El sistema deberá listar los productos cuyo stock sea igual o inferior al stock mínimo y deberá resumir entradas, salidas y ventas por período. \\
+Caso de uso & CU-22 \\
+Clases / proceso & Producto; Categoria; Proveedor; MovimientoStock; P-06 Gestionar inventario \\
+Estado & Aprobado en baseline v2.0 \\
+\end{tabularx}
+\textbf{Criterio BDD:} Dado un período de consulta, cuando el Administrador solicite el control de stock, entonces el sistema deberá listar los productos con stock igual o inferior al mínimo y resumir entradas, salidas y ventas del período.
+
+\textbf{Trazas:} HU-22; CP-22; MU-10;MU-19;MU-44*.
+\end{reqbox}
+
+
+\begin{reqbox}{RF-CAJ-01 - Cerrar turno y conciliar caja}
+\begin{tabularx}{\textwidth}{>{\bfseries}p{3.2cm}Y}
+Tipo y prioridad & Requisito funcional - Must \\
+Actor & Recepcionista \\
+Fuente & EV-ENTR02-01;EV-ENTR02-06;EV-ENTR03-05;EV-ENTR04-05;EV-ENTR07-03;EV-ENTR08-04 \\
+Enunciado & El sistema deberá calcular pagos y ventas por medio de pago, comparar los valores declarados y registrar las diferencias y la entrega de turno. \\
+Caso de uso & CU-16 \\
+Clases / proceso & Caja; Turno; Venta; Pago; P-08 Conciliar caja \\
+Estado & Aprobado en baseline v2.0 \\
+\end{tabularx}
+\textbf{Criterio BDD:} Dado un turno con pagos y ventas registrados, cuando Recepción ejecute el cierre, entonces el sistema deberá totalizar por medio de pago, comparar contra los valores declarados y registrar cualquier diferencia junto con la entrega del turno.
+
+\textbf{Trazas:} HU-16; CP-16; MU-70.
+\end{reqbox}
+
+
+\begin{reqbox}{RF-NOV-01 - Gestionar novedades internas}
+\begin{tabularx}{\textwidth}{>{\bfseries}p{3.2cm}Y}
+Tipo y prioridad & Requisito funcional - Must \\
+Actor & Personal autorizado \\
+Fuente & EV-ENTR02-01;EV-ENTR02-08;EV-ENTR03-07;EV-ENTR04-06;EV-ENTR05-01 \\
+Enunciado & El sistema deberá crear una novedad con categoría, detalle mínimo, responsable, vencimiento y uno de los estados: pendiente, en proceso, resuelta o cancelada. \\
+Caso de uso & CU-17 \\
+Clases / proceso & Novedad; Usuario; P-09 Gestionar novedades \\
+Estado & Aprobado en baseline v2.0 \\
+\end{tabularx}
+\textbf{Criterio BDD:} Dado un usuario autorizado y una novedad con categoría, detalle, responsable y vencimiento, cuando la registre, entonces el sistema deberá crearla con un estado válido y conservar los cambios posteriores de estado.
+
+\textbf{Trazas:} HU-17; CP-17; MU-21;MU-31*;MU-50;MU-51*;MU-61.
+\end{reqbox}
+
+
+\begin{reqbox}{RF-INS-01 - Gestionar horario y disponibilidad de instructor}
+\begin{tabularx}{\textwidth}{>{\bfseries}p{3.2cm}Y}
+Tipo y prioridad & Requisito funcional - Should \\
+Actor & Administrador \\
+Fuente & EV-ENTR07-06;EV-ENTR09-03;EV-ENTR10-02 \\
+Enunciado & El sistema deberá registrar turnos, capacidad, disponibilidad y novedades operativas del instructor, sin recopilar datos de salud. \\
+Caso de uso & CU-23 \\
+Clases / proceso & Instructor; Horario; Cliente; P-10 Gestionar instructores \\
+Estado & Aprobado en baseline v2.0 \\
+\end{tabularx}
+\textbf{Criterio BDD:} Dado un instructor registrado, cuando el Administrador actualice su operación, entonces el sistema deberá guardar turnos, capacidad, disponibilidad y novedades operativas sin solicitar datos de salud.
+
+\textbf{Trazas:} HU-23; CP-23; MU-23;MU-33;MU-48*;MU-49*;MU-58.
+\end{reqbox}
+
+
+\begin{reqbox}{RF-RUT-01 - Crear y asignar rutina}
+\begin{tabularx}{\textwidth}{>{\bfseries}p{3.2cm}Y}
+Tipo y prioridad & Requisito funcional - Must \\
+Actor & Instructor \\
+Fuente & EV-ENTR01-05;EV-ENTR05-04;EV-ENTR09-01;EV-ENTR09-02;EV-ENTR09-03 \\
+Enunciado & El sistema deberá crear una rutina con objetivo operativo, ejercicios, series, repeticiones, descanso y días de ejecución, y deberá asignarla a un cliente autorizado. \\
+Caso de uso & CU-18 \\
+Clases / proceso & Rutina; VersionRutina; Ejercicio; Cliente; Instructor; P-11 Gestionar rutinas \\
+Estado & Aprobado en baseline v2.0 \\
+\end{tabularx}
+\textbf{Criterio BDD:} Dado un cliente autorizado y un catálogo de ejercicios disponible, cuando el Instructor cree una rutina, entonces el sistema deberá guardar objetivo operativo, ejercicios, series, repeticiones, descanso y días, y deberá asignarla al cliente seleccionado.
+
+\textbf{Trazas:} HU-18; CP-18; MU-17*;MU-29*;MU-54;MU-55;MU-64(F).
+\end{reqbox}
+
+
+\begin{reqbox}{RF-RUT-02 - Versionar y ajustar rutina}
+\begin{tabularx}{\textwidth}{>{\bfseries}p{3.2cm}Y}
+Tipo y prioridad & Requisito funcional - Must \\
+Actor & Instructor \\
+Fuente & EV-ENTR01-05;EV-ENTR09-01;EV-ENTR09-04;EV-ENTR10-01;EV-ENTR10-03 \\
+Enunciado & El sistema deberá crear una nueva versión cuando se modifiquen ejercicios o parámetros de una rutina y deberá conservar las versiones anteriores en modo de solo lectura. \\
+Caso de uso & CU-19 \\
+Clases / proceso & Rutina; VersionRutina; Ejercicio; Cliente; Instructor; P-11 Gestionar rutinas \\
+Estado & Aprobado en baseline v2.0 \\
+\end{tabularx}
+\textbf{Criterio BDD:} Dado una rutina existente, cuando el Instructor modifique ejercicios o parámetros y confirme el cambio, entonces el sistema deberá crear una nueva versión y mantener las versiones anteriores en solo lectura.
+
+\textbf{Trazas:} HU-19; CP-19; MU-17*;MU-54.
+\end{reqbox}
+
+
+\begin{reqbox}{RF-RUT-03 - Registrar seguimiento operativo}
+\begin{tabularx}{\textwidth}{>{\bfseries}p{3.2cm}Y}
+Tipo y prioridad & Requisito funcional - Should \\
+Actor & Instructor \\
+Fuente & EV-ENTR09-04;EV-ENTR09-05;EV-ENTR09-06;EV-ENTR10-03;EV-ENTR10-04 \\
+Enunciado & El sistema deberá registrar fecha, cumplimiento de ejercicios, repeticiones y observación operativa, excluyendo diagnósticos, lesiones, peso y medidas corporales reales. \\
+Caso de uso & CU-24 \\
+Clases / proceso & Rutina; VersionRutina; Ejercicio; Cliente; Instructor; P-11 Gestionar rutinas \\
+Estado & Aprobado en baseline v2.0 \\
+\end{tabularx}
+\textbf{Criterio BDD:} Dado una rutina activa, cuando el Instructor registre seguimiento, entonces el sistema deberá guardar fecha, cumplimiento, repeticiones y observación operativa y deberá rechazar campos destinados a diagnósticos, lesiones, peso o medidas corporales reales.
+
+\textbf{Trazas:} HU-24; CP-24; MU-59;MU-60*.
+\end{reqbox}
+
+
+\begin{reqbox}{RF-REP-01 - Consultar panel y reportes}
+\begin{tabularx}{\textwidth}{>{\bfseries}p{3.2cm}Y}
+Tipo y prioridad & Requisito funcional - Should \\
+Actor & Administrador \\
+Fuente & EV-ENTR01-05;EV-ENTR05-05;EV-ENTR06-04;EV-ENTR07-04;EV-ENTR08-05;EV-ENTR09-05 \\
+Enunciado & El sistema deberá mostrar indicadores filtrables de clientes, membresías, ventas, asistencias, uso y promociones por período, calculados exclusivamente con datos almacenados y exportables a CSV. \\
+Caso de uso & CU-25 \\
+Clases / proceso & Reporte; Indicador; Filtro; P-12 Generar reportes \\
+Estado & Aprobado en baseline v2.0 \\
+\end{tabularx}
+\textbf{Criterio BDD:} Dado un período y filtros válidos, cuando el Administrador consulte el panel o reporte, entonces el sistema deberá calcular los indicadores con datos almacenados, mostrar los resultados filtrados y permitir exportarlos a CSV.
+
+\textbf{Trazas:} HU-25; CP-25; MU-10;MU-24;MU-34.
+\end{reqbox}
+
+
+\begin{reqbox}{RF-MEM-05 - Consultar mi membresía}
+\begin{tabularx}{\textwidth}{>{\bfseries}p{3.2cm}Y}
+Tipo y prioridad & Requisito funcional - Must \\
+Actor & Cliente \\
+Fuente & EV-VT-T02-12; MU-63 \\
+Enunciado & El sistema deberá permitir al cliente autenticado consultar el estado, plan y vigencia de su propia membresía en modo de solo lectura. \\
+Caso de uso & CU-26 \\
+Clases / proceso & Membresia; Plan; Promocion; P-03 Gestionar membresías \\
+Estado & Aprobado en baseline v2.0 \\
+\end{tabularx}
+\textbf{Criterio BDD:} Dado un Cliente autenticado, cuando consulte su membresía, entonces el sistema deberá mostrar únicamente el estado, plan y vigencia de su propia membresía y no deberá habilitar edición.
+
+\textbf{Trazas:} HU-26; CP-26; V7 / modelo conceptual.
+\end{reqbox}
+
+
+\begin{reqbox}{RF-PAG-03 - Consultar mis pagos}
+\begin{tabularx}{\textwidth}{>{\bfseries}p{3.2cm}Y}
+Tipo y prioridad & Requisito funcional - Must \\
+Actor & Cliente \\
+Fuente & EV-VT-T02-12 \\
+Enunciado & El sistema deberá permitir al cliente autenticado consultar sus pagos registrados y el estado contextual de cada pago en modo de solo lectura. \\
+Caso de uso & CU-27 \\
+Clases / proceso & Pago; Comprobante; Cliente; P-04 Gestionar pagos \\
+Estado & Aprobado en baseline v2.0 \\
+\end{tabularx}
+\textbf{Criterio BDD:} Dado un Cliente autenticado, cuando consulte sus pagos, entonces el sistema deberá mostrar únicamente sus registros de pago y el estado de cada uno en modo de solo lectura.
+
+\textbf{Trazas:} HU-27; CP-27; V7 / modelo conceptual.
+\end{reqbox}
+
+
+\begin{reqbox}{RF-RUT-04 - Consultar mi rutina e historial}
+\begin{tabularx}{\textwidth}{>{\bfseries}p{3.2cm}Y}
+Tipo y prioridad & Requisito funcional - Must \\
+Actor & Cliente \\
+Fuente & EV-VT-T01-06; EV-VT-T01-08; EV-VT-T02-04 \\
+Enunciado & El sistema deberá permitir al cliente autenticado consultar su rutina activa, sus versiones y el seguimiento operativo autorizado, sin modificar la rutina vigente. \\
+Caso de uso & CU-28 \\
+Clases / proceso & Rutina; VersionRutina; Ejercicio; Cliente; Instructor; P-11 Gestionar rutinas \\
+Estado & Aprobado en baseline v2.0 \\
+\end{tabularx}
+\textbf{Criterio BDD:} Dado un Cliente autenticado con una rutina asignada, cuando consulte su rutina, entonces el sistema deberá mostrar la versión activa, las versiones históricas y el seguimiento autorizado sin permitir modificar la rutina vigente.
+
+\textbf{Trazas:} HU-28; CP-28; V7 / modelo conceptual.
+\end{reqbox}
+
+
+\begin{reqbox}{RF-INV-04 - Gestionar categorías de productos}
+\begin{tabularx}{\textwidth}{>{\bfseries}p{3.2cm}Y}
+Tipo y prioridad & Requisito funcional - Should \\
+Actor & Dueño \\
+Fuente & EV-VT-T03-06 \\
+Enunciado & El sistema deberá permitir al usuario autorizado registrar, consultar, editar y desactivar categorías de productos. \\
+Caso de uso & CU-29 \\
+Clases / proceso & Producto; Categoria; Proveedor; MovimientoStock; P-06 Gestionar inventario \\
+Estado & Aprobado en baseline v2.0 \\
+\end{tabularx}
+\textbf{Criterio BDD:} Dado un usuario autorizado, cuando registre, edite o desactive una categoría, entonces el sistema deberá guardar el cambio y reflejar el estado actualizado en las consultas de categorías.
+
+\textbf{Trazas:} HU-29; CP-29; V7 / modelo conceptual.
+\end{reqbox}
+
+
+\begin{reqbox}{RF-INV-05 - Gestionar proveedores}
+\begin{tabularx}{\textwidth}{>{\bfseries}p{3.2cm}Y}
+Tipo y prioridad & Requisito funcional - Should \\
+Actor & Dueño \\
+Fuente & EV-VT-T03-06; EV-VT-T01-10 \\
+Enunciado & El sistema deberá permitir al usuario autorizado registrar, consultar, editar y desactivar proveedores utilizados en inventario. \\
+Caso de uso & CU-30 \\
+Clases / proceso & Producto; Categoria; Proveedor; MovimientoStock; P-06 Gestionar inventario \\
+Estado & Aprobado en baseline v2.0 \\
+\end{tabularx}
+\textbf{Criterio BDD:} Dado un usuario autorizado, cuando registre, edite o desactive un proveedor, entonces el sistema deberá guardar el cambio y reflejar el estado actualizado en las consultas de proveedores.
+
+\textbf{Trazas:} HU-30; CP-30; V7 / modelo conceptual.
+\end{reqbox}
+
+
+\begin{reqbox}{RF-CFG-01 - Configurar tratamiento de IVA}
+\begin{tabularx}{\textwidth}{>{\bfseries}p{3.2cm}Y}
+Tipo y prioridad & Requisito funcional - Must \\
+Actor & Dueño \\
+Fuente & EV-VT-T03-05 \\
+Enunciado & El sistema deberá permitir configurar el porcentaje general de IVA y definir por producto si el impuesto aplica, conservando el historial de cambios. \\
+Caso de uso & CU-31 \\
+Clases / proceso & Configuracion; HorarioAtencion; Producto; P-13 Configurar operación \\
+Estado & Aprobado en baseline v2.0 \\
+\end{tabularx}
+\textbf{Criterio BDD:} Dado un porcentaje de IVA válido y la configuración tributaria de un producto, cuando el Dueño confirme el cambio, entonces el sistema deberá aplicar la nueva configuración a operaciones posteriores y conservar el valor anterior, el nuevo valor, el actor y la fecha.
+
+\textbf{Trazas:} HU-31; CP-31; V7 / modelo conceptual.
+\end{reqbox}
+
+
+\begin{reqbox}{RF-BCK-01 - Generar respaldo}
+\begin{tabularx}{\textwidth}{>{\bfseries}p{3.2cm}Y}
+Tipo y prioridad & Requisito funcional - Should \\
+Actor & Superadministrador \\
+Fuente & EV-VT-T03-10 \\
+Enunciado & El sistema deberá permitir iniciar un respaldo cifrado y consultar su estado y fecha de finalización. \\
+Caso de uso & CU-32 \\
+Clases / proceso & Respaldo; EventoAuditoria; P-14 Respaldar y recuperar \\
+Estado & Aprobado en baseline v2.0 \\
+\end{tabularx}
+\textbf{Criterio BDD:} Dado un Superadministrador autenticado, cuando solicite un respaldo, entonces el sistema deberá iniciar el proceso cifrado, asignar un identificador y mostrar el estado y la fecha de finalización cuando concluya.
+
+\textbf{Trazas:} HU-32; CP-32; V7 / modelo conceptual.
+\end{reqbox}
+
+
+\begin{reqbox}{RF-BCK-02 - Restaurar respaldo}
+\begin{tabularx}{\textwidth}{>{\bfseries}p{3.2cm}Y}
+Tipo y prioridad & Requisito funcional - Should \\
+Actor & Superadministrador \\
+Fuente & EV-VT-T03-10 \\
+Enunciado & El sistema deberá permitir restaurar un respaldo seleccionado mediante confirmación explícita, verificación de integridad y registro de auditoría. \\
+Caso de uso & CU-33 \\
+Clases / proceso & Respaldo; EventoAuditoria; P-14 Respaldar y recuperar \\
+Estado & Aprobado en baseline v2.0 \\
+\end{tabularx}
+\textbf{Criterio BDD:} Dado un respaldo íntegro seleccionado, cuando el Superadministrador confirme explícitamente la restauración, entonces el sistema deberá verificar su integridad, ejecutar la restauración y registrar la operación en auditoría; si la verificación falla, no deberá restaurar.
+
+\textbf{Trazas:} HU-33; CP-33; V7 / modelo conceptual.
+\end{reqbox}
+
+
+\begin{reqbox}{RF-CFG-02 - Configurar horario de atención}
+\begin{tabularx}{\textwidth}{>{\bfseries}p{3.2cm}Y}
+Tipo y prioridad & Requisito funcional - Could \\
+Actor & Dueño \\
+Fuente & IND-14; V7 \\
+Enunciado & El sistema deberá permitir configurar los días y horas de atención del gimnasio y deberá mostrarlos al cliente. \\
+Caso de uso & CU-34 \\
+Clases / proceso & Configuracion; HorarioAtencion; Producto; P-13 Configurar operación \\
+Estado & Aprobado en baseline v2.0 \\
+\end{tabularx}
+\textbf{Criterio BDD:} Dado un Dueño autenticado y una configuración válida de días y horas, cuando guarde el horario, entonces el sistema deberá actualizarlo y mostrar al Cliente únicamente el horario vigente.
+
+\textbf{Trazas:} HU-34; CP-34; V7 / modelo conceptual.
+\end{reqbox}
+
+
+\begin{reqbox}{RF-IA-RUT-01 - Generar recomendación de rutina}
+\begin{tabularx}{\textwidth}{>{\bfseries}p{3.2cm}Y}
+Tipo y prioridad & Requisito funcional - Must \\
+Actor & Cliente/Instructor \\
+Fuente & EV-VT-T02-05; H03; PE5-OE3 \\
+Enunciado & El sistema deberá generar hasta tres alternativas de rutina a partir del objetivo declarado, la disponibilidad semanal, el historial operativo no sensible y el catálogo de ejercicios autorizado. \\
+Caso de uso & CU-35 \\
+Clases / proceso & ModeloIA; Recomendacion; Alerta; Explicacion; P-15 Asistir decisiones \\
+Estado & Aprobado como requisito PE5; implementación pendiente \\
+\end{tabularx}
+\textbf{Criterio BDD:} Dado un objetivo operativo, disponibilidad semanal, historial no sensible y catálogo autorizado, cuando se solicite una recomendación, entonces el componente deberá devolver como máximo tres alternativas ordenadas de rutina y una explicación de los factores utilizados.
+
+\textbf{Trazas:} HU-35; CP-35; Prototipo pendiente.
+\end{reqbox}
+
+
+\begin{reqbox}{RF-IA-RUT-02 - Aceptar, rechazar o solicitar alternativa}
+\begin{tabularx}{\textwidth}{>{\bfseries}p{3.2cm}Y}
+Tipo y prioridad & Requisito funcional - Must \\
+Actor & Cliente \\
+Fuente & Decisión del equipo; PE5-OE3 \\
+Enunciado & El sistema deberá permitir aceptar, rechazar o solicitar una alternativa antes de incorporar una recomendación a la propuesta de rutina. \\
+Caso de uso & CU-36 \\
+Clases / proceso & ModeloIA; Recomendacion; Alerta; Explicacion; P-15 Asistir decisiones \\
+Estado & Aprobado como requisito PE5; implementación pendiente \\
+\end{tabularx}
+\textbf{Criterio BDD:} Dado que el Cliente visualiza una recomendación de rutina, cuando seleccione aceptar, rechazar o solicitar alternativa, entonces el sistema deberá registrar la decisión y no deberá activar automáticamente la recomendación.
+
+\textbf{Trazas:} HU-36; CP-36; Prototipo pendiente.
+\end{reqbox}
+
+
+\begin{reqbox}{RF-IA-RUT-03 - Revisar recomendación de rutina}
+\begin{tabularx}{\textwidth}{>{\bfseries}p{3.2cm}Y}
+Tipo y prioridad & Requisito funcional - Must \\
+Actor & Instructor \\
+Fuente & EV-VT-T01-07; EV-VT-T01-08; H02 \\
+Enunciado & El sistema deberá exigir la revisión del instructor antes de activar una rutina recomendada y deberá conservar la decisión y el motivo. \\
+Caso de uso & CU-37 \\
+Clases / proceso & ModeloIA; Recomendacion; Alerta; Explicacion; P-15 Asistir decisiones \\
+Estado & Aprobado como requisito PE5; implementación pendiente \\
+\end{tabularx}
+\textbf{Criterio BDD:} Dado una recomendación aceptada por el Cliente, cuando el Instructor la revise, entonces el sistema deberá permitir aprobarla o rechazarla con motivo; únicamente una aprobación explícita podrá habilitar su activación.
+
+\textbf{Trazas:} HU-37; CP-37; Prototipo pendiente.
+\end{reqbox}
+
+
+\begin{reqbox}{RF-IA-ABA-01 - Calcular riesgo de inactividad}
+\begin{tabularx}{\textwidth}{>{\bfseries}p{3.2cm}Y}
+Tipo y prioridad & Requisito funcional - Should \\
+Actor & Dueño \\
+Fuente & PE5-OE3; decisión de diseño \\
+Enunciado & El sistema deberá calcular semanalmente un nivel de riesgo bajo, medio o alto usando únicamente asistencia, vigencia de membresía y frecuencia histórica. \\
+Caso de uso & CU-38 \\
+Clases / proceso & ModeloIA; Recomendacion; Alerta; Explicacion; P-15 Asistir decisiones \\
+Estado & Aprobado como requisito PE5; implementación pendiente \\
+\end{tabularx}
+\textbf{Criterio BDD:} Dado el historial de asistencia, vigencia de membresía y frecuencia histórica de un cliente, cuando se ejecute el cálculo semanal, entonces el componente deberá asignar un nivel bajo, medio o alto y registrar la fecha del cálculo.
+
+\textbf{Trazas:} HU-38; CP-38; Prototipo pendiente.
+\end{reqbox}
+
+
+\begin{reqbox}{RF-IA-ABA-02 - Mostrar alertas de riesgo}
+\begin{tabularx}{\textwidth}{>{\bfseries}p{3.2cm}Y}
+Tipo y prioridad & Requisito funcional - Should \\
+Actor & Dueño/Recepcionista \\
+Fuente & PE5-OE3; decisión de diseño \\
+Enunciado & El sistema deberá mostrar los clientes con riesgo medio o alto, los factores principales y la fecha del cálculo, sin ejecutar acciones automáticas. \\
+Caso de uso & CU-39 \\
+Clases / proceso & ModeloIA; Recomendacion; Alerta; Explicacion; P-15 Asistir decisiones \\
+Estado & Aprobado como requisito PE5; implementación pendiente \\
+\end{tabularx}
+\textbf{Criterio BDD:} Dado que existen clientes clasificados con riesgo medio o alto, cuando Dueño o Recepcionista consulte las alertas, entonces el sistema deberá mostrar el nivel, la fecha y los principales factores de cada alerta sin ejecutar acciones automáticas.
+
+\textbf{Trazas:} HU-39; CP-39; Prototipo pendiente.
+\end{reqbox}
+
+
+\begin{reqbox}{RF-IA-ABA-03 - Registrar seguimiento de alerta}
+\begin{tabularx}{\textwidth}{>{\bfseries}p{3.2cm}Y}
+Tipo y prioridad & Requisito funcional - Should \\
+Actor & Recepcionista \\
+Fuente & PE5-OE3; decisión de diseño \\
+Enunciado & El sistema deberá permitir registrar el contacto, aplazamiento o descarte de una alerta y deberá conservar la decisión humana para auditoría. \\
+Caso de uso & CU-40 \\
+Clases / proceso & ModeloIA; Recomendacion; Alerta; Explicacion; P-15 Asistir decisiones \\
+Estado & Aprobado como requisito PE5; implementación pendiente \\
+\end{tabularx}
+\textbf{Criterio BDD:} Dado una alerta de riesgo visible, cuando Recepción registre contacto, aplazamiento o descarte, entonces el sistema deberá guardar la acción, responsable, fecha y observación para auditoría.
+
+\textbf{Trazas:} HU-40; CP-40; Prototipo pendiente.
+\end{reqbox}

@@ -1,0 +1,54 @@
+
+\subsection{Principios comunes y base de legitimación}
+Los componentes de IA se especifican como apoyo a decisiones y no como autoridad autónoma. La LOPDP exige que cada finalidad de tratamiento se sustente en una base de legitimación aplicable \cite{lopdp,spdp}. Para FabroGym se adopta, como diseño jurídico preliminar sujeto a validación por el responsable real del tratamiento, la siguiente separación: (i) los datos estrictamente necesarios para gestionar membresías, pagos, asistencia y prestación del servicio se vinculan a medidas precontractuales o al cumplimiento de la relación contractual; (ii) la personalización opcional mediante IA-01 y cualquier uso secundario no necesario para prestar el servicio requerirá consentimiento específico, informado y revocable; y (iii) no se presumirá interés legítimo para analítica o seguimiento sin una evaluación previa de ponderación y documentación de la finalidad.
+
+El Reglamento (UE) 2024/1689 se emplea únicamente como referente comparado de gestión de riesgos, transparencia y supervisión humana \cite{aiact}; no se presenta como norma ecuatoriana aplicable. Ningún componente utiliza salud, diagnósticos, biometría, peso, grasa, masa muscular ni imagen corporal real. Durante desarrollo se emplearán datos sintéticos o datos operativos cuya base de legitimación, finalidad y período de conservación estén documentados antes del tratamiento.
+
+\begin{table}[H]
+\centering
+\caption{Controles de privacidad y derechos aplicables a los componentes de IA.}
+\small
+\begin{tabularx}{\textwidth}{|p{3.2cm}|Y|Y|}
+\hline
+\textbf{Control} & \textbf{Requisito de diseño} & \textbf{Evidencia prevista}\\\hline
+Finalidad & Separar gestión contractual, personalización opcional y seguimiento administrativo; prohibir reutilización para finalidades incompatibles. & Inventario de tratamientos y aviso de privacidad versionado.\\\hline
+Minimización & Usar únicamente variables operativas necesarias y excluir datos sensibles de salud o biometría. & Diccionario de datos y revisión de campos por componente.\\\hline
+Conservación & Definir un plazo por finalidad antes de producción; al vencimiento, eliminar o anonimizar de forma verificable. & Política de conservación aprobada y registro de eliminación.\\\hline
+Derechos del titular & Habilitar canales para información, acceso, rectificación, actualización, eliminación y oposición cuando correspondan. & Registro de solicitudes y respuesta del responsable.\\\hline
+Supervisión humana & Ninguna recomendación o alerta producirá activación, restricción del servicio o efecto automático irreversible. & Log de decisión humana y motivo.\\\hline
+\end{tabularx}
+\end{table}
+
+Los requisitos de datos, métricas, monitoreo y explicación se documentan como parte del comportamiento esperado del sistema con IA, en línea con la literatura de Ingeniería de Requisitos para aprendizaje automático \cite{vogelsang}.
+
+\subsection{IA-01: recomendador asistivo de rutinas}
+\begin{tabularx}{\textwidth}{>{\bfseries}p{3.8cm}Y}
+Tarea & Ordenar hasta tres alternativas de rutina; la activación exige decisión del cliente y revisión del instructor.\\
+Entradas & Objetivo operativo declarado, disponibilidad semanal, historial de cumplimiento no sensible y catálogo autorizado.\\
+Salida & Alternativas ordenadas con ejercicios, frecuencia y explicación; nunca prescripción médica.\\
+Datos & Al menos 300 casos sintéticos revisados por instructores, versionados y separados en entrenamiento, validación y prueba.\\
+Métrica principal & Precisión top-3 mayor o igual a 0,80; latencia p95 menor o igual a 800 ms.\\
+Equidad & Brecha máxima de 5 puntos porcentuales entre rangos etarios y, cuando exista muestra suficiente, por género declarado.\\
+Explicabilidad & Tres factores determinantes y restricciones aplicadas antes de aceptar.\\
+Fallback & Creación manual por instructor; ninguna recomendación se activa automáticamente.\\
+Monitoreo & Medición mensual; alerta si la precisión cae más de 5 puntos o una brecha supera 5 puntos; revisión antes de reentrenar.\\
+Riesgo & No se clasifica como alto riesgo según el uso previsto; se mantiene supervisión humana y transparencia.\\
+\end{tabularx}
+
+\subsection{IA-02: detector de riesgo de inactividad}
+\begin{tabularx}{\textwidth}{>{\bfseries}p{3.8cm}Y}
+Tarea & Clasificar semanalmente riesgo bajo, medio o alto para priorizar seguimiento administrativo.\\
+Entradas & Asistencia, vigencia de membresía y frecuencia histórica; se excluyen datos sensibles.\\
+Salida & Nivel de riesgo, fecha y dos factores operativos principales.\\
+Datos & Al menos 500 casos sintéticos con separación temporal para evaluación.\\
+Métrica principal & F1 mayor o igual a 0,80 para riesgo alto; lote de 10 000 clientes en 10 minutos o menos.\\
+Equidad & Brecha de falsos positivos menor o igual a 5 puntos porcentuales por edad y tipo de membresía.\\
+Explicabilidad & Dos factores, ventana temporal y advertencia de que la alerta no es decisión definitiva.\\
+Fallback & Mantener último cálculo con fecha visible; la decisión de contacto corresponde al personal.\\
+Monitoreo & Medición mensual de F1, falsos positivos y deriva; revisión si F1 cae bajo 0,80.\\
+Riesgo & Uso administrativo de apoyo, sin negar servicios ni producir efectos jurídicos automáticos.\\
+\end{tabularx}
+
+\begin{alertbox}
+Los componentes IA-01 e IA-02 están especificados y trazados para PE5, pero no están implementados en V7. Antes de producción requieren prototipo, validación con clientes e instructores, evaluación del conjunto de datos, análisis de impacto de privacidad y pruebas de seguridad.
+\end{alertbox}
