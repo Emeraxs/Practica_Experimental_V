@@ -1,0 +1,14 @@
+REINSPECCION DOCUMENTAL M6 - FABROGYM PE5
+Fecha de ejecución: 2026-08-20
+Versión documental inspeccionada: PE5 v2.0.3 / línea base funcional v2.0
+ERS SHA-256: 041602c0579340a07fc778abe7981924a87be9fd81988508e2c393b9f9d387e5
+RF inspeccionados: 40
+RNF inspeccionados: 27
+Requisitos totales: 67
+RF con BDD: 40/40
+RNF con BDD: 27/27
+Defectos residuales encontrados por los controles definidos: 0
+M6 = 0/67 = 0.000
+
+Alcance del control: re-inspección documental de defectos editoriales/estructurales del ERS saneado.
+No equivale a prueba funcional, validación de backend, ejecución de IA ni walkthrough no técnico.
