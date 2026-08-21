@@ -1,80 +1,100 @@
-# PE5 FabroGym - Castro / Mera / Sánchez
+# PE5 FabroGym - Equipo F
 
-## Contexto de la actividad
+## Identificación
 
-FabroGym se utiliza **como proyecto base seleccionado para la PE5 de aula**. El equipo ejecutor de esta práctica está conformado temporalmente por:
+**Asignatura:** Ingeniería de Requerimientos (ISR-401)  
+**Actividad:** Práctica Experimental PE5 - Integración, métricas y defensa del Proyecto Integrador  
+**PFC:** FabroGym  
+**Repositorio de la actividad:** https://github.com/Emeraxs/Practica_Experimental_v
 
-- Castro Bajaña Ariel Omar
+## Integrantes
+
+- Alvia Villegas Erick Adalberto
 - Mera Arias Erick Jhair
-- Sánchez Centeno Roselyn Andreina
-
-Esta conformación corresponde únicamente a la actividad PE5 y **no modifica la autoría ni la composición del proyecto FabroGym original**.
-
-**Commit de referencia del proyecto base:** `f7c9524023ef3156026b4dd1fe82f0b85cd62b22` (17-08-2026). Se cita únicamente como punto de referencia del proyecto seleccionado; no se atribuye a los tres integrantes de la PE5.
+- Mora Duarte Alex José
+- Ponce Rivera Mery Helenmey
+- Vaca Romero David Octavio
 
 ## Entregables incluidos
 
 - `01_Informe_Final/`: informe PE5 en LaTeX y PDF.
-- `02_ERS_Final/`: ERS/SRS v2.0 saneada en LaTeX y PDF.
-- `03_Matrices/`: matriz Excel con requisitos, trazabilidad, métricas, control de huérfanos, backlog, hallazgos y aportes.
-- `04_Validacion/`: evidencia de validación técnica y protocolo no técnico.
-- `05_Gestion/`: retrospectiva, aportes, declaración de uso de IA y checklist.
-- `06_Anexos/`: línea base anterior y modelos previos.
-- `assets/` y `diagramas_fuente/`: recursos gráficos y fuentes de diagramas.
-- `MANIFIESTO_SHA256.txt`: huellas de integridad del paquete.
+- `02_ERS_Final/`: ERS/SRS final v2.0.3 en LaTeX y PDF.
+- `03_Matriz_Trazabilidad/`: libro Excel con requisitos, trazabilidad, métricas, backlog, hallazgos, retrospectiva y aportes.
+- `04_Auditoria_Metricas/`: guía de auditoría y ubicación de los conteos verificables.
+- `05_Gestion/`: backlog, retrospectiva, aportes, declaración de uso de IA y documentación de validación no identificable.
+- `_generados/`: fragmentos LaTeX cargados por el informe y la ERS.
+- `assets/`: figuras empleadas en los documentos.
+- `diagramas_fuente/`: fuentes LaTeX de los diagramas.
 
-La presentación de 15-20 diapositivas **no se incluye en este ZIP** porque se prepara como entregable separado por distribución interna del equipo.
+La presentación de defensa se gestiona como entregable separado.
+
+## Modelos incorporados para cierre PE5
+
+La versión 2.0.3 incorpora DFD Nivel 0/Nivel 1, cuatro máquinas de estados y tres secuencias conceptuales representativas. Sus fuentes están en `diagramas_fuente/` y sus PDF en `assets/`. Los modelos derivan de la ERS y la matriz final y no se presentan como evidencia de backend implementado.
 
 ## Compilación reproducible
 
 ### Requisitos
-- TeX Live con `pdflatex`.
-- Paquetes LaTeX utilizados por `_generados/preamble.tex`.
+
+- TeX Live o MiKTeX actualizado.
+- `pdflatex` disponible en la terminal.
+- Los paquetes requeridos se declaran en `_generados/preamble.tex`.
 
 ### ERS/SRS final
 
-Desde la raíz del paquete:
+Desde la raíz del repositorio:
 
 ```bash
 cd 02_ERS_Final
-pdflatex -interaction=nonstopmode ERS_FabroGym_v2.0.1.tex
-pdflatex -interaction=nonstopmode ERS_FabroGym_v2.0.1.tex
+pdflatex -interaction=nonstopmode ERS_FabroGym_v2.0.3.tex
+pdflatex -interaction=nonstopmode ERS_FabroGym_v2.0.3.tex
 ```
 
-Salida:
+Salida esperada:
 
-`02_ERS_Final/ERS_FabroGym_v2.0.1.pdf`
+`02_ERS_Final/ERS_FabroGym_v2.0.3.pdf`
 
 ### Informe PE5
 
+Desde la raíz del repositorio:
+
 ```bash
-cd ../01_Informe_Final
-pdflatex -interaction=nonstopmode -jobname=PE5_U5_PFC_Final_CASTRO_MERA_SANCHEZ main.tex
-pdflatex -interaction=nonstopmode -jobname=PE5_U5_PFC_Final_CASTRO_MERA_SANCHEZ main.tex
+cd 01_Informe_Final
+pdflatex -interaction=nonstopmode -jobname=PE5_U5_PFC_Final_ALVIA_MERA_MORA_PONCE_VACA main.tex
+pdflatex -interaction=nonstopmode -jobname=PE5_U5_PFC_Final_ALVIA_MERA_MORA_PONCE_VACA main.tex
 ```
 
-Salida:
+Salida esperada:
 
-`01_Informe_Final/PE5_U5_PFC_Final_CASTRO_MERA_SANCHEZ.pdf`
+`01_Informe_Final/PE5_U5_PFC_Final_ALVIA_MERA_MORA_PONCE_VACA.pdf`
 
-## Criterio de evidencia
+## Estado técnico de la línea base
 
-- El prototipo V7 es HTML/JavaScript y no se presenta como backend implementado.
-- Los componentes IA-01 e IA-02 están especificados y trazados, pero no se presentan como implementados.
-- Respaldo/restauración permanecen como requisitos de arquitectura objetivo.
-- Los walkthroughs no técnicos no se presentan como sesiones ejecutadas; solo se incluye el protocolo preparado.
-- Las limitaciones de implementación no se contabilizan como defectos residuales de M6.
-- No se atribuyen commits del repositorio FabroGym a los tres integrantes de esta actividad temporal.
+- M1 se reporta como M1a, M1b y M1c.
+- M2 cierra sin conflictos de requisitos abiertos.
+- M3 usa criterios BDD comprobables para los 40 RF.
+- M4 se calcula hacia adelante y hacia atrás por separado.
+- M5 se calcula sobre una muestra representativa de cinco requisitos.
+- M6 se interpreta como tasa de defectos residuales de re-inspección.
+- Se documentan 40 RF, 27 RNF y 40 casos de uso especificados.
+- La matriz final reporta 0 requisitos huérfanos y 0 cadenas rotas al cierre.
+- IA-01 e IA-02 están especificados y trazados; no se presentan como implementados.
+- V7 es un prototipo HTML/JavaScript y no se presenta como backend productivo.
+- Los walkthroughs no técnicos siguen declarados como actividad no ejecutada.
 
-## Estado del saneamiento
+## Evidencia Git y línea base final
 
-- M1 desglosada en M1a, M1b y M1c.
-- M2 con cero conflictos de requisitos abiertos al cierre.
-- M3 re-auditada con BDD observables para los 40 RF.
-- M4 adelante y atrás calculadas por separado.
-- M6 corregida como tasa de defectos residuales de re-inspección.
-- 21 defectos de redacción en RF corregidos.
-- 40/40 casos de uso especificados.
-- 0 requisitos huérfanos y 0 cadenas rotas al cierre.
-- Base de legitimación y controles de privacidad de IA explicitados.
-- Referencias obligatorias incorporadas y citadas.
+La evidencia individual se determina con los commits reales, archivos modificados y fechas del historial. No se atribuyen commits antes de que existan.
+
+Al terminar de subir y revisar todos los artefactos, el equipo debe congelar la línea base con una etiqueta Git, por ejemplo:
+
+```bash
+git tag -a pe5-final-v2.0.3 -m "Línea base final PE5 FabroGym"
+git push origin pe5-final-v2.0.3
+```
+
+El hash del commit apuntado por esa etiqueta es el que debe utilizarse como evidencia final de línea base si el docente solicita el identificador concreto.
+
+## Uso responsable de IA
+
+La declaración completa, desglosada por secciones, está en `05_Gestion/Declaracion_Uso_IA.md` y en el Anexo E del informe. La IA se utilizó como apoyo de redacción, organización, revisión de consistencia y generación de código/tablas; no se usa como fuente de evidencia empírica ni para inventar pruebas, métricas, entrevistas o commits.
