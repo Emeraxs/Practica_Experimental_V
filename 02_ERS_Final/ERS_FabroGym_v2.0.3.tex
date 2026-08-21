@@ -1,0 +1,442 @@
+\documentclass[11pt,a4paper]{article}
+\input{../_generados/preamble.tex}
+\begin{document}
+\hypersetup{pageanchor=false}
+
+\begin{titlepage}
+\centering
+{\Large\bfseries UNIVERSIDAD TÉCNICA ESTATAL DE QUEVEDO\par}
+\vspace{.25cm}{\large Facultad de Ciencias de la Computación\par}{\large Carrera de Ingeniería de Software\par}
+\vspace{.6cm}{\large Ingeniería de Requerimientos (ISR-401)\par}
+\vspace{.8cm}{\LARGE\bfseries PRÁCTICA EXPERIMENTAL PE5\par}
+\vspace{.25cm}{\Large Integración, métricas y defensa del Proyecto Integrador\par}
+\vspace{.5cm}{\LARGE\bfseries FabroGym\par}{\large Sistema de gestión administrativa y operativa para gimnasios\par}
+\vspace{.7cm}
+\begin{tabularx}{\textwidth}{|>{\bfseries}p{4cm}|Y|}\hline
+Equipo PFC & Equipo F - FabroGym \\\hline
+Integrantes & \begin{minipage}[t]{\linewidth}
+Alvia Villegas Erick Adalberto\\
+Mera Arias Erick Jhair\\
+Mora Duarte Alex José\\
+Ponce Rivera Mery Helenmey\\
+Vaca Romero David Octavio
+\end{minipage} \\\hline
+Docente & Guerrero Ulloa Gleiston Cicerón, PhD \\\hline
+Periodo & 2026--2027 PPA \\\hline
+Versión & 2.0.3 - cierre de modelos y evidencia reproducible M6 \\\hline
+Fecha & 20 de agosto de 2026 \\\hline
+Repositorio PE5 & \url{https://github.com/Emeraxs/Practica_Experimental_v} \\\hline
+\end{tabularx}
+\vfill{\large Quevedo, Ecuador - 2026\par}
+\end{titlepage}
+\hypersetup{pageanchor=true}
+\tableofcontents\listoftables\listoffigures\clearpage
+\section{Control de versión}
+La versión 2.0.3 conserva la línea base funcional v2.0 y cierra dos aspectos documentales de PE5: (a) reincorpora la perspectiva funcional y de comportamiento mediante DFD, máquinas de estados y secuencias representativas alineadas con la matriz final; y (b) añade evidencia reproducible para la re-inspección documental de M6. No se afirma implementación de backend, restauración o IA.
+\section{Propósito, alcance y actores}
+La estructura y atributos de esta ERS se alinean con ISO/IEC/IEEE 29148:2018 \cite{iso29148}; la trazabilidad y la integración con procesos de ciclo de vida se contrastan con ISO/IEC/IEEE 15288:2023 e ISO/IEC/IEEE 12207:2017 \cite{iso15288,iso12207}.
+FabroGym centraliza gestión de clientes, membresías, pagos, asistencia, ventas, inventario, caja, novedades, instructores, rutinas, reportes y configuración. Los actores son Superadministrador, Dueño, Recepcionista, Instructor y Cliente. Se excluyen salud, diagnóstico, biometría y medidas corporales reales.
+\begin{figure}[H]\centering\includegraphics[width=.94\textwidth]{contexto.png}\caption{Contexto del sistema.}\end{figure}
+\section{Requisitos funcionales}
+\input{../_generados/catalogo_rf.tex}
+\section{Requisitos no funcionales}
+
+\begin{reqbox}[colframe=Teal]{RNF-AF-01 - Adecuación funcional}
+\begin{tabularx}{\textwidth}{>{\bfseries}p{3.2cm}Y}
+Tipo y prioridad & Requisito no funcional - Must \\
+Fuente & ISO/IEC 25010:2023; PE5 \\
+Enunciado medible & El 100 \% de los RF Must deberá disponer de criterio BDD y caso de prueba conceptual antes de liberar una línea base. \\
+Método de comprobación & Prueba reproducible registrada en CP-RNF-AF-01 y contraste con el umbral del enunciado. \\
+Estado & Especificado; verificación pendiente \\
+\end{tabularx}
+\textbf{Criterio BDD:} Dado un entorno de prueba reproducible, cuando se ejecute el método de comprobación definido para RNF-AF-01, entonces se deberá alcanzar el umbral expresado en el requisito y conservar la evidencia.
+\end{reqbox}
+
+
+\begin{reqbox}[colframe=Teal]{RNF-ED-01 - Rendimiento de consultas}
+\begin{tabularx}{\textwidth}{>{\bfseries}p{3.2cm}Y}
+Tipo y prioridad & Requisito no funcional - Must \\
+Fuente & ISO/IEC 25010:2023 \\
+Enunciado medible & Con 10 000 clientes sintéticos y 20 sesiones concurrentes, el percentil 95 de búsqueda y consulta será menor o igual a 5 s y la tasa de error menor o igual a 1 \%. \\
+Método de comprobación & Prueba reproducible registrada en CP-RNF-ED-01 y contraste con el umbral del enunciado. \\
+Estado & Especificado; verificación pendiente \\
+\end{tabularx}
+\textbf{Criterio BDD:} Dado un entorno de prueba reproducible, cuando se ejecute el método de comprobación definido para RNF-ED-01, entonces se deberá alcanzar el umbral expresado en el requisito y conservar la evidencia.
+\end{reqbox}
+
+
+\begin{reqbox}[colframe=Teal]{RNF-ED-02 - Tiempo de registro de asistencia}
+\begin{tabularx}{\textwidth}{>{\bfseries}p{3.2cm}Y}
+Tipo y prioridad & Requisito no funcional - Must \\
+Fuente & EV-VT-T01-03; EV-VT-T02-06; EV-VT-T03-08 \\
+Enunciado medible & Al menos 9 de 10 tareas moderadas de registro de asistencia deberán completarse en 30 s o menos. \\
+Método de comprobación & Prueba reproducible registrada en CP-RNF-ED-02 y contraste con el umbral del enunciado. \\
+Estado & Especificado; verificación pendiente \\
+\end{tabularx}
+\textbf{Criterio BDD:} Dado un entorno de prueba reproducible, cuando se ejecute el método de comprobación definido para RNF-ED-02, entonces se deberá alcanzar el umbral expresado en el requisito y conservar la evidencia.
+\end{reqbox}
+
+
+\begin{reqbox}[colframe=Teal]{RNF-COM-01 - Compatibilidad web}
+\begin{tabularx}{\textwidth}{>{\bfseries}p{3.2cm}Y}
+Tipo y prioridad & Requisito no funcional - Should \\
+Fuente & ISO/IEC 25010:2023 \\
+Enunciado medible & Las funciones Must deberán superar todas sus pruebas en las dos versiones estables más recientes de Chrome, Edge y Firefox disponibles al corte. \\
+Método de comprobación & Prueba reproducible registrada en CP-RNF-COM-01 y contraste con el umbral del enunciado. \\
+Estado & Especificado; verificación pendiente \\
+\end{tabularx}
+\textbf{Criterio BDD:} Dado un entorno de prueba reproducible, cuando se ejecute el método de comprobación definido para RNF-COM-01, entonces se deberá alcanzar el umbral expresado en el requisito y conservar la evidencia.
+\end{reqbox}
+
+
+\begin{reqbox}[colframe=Teal]{RNF-IU-01 - Usabilidad de tareas críticas}
+\begin{tabularx}{\textwidth}{>{\bfseries}p{3.2cm}Y}
+Tipo y prioridad & Requisito no funcional - Must \\
+Fuente & EV-VT-T01-11; EV-VT-T01-12; H04; H05 \\
+Enunciado medible & Al menos 9 de 10 tareas críticas deberán completarse sin ayuda por cada perfil en walkthrough moderado. \\
+Método de comprobación & Prueba reproducible registrada en CP-RNF-IU-01 y contraste con el umbral del enunciado. \\
+Estado & Especificado; verificación pendiente \\
+\end{tabularx}
+\textbf{Criterio BDD:} Dado un entorno de prueba reproducible, cuando se ejecute el método de comprobación definido para RNF-IU-01, entonces se deberá alcanzar el umbral expresado en el requisito y conservar la evidencia.
+\end{reqbox}
+
+
+\begin{reqbox}[colframe=Teal]{RNF-IU-02 - Accesibilidad}
+\begin{tabularx}{\textwidth}{>{\bfseries}p{3.2cm}Y}
+Tipo y prioridad & Requisito no funcional - Should \\
+Fuente & WCAG 2.2 \\
+Enunciado medible & Las pantallas Must deberán cumplir WCAG 2.2 nivel AA en criterios aplicables, sin errores críticos. \\
+Método de comprobación & Prueba reproducible registrada en CP-RNF-IU-02 y contraste con el umbral del enunciado. \\
+Estado & Especificado; verificación pendiente \\
+\end{tabularx}
+\textbf{Criterio BDD:} Dado un entorno de prueba reproducible, cuando se ejecute el método de comprobación definido para RNF-IU-02, entonces se deberá alcanzar el umbral expresado en el requisito y conservar la evidencia.
+\end{reqbox}
+
+
+\begin{reqbox}[colframe=Teal]{RNF-FIA-01 - Integridad transaccional}
+\begin{tabularx}{\textwidth}{>{\bfseries}p{3.2cm}Y}
+Tipo y prioridad & Requisito no funcional - Must \\
+Fuente & ISO/IEC 25010:2023 \\
+Enunciado medible & Tras 100 operaciones de pago, venta y asistencia con una interrupción simulada no deberán quedar registros parciales y la recuperación será menor o igual a 10 min. \\
+Método de comprobación & Prueba reproducible registrada en CP-RNF-FIA-01 y contraste con el umbral del enunciado. \\
+Estado & Especificado; verificación pendiente \\
+\end{tabularx}
+\textbf{Criterio BDD:} Dado un entorno de prueba reproducible, cuando se ejecute el método de comprobación definido para RNF-FIA-01, entonces se deberá alcanzar el umbral expresado en el requisito y conservar la evidencia.
+\end{reqbox}
+
+
+\begin{reqbox}[colframe=Teal]{RNF-FIA-02 - Recuperación}
+\begin{tabularx}{\textwidth}{>{\bfseries}p{3.2cm}Y}
+Tipo y prioridad & Requisito no funcional - Should \\
+Fuente & EV-VT-T03-10; H12 \\
+Enunciado medible & Una copia diaria cifrada deberá permitir restaurar una base sintética con RPO menor o igual a 24 h y RTO menor o igual a 4 h. \\
+Método de comprobación & Prueba reproducible registrada en CP-RNF-FIA-02 y contraste con el umbral del enunciado. \\
+Estado & Especificado; verificación pendiente \\
+\end{tabularx}
+\textbf{Criterio BDD:} Dado un entorno de prueba reproducible, cuando se ejecute el método de comprobación definido para RNF-FIA-02, entonces se deberá alcanzar el umbral expresado en el requisito y conservar la evidencia.
+\end{reqbox}
+
+
+\begin{reqbox}[colframe=Teal]{RNF-SEG-01 - Autorización}
+\begin{tabularx}{\textwidth}{>{\bfseries}p{3.2cm}Y}
+Tipo y prioridad & Requisito no funcional - Must \\
+Fuente & LOPDP; RF-AUT-02 \\
+Enunciado medible & El 100 \% de las pruebas negativas deberá impedir acceso fuera del rol y registrar el intento sin exponer datos personales. \\
+Método de comprobación & Prueba reproducible registrada en CP-RNF-SEG-01 y contraste con el umbral del enunciado. \\
+Estado & Especificado; verificación pendiente \\
+\end{tabularx}
+\textbf{Criterio BDD:} Dado un entorno de prueba reproducible, cuando se ejecute el método de comprobación definido para RNF-SEG-01, entonces se deberá alcanzar el umbral expresado en el requisito y conservar la evidencia.
+\end{reqbox}
+
+
+\begin{reqbox}[colframe=Teal]{RNF-SEG-02 - Minimización de datos}
+\begin{tabularx}{\textwidth}{>{\bfseries}p{3.2cm}Y}
+Tipo y prioridad & Requisito no funcional - Must \\
+Fuente & LOPDP; I-01 \\
+Enunciado medible & En desarrollo y pruebas, la cobertura de captura de salud, biometría, peso, medidas e imagen corporal real deberá ser 0 \%. \\
+Método de comprobación & Prueba reproducible registrada en CP-RNF-SEG-02 y contraste con el umbral del enunciado. \\
+Estado & Especificado; verificación pendiente \\
+\end{tabularx}
+\textbf{Criterio BDD:} Dado un entorno de prueba reproducible, cuando se ejecute el método de comprobación definido para RNF-SEG-02, entonces se deberá alcanzar el umbral expresado en el requisito y conservar la evidencia.
+\end{reqbox}
+
+
+\begin{reqbox}[colframe=Teal]{RNF-SEG-03 - Sesión y cifrado}
+\begin{tabularx}{\textwidth}{>{\bfseries}p{3.2cm}Y}
+Tipo y prioridad & Requisito no funcional - Must \\
+Fuente & LOPDP; OWASP \\
+Enunciado medible & Las sesiones expirarán tras 15 min de inactividad y todo tráfico conectado utilizará TLS 1.2 o superior. \\
+Método de comprobación & Prueba reproducible registrada en CP-RNF-SEG-03 y contraste con el umbral del enunciado. \\
+Estado & Especificado; verificación pendiente \\
+\end{tabularx}
+\textbf{Criterio BDD:} Dado un entorno de prueba reproducible, cuando se ejecute el método de comprobación definido para RNF-SEG-03, entonces se deberá alcanzar el umbral expresado en el requisito y conservar la evidencia.
+\end{reqbox}
+
+
+\begin{reqbox}[colframe=Teal]{RNF-MAN-01 - Cobertura de pruebas}
+\begin{tabularx}{\textwidth}{>{\bfseries}p{3.2cm}Y}
+Tipo y prioridad & Requisito no funcional - Should \\
+Fuente & ISO/IEC 25010:2023 \\
+Enunciado medible & La suite automatizada deberá cubrir al menos el 70 \% de líneas de los módulos de dominio antes de etiquetar una versión candidata. \\
+Método de comprobación & Prueba reproducible registrada en CP-RNF-MAN-01 y contraste con el umbral del enunciado. \\
+Estado & Especificado; verificación pendiente \\
+\end{tabularx}
+\textbf{Criterio BDD:} Dado un entorno de prueba reproducible, cuando se ejecute el método de comprobación definido para RNF-MAN-01, entonces se deberá alcanzar el umbral expresado en el requisito y conservar la evidencia.
+\end{reqbox}
+
+
+\begin{reqbox}[colframe=Teal]{RNF-MAN-02 - Acoplamiento modular}
+\begin{tabularx}{\textwidth}{>{\bfseries}p{3.2cm}Y}
+Tipo y prioridad & Requisito no funcional - Should \\
+Fuente & ISO/IEC 25010:2023; H16 \\
+Enunciado medible & Un cambio de regla en un módulo no deberá exigir modificar más de un módulo consumidor. \\
+Método de comprobación & Prueba reproducible registrada en CP-RNF-MAN-02 y contraste con el umbral del enunciado. \\
+Estado & Especificado; verificación pendiente \\
+\end{tabularx}
+\textbf{Criterio BDD:} Dado un entorno de prueba reproducible, cuando se ejecute el método de comprobación definido para RNF-MAN-02, entonces se deberá alcanzar el umbral expresado en el requisito y conservar la evidencia.
+\end{reqbox}
+
+
+\begin{reqbox}[colframe=Teal]{RNF-POR-01 - Despliegue reproducible}
+\begin{tabularx}{\textwidth}{>{\bfseries}p{3.2cm}Y}
+Tipo y prioridad & Requisito no funcional - Should \\
+Fuente & ISO/IEC 25010:2023 \\
+Enunciado medible & El sistema y sus pruebas deberán desplegarse con una única instrucción documentada en Windows 11 y Linux LTS, sin editar código fuente. \\
+Método de comprobación & Prueba reproducible registrada en CP-RNF-POR-01 y contraste con el umbral del enunciado. \\
+Estado & Especificado; verificación pendiente \\
+\end{tabularx}
+\textbf{Criterio BDD:} Dado un entorno de prueba reproducible, cuando se ejecute el método de comprobación definido para RNF-POR-01, entonces se deberá alcanzar el umbral expresado en el requisito y conservar la evidencia.
+\end{reqbox}
+
+
+\begin{reqbox}[colframe=Teal]{RNF-FLE-01 - Configurabilidad}
+\begin{tabularx}{\textwidth}{>{\bfseries}p{3.2cm}Y}
+Tipo y prioridad & Requisito no funcional - Should \\
+Fuente & EV-VT-T03-05; H10; H16 \\
+Enunciado medible & Planes, precios, IVA, stock mínimo, roles y ventanas de alerta deberán modificarse por configuración autorizada sin recompilar. \\
+Método de comprobación & Prueba reproducible registrada en CP-RNF-FLE-01 y contraste con el umbral del enunciado. \\
+Estado & Especificado; verificación pendiente \\
+\end{tabularx}
+\textbf{Criterio BDD:} Dado un entorno de prueba reproducible, cuando se ejecute el método de comprobación definido para RNF-FLE-01, entonces se deberá alcanzar el umbral expresado en el requisito y conservar la evidencia.
+\end{reqbox}
+
+
+\begin{reqbox}[colframe=Teal]{RNF-IA-RUT-P01 - Precisión top-3}
+\begin{tabularx}{\textwidth}{>{\bfseries}p{3.2cm}Y}
+Tipo y prioridad & Requisito no funcional - Must \\
+Fuente & PE5-OE3; ISO/IEC 25010:2023 \\
+Enunciado medible & El recomendador deberá alcanzar precisión top-3 mayor o igual a 0,80 sobre un conjunto de evaluación versionado de al menos 300 casos sintéticos revisados por instructores. \\
+Método de comprobación & Prueba reproducible registrada en CP-RNF-IA-RUT-P01 y contraste con el umbral del enunciado. \\
+Estado & Aprobado como requisito PE5; evaluación pendiente \\
+\end{tabularx}
+\textbf{Criterio BDD:} Dado un entorno de prueba reproducible, cuando se ejecute el método de comprobación definido para RNF-IA-RUT-P01, entonces se deberá alcanzar el umbral expresado en el requisito y conservar la evidencia.
+\end{reqbox}
+
+
+\begin{reqbox}[colframe=Teal]{RNF-IA-RUT-P02 - Latencia}
+\begin{tabularx}{\textwidth}{>{\bfseries}p{3.2cm}Y}
+Tipo y prioridad & Requisito no funcional - Must \\
+Fuente & PE5-OE3 \\
+Enunciado medible & El percentil 95 de inferencia del recomendador deberá ser menor o igual a 800 ms con 50 solicitudes concurrentes. \\
+Método de comprobación & Prueba reproducible registrada en CP-RNF-IA-RUT-P02 y contraste con el umbral del enunciado. \\
+Estado & Aprobado como requisito PE5; evaluación pendiente \\
+\end{tabularx}
+\textbf{Criterio BDD:} Dado un entorno de prueba reproducible, cuando se ejecute el método de comprobación definido para RNF-IA-RUT-P02, entonces se deberá alcanzar el umbral expresado en el requisito y conservar la evidencia.
+\end{reqbox}
+
+
+\begin{reqbox}[colframe=Teal]{RNF-IA-RUT-P03 - Disponibilidad}
+\begin{tabularx}{\textwidth}{>{\bfseries}p{3.2cm}Y}
+Tipo y prioridad & Requisito no funcional - Should \\
+Fuente & PE5-OE3 \\
+Enunciado medible & El recomendador deberá mantener disponibilidad mensual mayor o igual a 99 \%; si falla, se habilitará creación manual de rutina. \\
+Método de comprobación & Prueba reproducible registrada en CP-RNF-IA-RUT-P03 y contraste con el umbral del enunciado. \\
+Estado & Aprobado como requisito PE5; evaluación pendiente \\
+\end{tabularx}
+\textbf{Criterio BDD:} Dado un entorno de prueba reproducible, cuando se ejecute el método de comprobación definido para RNF-IA-RUT-P03, entonces se deberá alcanzar el umbral expresado en el requisito y conservar la evidencia.
+\end{reqbox}
+
+
+\begin{reqbox}[colframe=Teal]{RNF-IA-RUT-E01 - Equidad por rango etario}
+\begin{tabularx}{\textwidth}{>{\bfseries}p{3.2cm}Y}
+Tipo y prioridad & Requisito no funcional - Must \\
+Fuente & PE5-OE3; Reglamento (UE) 2024/1689 \\
+Enunciado medible & La diferencia de precisión top-3 entre grupos de 18-35, 36-55 y 56 o más años no deberá superar 5 puntos porcentuales en el conjunto de evaluación. \\
+Método de comprobación & Prueba reproducible registrada en CP-RNF-IA-RUT-E01 y contraste con el umbral del enunciado. \\
+Estado & Aprobado como requisito PE5; evaluación pendiente \\
+\end{tabularx}
+\textbf{Criterio BDD:} Dado un entorno de prueba reproducible, cuando se ejecute el método de comprobación definido para RNF-IA-RUT-E01, entonces se deberá alcanzar el umbral expresado en el requisito y conservar la evidencia.
+\end{reqbox}
+
+
+\begin{reqbox}[colframe=Teal]{RNF-IA-RUT-E02 - Equidad por género declarado}
+\begin{tabularx}{\textwidth}{>{\bfseries}p{3.2cm}Y}
+Tipo y prioridad & Requisito no funcional - Must \\
+Fuente & PE5-OE3; LOPDP \\
+Enunciado medible & La diferencia de tasa de aceptación útil entre grupos con al menos 30 observaciones no deberá superar 5 puntos porcentuales; no se inferirá el género. \\
+Método de comprobación & Prueba reproducible registrada en CP-RNF-IA-RUT-E02 y contraste con el umbral del enunciado. \\
+Estado & Aprobado como requisito PE5; evaluación pendiente \\
+\end{tabularx}
+\textbf{Criterio BDD:} Dado un entorno de prueba reproducible, cuando se ejecute el método de comprobación definido para RNF-IA-RUT-E02, entonces se deberá alcanzar el umbral expresado en el requisito y conservar la evidencia.
+\end{reqbox}
+
+
+\begin{reqbox}[colframe=Teal]{RNF-IA-RUT-X01 - Explicabilidad de rutina}
+\begin{tabularx}{\textwidth}{>{\bfseries}p{3.2cm}Y}
+Tipo y prioridad & Requisito no funcional - Must \\
+Fuente & EV-VT-T02-05; H03 \\
+Enunciado medible & Cada recomendación deberá presentar al menos tres factores determinantes y las restricciones aplicadas, antes de solicitar aceptación. \\
+Método de comprobación & Prueba reproducible registrada en CP-RNF-IA-RUT-X01 y contraste con el umbral del enunciado. \\
+Estado & Aprobado como requisito PE5; evaluación pendiente \\
+\end{tabularx}
+\textbf{Criterio BDD:} Dado un entorno de prueba reproducible, cuando se ejecute el método de comprobación definido para RNF-IA-RUT-X01, entonces se deberá alcanzar el umbral expresado en el requisito y conservar la evidencia.
+\end{reqbox}
+
+
+\begin{reqbox}[colframe=Teal]{RNF-IA-ABA-P01 - F1 de riesgo}
+\begin{tabularx}{\textwidth}{>{\bfseries}p{3.2cm}Y}
+Tipo y prioridad & Requisito no funcional - Should \\
+Fuente & PE5-OE3 \\
+Enunciado medible & El detector de inactividad deberá alcanzar F1 mayor o igual a 0,80 para la clase de riesgo alto sobre un conjunto temporal separado de al menos 500 casos sintéticos. \\
+Método de comprobación & Prueba reproducible registrada en CP-RNF-IA-ABA-P01 y contraste con el umbral del enunciado. \\
+Estado & Aprobado como requisito PE5; evaluación pendiente \\
+\end{tabularx}
+\textbf{Criterio BDD:} Dado un entorno de prueba reproducible, cuando se ejecute el método de comprobación definido para RNF-IA-ABA-P01, entonces se deberá alcanzar el umbral expresado en el requisito y conservar la evidencia.
+\end{reqbox}
+
+
+\begin{reqbox}[colframe=Teal]{RNF-IA-ABA-P02 - Latencia por lote}
+\begin{tabularx}{\textwidth}{>{\bfseries}p{3.2cm}Y}
+Tipo y prioridad & Requisito no funcional - Should \\
+Fuente & PE5-OE3 \\
+Enunciado medible & El cálculo semanal de riesgo para 10 000 clientes deberá completarse en 10 min o menos. \\
+Método de comprobación & Prueba reproducible registrada en CP-RNF-IA-ABA-P02 y contraste con el umbral del enunciado. \\
+Estado & Aprobado como requisito PE5; evaluación pendiente \\
+\end{tabularx}
+\textbf{Criterio BDD:} Dado un entorno de prueba reproducible, cuando se ejecute el método de comprobación definido para RNF-IA-ABA-P02, entonces se deberá alcanzar el umbral expresado en el requisito y conservar la evidencia.
+\end{reqbox}
+
+
+\begin{reqbox}[colframe=Teal]{RNF-IA-ABA-P03 - Disponibilidad de alertas}
+\begin{tabularx}{\textwidth}{>{\bfseries}p{3.2cm}Y}
+Tipo y prioridad & Requisito no funcional - Should \\
+Fuente & PE5-OE3 \\
+Enunciado medible & Las alertas deberán quedar disponibles antes de las 08:00 del primer día laborable; ante fallo se conservará el último cálculo con fecha visible. \\
+Método de comprobación & Prueba reproducible registrada en CP-RNF-IA-ABA-P03 y contraste con el umbral del enunciado. \\
+Estado & Aprobado como requisito PE5; evaluación pendiente \\
+\end{tabularx}
+\textbf{Criterio BDD:} Dado un entorno de prueba reproducible, cuando se ejecute el método de comprobación definido para RNF-IA-ABA-P03, entonces se deberá alcanzar el umbral expresado en el requisito y conservar la evidencia.
+\end{reqbox}
+
+
+\begin{reqbox}[colframe=Teal]{RNF-IA-ABA-E01 - Equidad por rango etario}
+\begin{tabularx}{\textwidth}{>{\bfseries}p{3.2cm}Y}
+Tipo y prioridad & Requisito no funcional - Must \\
+Fuente & PE5-OE3; Reglamento (UE) 2024/1689 \\
+Enunciado medible & La diferencia de tasa de falsos positivos entre grupos etarios con al menos 30 casos no deberá superar 5 puntos porcentuales. \\
+Método de comprobación & Prueba reproducible registrada en CP-RNF-IA-ABA-E01 y contraste con el umbral del enunciado. \\
+Estado & Aprobado como requisito PE5; evaluación pendiente \\
+\end{tabularx}
+\textbf{Criterio BDD:} Dado un entorno de prueba reproducible, cuando se ejecute el método de comprobación definido para RNF-IA-ABA-E01, entonces se deberá alcanzar el umbral expresado en el requisito y conservar la evidencia.
+\end{reqbox}
+
+
+\begin{reqbox}[colframe=Teal]{RNF-IA-ABA-E02 - Equidad por tipo de membresía}
+\begin{tabularx}{\textwidth}{>{\bfseries}p{3.2cm}Y}
+Tipo y prioridad & Requisito no funcional - Must \\
+Fuente & PE5-OE3 \\
+Enunciado medible & La diferencia de tasa de falsos positivos entre membresía mensual y trimestral no deberá superar 5 puntos porcentuales. \\
+Método de comprobación & Prueba reproducible registrada en CP-RNF-IA-ABA-E02 y contraste con el umbral del enunciado. \\
+Estado & Aprobado como requisito PE5; evaluación pendiente \\
+\end{tabularx}
+\textbf{Criterio BDD:} Dado un entorno de prueba reproducible, cuando se ejecute el método de comprobación definido para RNF-IA-ABA-E02, entonces se deberá alcanzar el umbral expresado en el requisito y conservar la evidencia.
+\end{reqbox}
+
+
+\begin{reqbox}[colframe=Teal]{RNF-IA-ABA-X01 - Explicabilidad de riesgo}
+\begin{tabularx}{\textwidth}{>{\bfseries}p{3.2cm}Y}
+Tipo y prioridad & Requisito no funcional - Must \\
+Fuente & PE5-OE3 \\
+Enunciado medible & Cada alerta deberá mostrar los dos factores operativos principales, su ventana temporal y una advertencia de que no constituye una decisión definitiva. \\
+Método de comprobación & Prueba reproducible registrada en CP-RNF-IA-ABA-X01 y contraste con el umbral del enunciado. \\
+Estado & Aprobado como requisito PE5; evaluación pendiente \\
+\end{tabularx}
+\textbf{Criterio BDD:} Dado un entorno de prueba reproducible, cuando se ejecute el método de comprobación definido para RNF-IA-ABA-X01, entonces se deberá alcanzar el umbral expresado en el requisito y conservar la evidencia.
+\end{reqbox}
+
+\section{Casos de uso y modelos}
+\subsection{Especificación textual de los 40 casos de uso}
+\input{../_generados/casos_uso.tex}
+
+\subsection{Vistas UML actualizadas}
+\begin{figure}[H]\centering\includegraphics[width=.96\textwidth,height=.79\textheight,keepaspectratio]{casos_uso_v2_1.pdf}\caption{Casos de uso v2.0: acceso, clientes, membresías y pagos.}\end{figure}
+\begin{figure}[H]\centering\includegraphics[width=.96\textwidth,height=.77\textheight,keepaspectratio]{casos_uso_v2_2.pdf}\caption{Casos de uso v2.0: asistencia, inventario, ventas, caja y operación.}\end{figure}
+\begin{figure}[H]\centering\includegraphics[width=.96\textwidth,height=.79\textheight,keepaspectratio]{casos_uso_v2_3.pdf}\caption{Casos de uso v2.0: rutinas, reportes, autoservicio, respaldo y configuración.}\end{figure}
+\begin{figure}[H]\centering\includegraphics[width=.96\textwidth,height=.61\textheight,keepaspectratio]{casos_uso_v2_4_ia.pdf}\caption{Casos de uso v2.0 de los componentes de IA especificados.}\end{figure}
+\begin{figure}[H]\centering\includegraphics[width=.96\textwidth,height=.77\textheight,keepaspectratio]{clases.png}\caption{Modelo de clases base.}\end{figure}
+\begin{figure}[H]\centering\includegraphics[width=.98\textwidth]{despliegue_v2_propuesto.pdf}\caption{Despliegue v2.0: prototipo disponible y arquitectura propuesta.}\end{figure}
+El diagrama de despliegue no declara implementación de backend, persistencia, respaldo ni IA. Los nodos discontinuos documentan la arquitectura objetivo y permiten trazar las decisiones de diseño sin confundir especificación con evidencia de ejecución.
+
+\subsection{DFD de contexto y nivel 1}
+La columna Proceso DFD de la matriz final se materializa mediante los siguientes diagramas, regenerados desde los procesos P-01 a P-15. Los procesos de respaldo e IA se representan como especificación objetivo, no como implementación.
+\begin{figure}[H]\centering\includegraphics[width=.94\textwidth]{DFD_N0_FabroGym.pdf}\caption{DFD Nivel 0 de FabroGym.}\end{figure}
+\begin{landscape}\begin{figure}[H]\centering\includegraphics[width=.98\linewidth,height=.82\textheight,keepaspectratio]{DFD_N1_FabroGym.pdf}\caption{DFD Nivel 1 con procesos y almacenes de la matriz final.}\end{figure}\end{landscape}
+
+\subsection{Máquinas de estados}
+Se incluyen cuatro entidades con ciclo de vida no trivial para respaldar el eslabón Estado/transición de la trazabilidad.
+\begin{figure}[H]\centering\includegraphics[width=.86\textwidth]{DE_01_Membresia_v2_0_3.pdf}\caption{Estados de Membresía.}\end{figure}
+\begin{figure}[H]\centering\includegraphics[width=.82\textwidth]{DE_02_Pago_v2_0_3.pdf}\caption{Estados de Pago.}\end{figure}
+\begin{figure}[H]\centering\includegraphics[width=.82\textwidth]{DE_03_Novedad_v2_0_3.pdf}\caption{Estados de Novedad.}\end{figure}
+\begin{figure}[H]\centering\includegraphics[width=.82\textwidth]{DE_04_Rutina_v2_0_3.pdf}\caption{Estados de Rutina.}\end{figure}
+
+\subsection{Secuencias representativas}
+Las secuencias se derivan de los RF y BDD finales y actualizan tres flujos críticos sin afirmar ejecución de backend.
+\begin{figure}[H]\centering\includegraphics[width=.96\textwidth]{DS_01_RF-AUT-01_v2_0_3.pdf}\caption{Secuencia conceptual de autenticación.}\end{figure}
+\begin{figure}[H]\centering\includegraphics[width=.96\textwidth]{DS_10_RF-PAG-01_v2_0_3.pdf}\caption{Secuencia conceptual de registro de pago.}\end{figure}
+\begin{figure}[H]\centering\includegraphics[width=.96\textwidth]{DS_15_RF-VEN-01_v2_0_3.pdf}\caption{Secuencia conceptual de registro de venta y actualización de inventario.}\end{figure}
+
+\section{Validación y control de cambios}
+\input{../_generados/validacion.tex}
+
+\section{Trazabilidad}
+La trazabilidad final se mantiene en la matriz editable. Para los 40 RF la cadena exigida es Fuente $\rightarrow$ RF $\rightarrow$ CU $\rightarrow$ Clase UML $\rightarrow$ Proceso DFD $\rightarrow$ Estado $\rightarrow$ BDD $\rightarrow$ CP. Para RNF, los elementos de diseño no aplicables se marcan como transversales y conservan fuente, método de comprobación y caso de prueba.
+\input{../_generados/trazabilidad.tex}
+
+\subsection{Huérfanos y cadenas rotas}
+\begin{tabularx}{\textwidth}{|p{4.8cm}|c|Y|}
+\hline
+\textbf{Control} & \textbf{Cantidad} & \textbf{Resultado}\\\hline
+RF sin fuente & 0 & Todos los RF conservan evidencia, norma o decisión de diseño identificada.\\\hline
+RF sin realización posterior & 0 & Los 40 RF enlazan CU, clase, proceso/estado, BDD y CP.\\\hline
+CU huérfanos & 0 & CU-01 a CU-40 enlazan un RF del catálogo.\\\hline
+Cadenas rotas & 0 & No existen filas RF marcadas como rota o huérfana en la línea base final.\\\hline
+\end{tabularx}
+
+\section{Componentes de inteligencia artificial}
+\input{../_generados/ia.tex}
+
+\section{Métricas de calidad}
+\input{../_generados/metricas.tex}
+
+\section{Referencias}
+
+\begin{thebibliography}{99}
+\bibitem{iso29148} ISO/IEC/IEEE, \emph{ISO/IEC/IEEE 29148:2018 Systems and software engineering---Life cycle processes---Requirements engineering}, 2018. [En línea]. Disponible en: \url{https://www.iso.org/standard/72089.html}
+\bibitem{iso25010} ISO/IEC, \emph{ISO/IEC 25010:2023 Systems and software engineering---SQuaRE---Product quality model}, 2023. [En línea]. Disponible en: \url{https://www.iso.org/standard/78176.html}
+\bibitem{iso15288} ISO/IEC/IEEE, \emph{ISO/IEC/IEEE 15288:2023 Systems and software engineering---System life cycle processes}, 2023. [En línea]. Disponible en: \url{https://www.iso.org/standard/81702.html}
+\bibitem{iso12207} ISO/IEC/IEEE, \emph{ISO/IEC/IEEE 12207:2017 Systems and software engineering---Software life cycle processes}, 2017. [En línea]. Disponible en: \url{https://www.iso.org/standard/63712.html}
+
+\bibitem{pohl} K. Pohl, \emph{Requirements Engineering: Fundamentals, Principles, and Techniques}, 2.a ed. Berlin, Alemania: Springer, 2025. ISBN 978-3-662-69204-2.
+\bibitem{swebok} IEEE Computer Society, \emph{Guide to the Software Engineering Body of Knowledge, Version 4.0}, 2024. [En línea]. Disponible en: \url{https://www.computer.org/education/bodies-of-knowledge/software-engineering}
+\bibitem{ireb} S. Bühne y M. Glinz, \emph{IREB Certified Professional for Requirements Engineering - Foundation Level Syllabus}, versión 3.3.0, International Requirements Engineering Board, 2026. [En línea]. Disponible en: \url{https://cpre.ireb.org/en/downloads-and-resources/downloads}
+\bibitem{lopdp} Asamblea Nacional del Ecuador, \emph{Ley Orgánica de Protección de Datos Personales}, Registro Oficial No. 459, Quinto Suplemento, 26 mayo 2021. [En línea]. Disponible en: \url{https://www.asambleanacional.gob.ec/es/multimedios-legislativos/63464-ley-organica-de-proteccion-de-datos}
+\bibitem{spdp} Superintendencia de Protección de Datos Personales, \emph{Consultas y criterios sobre bases de legitimación de la LOPDP}, 2025--2026. [En línea]. Disponible en: \url{https://spdp.gob.ec/consultas2025/}
+\bibitem{aiact} Parlamento Europeo y Consejo de la Unión Europea, \emph{Reglamento (UE) 2024/1689 por el que se establecen normas armonizadas en materia de inteligencia artificial}, 2024. [En línea]. Disponible en: \url{https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng}
+\bibitem{vogelsang} A. Vogelsang y M. Borg, “Requirements engineering for machine learning: Perspectives from data scientists,” en \emph{2019 IEEE 27th International Requirements Engineering Conference Workshops}, 2019, pp. 245--251, doi: 10.1109/REW.2019.00050.
+\bibitem{pmbok} Project Management Institute, \emph{A Guide to the Project Management Body of Knowledge}, 7.a ed. Newtown Square, PA, EE. UU.: PMI, 2021. ISBN 978-1-62825-664-2.
+\bibitem{guiaPE5} Universidad Técnica Estatal de Quevedo, \emph{Guía ampliada de práctica experimental PE5: Integración, métricas y defensa del Proyecto Integrador de Ingeniería de Requisitos}, 2026, documento académico suministrado en la asignatura.
+\bibitem{sem11} Universidad Técnica Estatal de Quevedo, \emph{Semana 11: Validación de requisitos}, 2026, material de cátedra.
+\bibitem{sem13} Universidad Técnica Estatal de Quevedo, \emph{Semana 13: Herramientas CASE y estándares para IR}, 2026, material de cátedra.
+\end{thebibliography}
+
+\end{document}
