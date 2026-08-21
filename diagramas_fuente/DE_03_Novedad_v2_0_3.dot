@@ -1,0 +1,12 @@
+digraph IncidentState {
+  graph [rankdir=LR, label="Máquina de estados - Novedad", labelloc=t, fontsize=18, fontname="Helvetica-Bold", pad=0.25];
+  node [shape=circle, fontname="Helvetica", fontsize=9, width=1.35, fixedsize=true];
+  edge [fontname="Helvetica", fontsize=8];
+  inicio [shape=point]; p [label="PENDIENTE"]; ep [label="EN\nPROCESO"]; r [label="RESUELTA", shape=doublecircle]; c [label="CANCELADA", shape=doublecircle];
+  inicio -> p [label="crear"];
+  p -> ep [label="tomar / asignar"];
+  ep -> r [label="resolver"];
+  p -> c [label="cancelar / motivo"];
+  ep -> c [label="cancelar / motivo"];
+  ep -> p [label="devolver a pendiente"];
+}
