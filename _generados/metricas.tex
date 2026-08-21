@@ -1,0 +1,45 @@
+
+\subsection{Conteos base y criterio de medición}
+La auditoría compara la línea base de entrada v1.5.8 (25 RF + 15 RNF = 40 requisitos) con la línea base saneada v2.0 (40 RF + 27 RNF = 67 requisitos). Los valores de referencia corresponden a los umbrales pedagógicos de la guía PE5 \cite{guiaPE5}. Para M6, por definición de la propia guía, el ``antes'' corresponde a la primera re-inspección de PE5 sobre el documento recibido y el ``después'' a la re-inspección posterior al saneamiento, porque esta métrica mide defectos residuales y no funcionalidades pendientes.
+
+\begin{table}[H]
+\centering
+\caption{Conteos auditables utilizados en las métricas.}
+\small
+\begin{tabularx}{\textwidth}{|p{4.2cm}|c|c|Y|}
+\hline
+\textbf{Conteo} & \textbf{Antes} & \textbf{Después} & \textbf{Evidencia de conteo}\\\hline
+Requisitos totales & 40 & 67 & ERS v1.5.8 y catálogo v2.0\\\hline
+Requisitos con ID, prioridad, fuente y BDD & 34 & 67 & Catálogos RF/RNF y matriz editable\\\hline
+Casos de uso identificados / especificados & 19 / 19 & 40 / 40 & Especificaciones textuales y cuatro vistas UML\\\hline
+Actores con al menos un RF / actores identificados & 3 / 4 & 5 / 5 & Administrador, Recepción, Instructor, Cliente; luego Superadministrador, Dueño, Recepcionista, Instructor y Cliente\\\hline
+Pares de requisitos analizados / conflictos abiertos & 140 / 8 & 140 / 0 & Registro de conflictos y decisiones\\\hline
+Requisitos con BDD comprobable & 34 & 67 & Columna Criterio BDD de la matriz\\\hline
+RF con cadena adelante completa & 19/25 & 40/40 & Matriz Fuente--RF--CU--Clase--Estado--BDD--CP\\\hline
+RF con fuente identificada & 25/25 & 40/40 & Columna Fuente\\\hline
+Defectos residuales de redacción detectados en primera re-inspección PE5 & 21 & 0 & Registro de saneamiento y control reproducible en \path{04_Auditoria_Metricas/Registro_Reinspeccion_M6.md}\\\hline
+\end{tabularx}
+\end{table}
+
+\subsection{Tabla de auditoría antes/después}
+\scriptsize
+\begin{longtable}{|p{2.2cm}|p{2.5cm}|p{2.5cm}|p{1.9cm}|p{1.5cm}|p{4.1cm}|}
+\caption{Auditoría de métricas de calidad del ERS.}\\
+\hline\textbf{Métrica} & \textbf{Antes} & \textbf{Después} & \textbf{Referencia} & \textbf{Veredicto} & \textbf{Acción aplicada}\\\hline
+\endfirsthead
+\hline\textbf{Métrica} & \textbf{Antes} & \textbf{Después} & \textbf{Referencia} & \textbf{Veredicto} & \textbf{Acción aplicada}\\\hline
+\endhead
+M1a Atributos & $34/40=85,0\%$ & $67/67=100\%$ & $\geq95\%$ & Cumple & Se completaron ID, prioridad, fuente y criterio BDD en los 67 requisitos.\\\hline
+M1b CU especificados & $19/19=100\%$ & $40/40=100\%$ & $100\%$ & Cumple & Se especificaron textualmente CU-01 a CU-40 con actor, precondición y escenario observable.\\\hline
+M1c Cobertura de actores & $3/4=75,0\%$ & $5/5=100\%$ & $100\%$ & Cumple & Se cerró la ausencia de RF de Cliente y se separaron los roles de administración de la línea base final.\\\hline
+M2 Consistencia & $1-8/140=0,943$ & $1-0/140=1,000$ & $\geq0,98$ y 0 abiertos & Cumple & Los ocho conflictos/discrepancias se resolvieron por cambio, delimitación o aclaración documental; las limitaciones de implementación no se cuentan como conflictos.\\\hline
+M3 Verificabilidad & $34/40=85,0\%$ & $67/67=100\%$ & $\geq90\%$ & Cumple & Se sustituyeron BDD genéricos de RF por resultados observables y se conservaron umbral, unidad y método en RNF.\\\hline
+M4 adelante & $19/25=76,0\%$ & $40/40=100\%$ & $\geq90\%$ & Cumple & Cada RF enlaza CU, clase, proceso/estado, BDD y CP.\\\hline
+M4 atrás & $25/25=100\%$ & $40/40=100\%$ & $100\%$ & Cumple & Cada RF conserva una fuente o decisión de diseño explícita.\\\hline
+M5 Modificabilidad & $21/5=4,2$ & $12/5=2,4$ & $\leq3,0$ & Cumple & Se mantuvo la separación modular y se revisaron cinco requisitos representativos en la hoja Modificabilidad.\\\hline
+M6 Corrección & $21/67=0,313$ & $0/67=0,000$ & $\leq0,05$ & Cumple & Se corrigieron los 21 defectos editoriales registrados y se ejecutó el control reproducible de cierre sobre los 67 requisitos; ver el registro de re-inspección M6 del paquete.\\\hline
+\end{longtable}
+\normalsize
+
+\subsection{Interpretación y límites}
+La evidencia reproducible de M6 conserva el SHA-256 de la ERS inspeccionada, cuenta 40 RF y 27 RNF y verifica 40/40 BDD de RF y 27/27 BDD de RNF. El resultado de M6 no significa que el backend, la restauración, la IA o los walkthroughs no técnicos estén ejecutados. Esas condiciones se registran como \emph{limitaciones de validación o implementación}, no como defectos residuales de redacción del ERS. Del mismo modo, el 100\,\% de M3 expresa verificabilidad documental: cada requisito dispone de un criterio reproducible; no equivale a afirmar que todos los casos de prueba hayan sido ejecutados.
