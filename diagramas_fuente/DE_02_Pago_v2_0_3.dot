@@ -1,0 +1,10 @@
+digraph PaymentState {
+  graph [rankdir=LR, label="Máquina de estados - Pago", labelloc=t, fontsize=18, fontname="Helvetica-Bold", pad=0.25];
+  node [shape=circle, fontname="Helvetica", fontsize=10, width=1.35, fixedsize=true];
+  edge [fontname="Helvetica", fontsize=8];
+  inicio [shape=point]; pendiente [label="PENDIENTE"]; confirmado [label="CONFIRMADO", shape=doublecircle]; rechazado [label="RECHAZADO", shape=doublecircle];
+  inicio -> pendiente [label="registrar pago"];
+  pendiente -> confirmado [label="confirmar / auditar"];
+  pendiente -> rechazado [label="rechazar / motivo"];
+  pendiente -> pendiente [label="corregir referencia / auditar"];
+}
