@@ -1,0 +1,43 @@
+digraph DFD1 {
+  graph [rankdir=LR, bgcolor="white", pad=0.25, nodesep=0.35, ranksep=0.55, label="DFD Nivel 1 - Procesos y almacenes de FabroGym (PE5 v2.0.3)", labelloc=t, fontsize=18, fontname="Helvetica-Bold"];
+  node [fontname="Helvetica", fontsize=9, color="#203040"];
+  edge [fontname="Helvetica", fontsize=8, color="#536878", arrowsize=0.65];
+
+  ext [shape=box, label="Actores\nautorizados"];
+  cli [shape=box, label="Cliente"];
+
+  p01 [shape=ellipse, label="P-01\nControlar acceso"];
+  p02 [shape=ellipse, label="P-02\nGestionar clientes"];
+  p03 [shape=ellipse, label="P-03\nGestionar membresías"];
+  p04 [shape=ellipse, label="P-04\nGestionar pagos"];
+  p05 [shape=ellipse, label="P-05\nControlar asistencia"];
+  p06 [shape=ellipse, label="P-06\nGestionar inventario"];
+  p07 [shape=ellipse, label="P-07\nRegistrar ventas"];
+  p08 [shape=ellipse, label="P-08\nConciliar caja"];
+  p09 [shape=ellipse, label="P-09\nGestionar novedades"];
+  p10 [shape=ellipse, label="P-10\nGestionar instructores"];
+  p11 [shape=ellipse, label="P-11\nGestionar rutinas"];
+  p12 [shape=ellipse, label="P-12\nGenerar reportes"];
+  p13 [shape=ellipse, label="P-13\nConfigurar operación"];
+  p14 [shape=ellipse, style="dashed", label="P-14\nRespaldar / recuperar\n(objetivo)"];
+  p15 [shape=ellipse, style="dashed", label="P-15\nAsistir decisiones IA\n(especificado)"];
+
+  d1 [shape=box3d, label="D1 Usuarios / roles"];
+  d2 [shape=box3d, label="D2 Clientes"];
+  d3 [shape=box3d, label="D3 Membresías / planes"];
+  d4 [shape=box3d, label="D4 Pagos / caja"];
+  d5 [shape=box3d, label="D5 Asistencias"];
+  d6 [shape=box3d, label="D6 Productos / stock / ventas"];
+  d7 [shape=box3d, label="D7 Instructores / rutinas"];
+  d8 [shape=box3d, label="D8 Novedades / auditoría"];
+  d9 [shape=box3d, style="dashed", label="D9 Respaldo /\nartefactos IA"];
+
+  ext -> p01; cli -> p01;
+  p01 -> d1 [dir=both]; p02 -> d2 [dir=both]; p03 -> d3 [dir=both]; p04 -> d4 [dir=both];
+  p05 -> d5 [dir=both]; p06 -> d6 [dir=both]; p07 -> d6 [dir=both]; p08 -> d4 [dir=both];
+  p09 -> d8 [dir=both]; p10 -> d7 [dir=both]; p11 -> d7 [dir=both]; p12 -> d2; p12 -> d3; p12 -> d4; p12 -> d5; p12 -> d6; p13 -> d1; p13 -> d3;
+  p14 -> d9 [dir=both, style=dashed]; p15 -> d7 [style=dashed]; p15 -> d9 [style=dashed];
+  ext -> p02; ext -> p03; ext -> p04; ext -> p05; ext -> p06; ext -> p07; ext -> p08; ext -> p09; ext -> p10; ext -> p11; ext -> p12; ext -> p13;
+  cli -> p03; cli -> p04; cli -> p11; cli -> p15 [style=dashed];
+  p02 -> ext; p03 -> cli; p04 -> cli; p11 -> cli; p12 -> ext; p15 -> cli [style=dashed];
+}
