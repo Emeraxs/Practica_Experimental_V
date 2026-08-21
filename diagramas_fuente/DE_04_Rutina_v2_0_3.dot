@@ -1,0 +1,11 @@
+digraph RoutineState {
+  graph [rankdir=LR, label="Máquina de estados - Rutina", labelloc=t, fontsize=18, fontname="Helvetica-Bold", pad=0.25];
+  node [shape=circle, fontname="Helvetica", fontsize=9, width=1.35, fixedsize=true];
+  edge [fontname="Helvetica", fontsize=8];
+  inicio [shape=point]; borrador [label="BORRADOR"]; activa [label="ACTIVA"]; hist [label="HISTÓRICA", shape=doublecircle];
+  inicio -> borrador [label="crear versión"];
+  borrador -> activa [label="asignar / activar"];
+  activa -> hist [label="versionar / sustituir"];
+  hist -> activa [label="restaurar como nueva versión"];
+  activa -> activa [label="seguimiento autorizado"];
+}
