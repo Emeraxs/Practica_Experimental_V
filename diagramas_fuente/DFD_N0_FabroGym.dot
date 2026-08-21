@@ -1,0 +1,14 @@
+digraph DFD0 {
+  graph [rankdir=LR, bgcolor="white", pad=0.3, nodesep=0.7, ranksep=0.9, label="DFD Nivel 0 - Contexto funcional FabroGym (PE5 v2.0.3)", labelloc=t, fontsize=18, fontname="Helvetica-Bold"];
+  node [fontname="Helvetica", fontsize=11, color="#203040"];
+  edge [fontname="Helvetica", fontsize=9, color="#405060", arrowsize=0.8];
+
+  admin [shape=box, label="Personal autorizado\n(Superadministrador / Dueño /\nRecepcionista / Instructor)"];
+  cliente [shape=box, label="Cliente"];
+  sistema [shape=ellipse, style="filled", fillcolor="#EAF2F8", penwidth=1.5, label="P0\nSistema FabroGym"];
+
+  admin -> sistema [label="credenciales; altas/cambios; pagos;\nasistencias; ventas; inventario; rutinas;\nconfiguración y solicitudes de reporte"];
+  sistema -> admin [label="autorización; comprobantes; alertas;\nreportes; estados operativos"];
+  cliente -> sistema [label="credenciales; consultas propias;\nsolicitud de recomendación IA"];
+  sistema -> cliente [label="membresía; pagos; rutina; historial;\nexplicaciones de recomendaciones"];
+}
