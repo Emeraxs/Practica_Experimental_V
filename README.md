@@ -23,6 +23,7 @@
 - `03_Matriz_Trazabilidad/Jira/`: CSV de importación y exportación de FabroGym, configuración reutilizable del importador, capturas, README y registro de importación.
 - `04_Auditoria_Metricas/`: guía de auditoría y ubicación de los conteos verificables.
 - `05_Gestion/`: backlog, retrospectiva, aportes, declaración de uso de IA y documentación de validación no identificable.
+- `06_presentacion`: presentacion pptx.
 - `_generados/`: fragmentos LaTeX cargados por el informe y la ERS.
 - `assets/`: figuras empleadas en los documentos.
 - `diagramas_fuente/`: fuentes LaTeX de los diagramas.
