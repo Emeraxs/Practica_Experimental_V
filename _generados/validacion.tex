@@ -1,0 +1,51 @@
+
+\subsection{Diseño y corpus de validación}
+Se analizaron tres sesiones técnicas independientes, identificadas públicamente como T01, T02 y T03. La matriz suministrada registra 39 fragmentos codificados, 18 hallazgos consolidados, 20 grupos de cambios revisados y ocho riesgos o discrepancias. Para M2 se verificó el cierre documental de las ocho discrepancias: ninguna permanece como contradicción entre requisitos de la línea base final. La validación se trató como walkthrough técnico apoyado en el prototipo V7 y se mantuvo la separación entre hallazgo, decisión y corrección recomendada \cite{sem11}.
+
+\begin{alertbox}
+La evidencia disponible no permite afirmar que la validación integral esté cerrada: no se aportaron tres walkthroughs no técnicos ni member checking. Asimismo, V7 es un prototipo HTML/JavaScript sin backend; respaldo, restauración e IA no se contabilizan como funciones implementadas. Estas limitaciones permanecen explícitas para no transformar ausencia de evidencia en un resultado ficticio.
+\end{alertbox}
+
+\begin{longtable}{|p{1.3cm}|p{4.6cm}|p{2.1cm}|p{7cm}|}
+\caption{Tratamiento de los 18 hallazgos técnicos.}\\\hline
+\textbf{ID} & \textbf{Hallazgo} & \textbf{Prioridad} & \textbf{Tratamiento}\\\hline\endfirsthead
+\hline\textbf{ID} & \textbf{Hallazgo} & \textbf{Prioridad} & \textbf{Tratamiento}\\\hline\endhead
+H01 & Portal del cliente & Alta & Adoptado: RF-MEM-05, RF-PAG-03 y RF-RUT-04 \\ \hline
+H02 & Rutina personalizada y control humano & Alta & Adoptado y trazado en RF-RUT-01/02/04 y RF-IA-RUT-03 \\ \hline
+H03 & IA como recomendador asistivo & Alta & Especificado con control humano y explicación; implementación pendiente \\ \hline
+H04 & Claridad semántica de estados & Alta & Corregido mediante etiquetas contextuales y BDD \\ \hline
+H05 & Navegación y jerarquía visual & Media-Alta & Conservar patrones V7 y verificar en walkthrough \\ \hline
+H06 & Asistencia QR con contingencia manual & Alta & RF-ASI-01 modificado \\ \hline
+H07 & Jerarquía de roles & Alta & RF-AUT-02 modificado a cinco roles \\ \hline
+H08 & Auditoría de operaciones & Alta & RF-AUT-03 ampliado \\ \hline
+H09 & Categorías y proveedores & Media-Alta & RF-INV-04 y RF-INV-05 añadidos \\ \hline
+H10 & IVA configurable & Alta & RF-CFG-01 y RNF-FLE-01 \\ \hline
+H11 & Analítica administrativa & Media & RF-REP-01 limitado a análisis descriptivo \\ \hline
+H12 & Respaldo y recuperación & Alta & RF-BCK-01/02 y RNF-FIA-02; backend pendiente \\ \hline
+H13 & Contacto mínimo & Alta & Teléfono opcional por minimización; discrepancia documentada \\ \hline
+H14 & Formularios y validación & Alta & Criterios BDD y consistencia de formularios \\ \hline
+H15 & Seguridad y transparencia & Media-Alta & Conservar transparencia; recuperación definitiva pendiente \\ \hline
+H16 & Escalabilidad y mantenibilidad & Media-Alta & RNF-MAN-02 y RNF-FLE-01 \\ \hline
+H17 & Pruebas con usuarios no técnicos & Crítica & Tratado como limitación de validación: existe protocolo preparado, pero no se declara sesión ejecutada \\ \hline
+H18 & Clientes no tradicionales y pago flexible & Media & Conservado como decisión pendiente de negocio \\ \hline
+\end{longtable}
+
+\subsection{Conflictos y decisiones}
+\begin{longtable}{|p{1.3cm}|p{4.4cm}|p{2.8cm}|p{7.2cm}|}
+\caption{Conflictos, riesgos y decisión documentada.}\\\hline
+\textbf{ID} & \textbf{Conflicto} & \textbf{Estado} & \textbf{Resolución o limitación}\\\hline\endfirsthead
+\hline\textbf{ID} & \textbf{Conflicto} & \textbf{Estado} & \textbf{Resolución o limitación}\\\hline\endhead
+I-01 & MU-66 vs minimización de datos & Resuelto & Se excluyen peso, grasa y masa corporal reales; solo seguimiento operativo no sensible. \\ \hline
+I-02 & Rol Cliente futuro vs V7 & Resuelto & Se incorpora Cliente con funciones de consulta delimitadas. \\ \hline
+I-03 & Tres roles vs cinco roles & Resuelto & RF-AUT-02 y matriz usan cinco roles. \\ \hline
+I-04 & Validación técnica vs validación completa & Resuelto documentalmente & Se separa el resultado técnico de la limitación no técnica; el protocolo no ejecutado no se presenta como evidencia. \\ \hline
+I-05 & IA requerida vs no implementada & Resuelto documentalmente & La IA queda especificada y trazada como alcance futuro; el prototipo actual no se presenta como implementación del modelo. \\ \hline
+I-06 & Teléfono obligatorio vs opcional & Resuelto & Se mantiene opcional por minimización y se registra la discrepancia. \\ \hline
+I-07 & Prototipo V7 vs MVP terminal & Resuelto documentalmente & V7 se etiqueta como prototipo HTML/JS; API, persistencia, respaldo e IA se mantienen como arquitectura objetivo. \\ \hline
+I-08 & Correlación vs análisis descriptivo & Resuelto & RF-REP-01 usa indicadores descriptivos reproducibles. \\ \hline
+\end{longtable}
+
+
+\subsection{Cierre de conflictos y limitaciones}
+Al cierre de la línea base v2.0 no se mantienen conflictos de requisitos abiertos. Los elementos I-04, I-05 e I-07 se cerraron por delimitación documental: continúan existiendo actividades no ejecutadas o componentes no implementados, pero ya no generan instrucciones contradictorias dentro del ERS. Esta separación permite que M2 mida consistencia del documento y no madurez de implementación.
+
