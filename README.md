@@ -20,9 +20,9 @@
 - `01_Informe_Final/`: informe PE5 en LaTeX y PDF.
 - `02_ERS_Final/`: ERS/SRS final v2.0.3 en LaTeX y PDF.
 - `03_Matriz_Trazabilidad/`: libro Excel con requisitos, trazabilidad, métricas, backlog, hallazgos, retrospectiva y aportes.
+- `03_Matriz_Trazabilidad/Jira/`: CSV de importación y exportación de FabroGym, configuración reutilizable del importador, capturas, README y registro de importación.
 - `04_Auditoria_Metricas/`: guía de auditoría y ubicación de los conteos verificables.
 - `05_Gestion/`: backlog, retrospectiva, aportes, declaración de uso de IA y documentación de validación no identificable.
-- `05_Gestion/Jira/`: CSV de importación FabroGym, configuración reutilizable del importador y guías de mapeo.
 - `_generados/`: fragmentos LaTeX cargados por el informe y la ERS.
 - `assets/`: figuras empleadas en los documentos.
 - `diagramas_fuente/`: fuentes LaTeX de los diagramas.
@@ -85,17 +85,15 @@ Salida esperada:
 
 ## Evidencia Git y línea base final
 
-La evidencia individual se determina con los commits reales, archivos modificados y fechas del historial. No se atribuyen commits antes de que existan.
+La evidencia individual se determina con los commits reales, archivos modificados y fechas del historial.
 
-Al terminar de subir y revisar todos los artefactos, el equipo debe congelar la línea base con una etiqueta Git, por ejemplo:
+Cuando todos los artefactos estén cargados y verificados mediante una clonación limpia, el equipo debe congelar la línea base con una etiqueta Git:
 
 ```bash
 git tag -a pe5-final-v2.0.3 -m "Línea base final PE5 FabroGym"
 git push origin pe5-final-v2.0.3
 ```
 
-El hash del commit apuntado por esa etiqueta es el que debe utilizarse como evidencia final de línea base si el docente solicita el identificador concreto.
-
 ## Uso responsable de IA
 
-La declaración completa, desglosada por secciones, está en `05_Gestion/Declaracion_Uso_IA.md` y en el Anexo E del informe. La IA se utilizó como apoyo de redacción, organización, revisión de consistencia y generación de código/tablas; no se usa como fuente de evidencia empírica ni para inventar pruebas, métricas, entrevistas o commits.
+La declaración completa, desglosada por secciones, está en `05_Gestion/Declaracion_Uso_IA.md` y en el Anexo E del informe.
