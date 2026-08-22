@@ -1,0 +1,105 @@
+2026-08-21 19:34:12,751 INFO - Import started by 7f00e534-5d48-4211-9c9f-27b17a67f96a using com.atlassian.jira.plugins.importer.imports.csv.CsvDataBean
+2026-08-21 19:34:13,152 INFO - ------------------------------
+2026-08-21 19:34:13,152 INFO - Importing: Users
+2026-08-21 19:34:13,152 INFO - ------------------------------
+2026-08-21 19:34:13,152 INFO - Only new items will be imported
+2026-08-21 19:34:13,159 INFO - 0 users associated with import. All of them imported as inactive, this can be changed after import in User Access step.
+2026-08-21 19:34:13,159 INFO - ------------------------------
+2026-08-21 19:34:13,159 INFO - Finished Importing : Users
+2026-08-21 19:34:13,159 INFO - ------------------------------
+2026-08-21 19:34:13,159 INFO - 0 users successfully created.
+2026-08-21 19:34:13,165 INFO - Retrieving projects...
+2026-08-21 19:34:13,200 INFO - Project ExternalProject{id='null', key='FABRO', externalName='null', name='FabroGym — Sistema de gestión administrativa y operativa para gimnasio', type='software', template='null'} exists and found correctly.
+2026-08-21 19:34:13,200 INFO - ------------------------------
+2026-08-21 19:34:13,200 INFO - Importing: Versions
+2026-08-21 19:34:13,200 INFO - ------------------------------
+2026-08-21 19:34:13,200 INFO - Only new items will be imported
+2026-08-21 19:34:13,200 INFO - ------------------------------
+2026-08-21 19:34:13,200 INFO - Finished Importing : Versions
+2026-08-21 19:34:13,200 INFO - ------------------------------
+2026-08-21 19:34:13,201 INFO - ------------------------------
+2026-08-21 19:34:13,201 INFO - Importing: Components
+2026-08-21 19:34:13,201 INFO - ------------------------------
+2026-08-21 19:34:13,201 INFO - Only new items will be imported
+2026-08-21 19:34:13,201 INFO - ------------------------------
+2026-08-21 19:34:13,201 INFO - Finished Importing : Components
+2026-08-21 19:34:13,201 INFO - ------------------------------
+2026-08-21 19:34:13,212 INFO - Retrieving custom fields...
+2026-08-21 19:34:13,225 INFO - ------------------------------
+2026-08-21 19:34:13,225 INFO - Importing: Work Items
+2026-08-21 19:34:13,225 INFO - ------------------------------
+2026-08-21 19:34:13,225 INFO - Only new items will be imported
+2026-08-21 19:34:13,584 INFO - Importing work item: [externalId='1001', summary='FabroGym - Acceso y seguridad']
+2026-08-21 19:34:14,927 INFO - Importing work item: [externalId='1002', summary='FabroGym - Clientes']
+2026-08-21 19:34:15,659 INFO - Importing work item: [externalId='1003', summary='FabroGym - Membresías']
+2026-08-21 19:34:16,360 INFO - Importing work item: [externalId='1004', summary='FabroGym - Pagos']
+2026-08-21 19:34:17,039 INFO - Importing work item: [externalId='1005', summary='FabroGym - Asistencias']
+2026-08-21 19:34:17,713 INFO - Importing work item: [externalId='1006', summary='FabroGym - Inventario']
+2026-08-21 19:34:18,492 INFO - Importing work item: [externalId='1007', summary='FabroGym - Ventas']
+2026-08-21 19:34:19,149 INFO - Importing work item: [externalId='1008', summary='FabroGym - Caja']
+2026-08-21 19:34:19,697 INFO - Importing work item: [externalId='1009', summary='FabroGym - Novedades']
+2026-08-21 19:34:20,484 INFO - Importing work item: [externalId='1010', summary='FabroGym - Instructores']
+2026-08-21 19:34:21,269 INFO - Importing work item: [externalId='1011', summary='FabroGym - Rutinas']
+2026-08-21 19:34:21,962 INFO - Importing work item: [externalId='1012', summary='FabroGym - Reportes']
+2026-08-21 19:34:22,678 INFO - Importing work item: [externalId='1013', summary='FabroGym - Configuración']
+2026-08-21 19:34:23,302 INFO - Importing work item: [externalId='1014', summary='FabroGym - Continuidad']
+2026-08-21 19:34:23,987 INFO - Importing work item: [externalId='1015', summary='FabroGym - Inteligencia artificial']
+2026-08-21 19:34:24,696 INFO - Importing work item: [externalId='2001', summary='[RF-AUT-01] Autenticar usuario']
+2026-08-21 19:34:25,593 INFO - Importing work item: [externalId='2002', summary='[RF-AUT-02] Aplicar permisos por rol']
+2026-08-21 19:34:26,615 INFO - Importing work item: [externalId='2003', summary='[RF-AUT-03] Auditar cambios criticos']
+2026-08-21 19:34:27,645 INFO - Importing work item: [externalId='2004', summary='[RF-CLI-01] Registrar cliente minimo']
+2026-08-21 19:34:28,793 INFO - Importing work item: [externalId='2005', summary='[RF-CLI-02] Buscar y consultar cliente']
+2026-08-21 19:34:29,770 INFO - Importing work item: [externalId='2006', summary='[RF-CLI-03] Actualizar o reactivar sin duplicar']
+2026-08-21 19:34:30,671 INFO - Importing work item: [externalId='2007', summary='[RF-MEM-01] Configurar planes y promociones']
+2026-08-21 19:34:31,585 INFO - Importing work item: [externalId='2008', summary='[RF-MEM-02] Activar o renovar membresia']
+2026-08-21 19:34:32,624 INFO - Importing work item: [externalId='2009', summary='[RF-MEM-03] Consultar vigencia']
+2026-08-21 19:34:33,498 INFO - Importing work item: [externalId='2010', summary='[RF-MEM-04] Alertar vencimientos']
+2026-08-21 19:34:34,528 INFO - Importing work item: [externalId='2011', summary='[RF-PAG-01] Registrar pago y comprobante']
+2026-08-21 19:34:35,622 INFO - Importing work item: [externalId='2012', summary='[RF-PAG-02] Resolver pago pendiente']
+2026-08-21 19:34:36,525 INFO - Importing work item: [externalId='2013', summary='[RF-ASI-01] Registrar asistencia']
+2026-08-21 19:34:37,471 INFO - Importing work item: [externalId='2014', summary='[RF-ASI-02] Consultar asistencia']
+2026-08-21 19:34:38,497 INFO - Importing work item: [externalId='2015', summary='[RF-INV-01] Administrar productos']
+2026-08-21 19:34:39,431 INFO - Importing work item: [externalId='2016', summary='[RF-INV-02] Registrar movimientos de stock']
+2026-08-21 19:34:40,423 INFO - Importing work item: [externalId='2017', summary='[RF-VEN-01] Registrar venta']
+2026-08-21 19:34:41,404 INFO - Importing work item: [externalId='2018', summary='[RF-INV-03] Alertar stock y rotacion']
+2026-08-21 19:34:42,303 INFO - Importing work item: [externalId='2019', summary='[RF-CAJ-01] Cerrar turno y conciliar caja']
+2026-08-21 19:34:43,465 INFO - Importing work item: [externalId='2020', summary='[RF-NOV-01] Gestionar novedades internas']
+2026-08-21 19:34:44,480 INFO - Importing work item: [externalId='2021', summary='[RF-INS-01] Gestionar horario y disponibilidad de instructor']
+2026-08-21 19:34:45,516 INFO - Importing work item: [externalId='2022', summary='[RF-RUT-01] Crear y asignar rutina']
+2026-08-21 19:34:46,453 INFO - Importing work item: [externalId='2023', summary='[RF-RUT-02] Versionar y ajustar rutina']
+2026-08-21 19:34:47,384 INFO - Importing work item: [externalId='2024', summary='[RF-RUT-03] Registrar seguimiento operativo']
+2026-08-21 19:34:48,394 INFO - Importing work item: [externalId='2025', summary='[RF-REP-01] Consultar panel y reportes']
+2026-08-21 19:34:49,384 INFO - Importing work item: [externalId='2026', summary='[RF-MEM-05] Consultar mi membresía']
+2026-08-21 19:34:50,318 INFO - Importing work item: [externalId='2027', summary='[RF-PAG-03] Consultar mis pagos']
+2026-08-21 19:34:51,172 INFO - Importing work item: [externalId='2028', summary='[RF-RUT-04] Consultar mi rutina e historial']
+2026-08-21 19:34:52,033 INFO - Importing work item: [externalId='2029', summary='[RF-INV-04] Gestionar categorías de productos']
+2026-08-21 19:34:52,918 INFO - Importing work item: [externalId='2030', summary='[RF-INV-05] Gestionar proveedores']
+2026-08-21 19:34:53,887 INFO - Importing work item: [externalId='2031', summary='[RF-CFG-01] Configurar tratamiento de IVA']
+2026-08-21 19:34:54,900 INFO - Importing work item: [externalId='2032', summary='[RF-BCK-01] Generar respaldo']
+2026-08-21 19:34:55,880 INFO - Importing work item: [externalId='2033', summary='[RF-BCK-02] Restaurar respaldo']
+2026-08-21 19:34:56,911 INFO - Importing work item: [externalId='2034', summary='[RF-CFG-02] Configurar horario de atención']
+2026-08-21 19:34:57,853 INFO - Importing work item: [externalId='2035', summary='[RF-IA-RUT-01] Generar recomendación de rutina']
+2026-08-21 19:34:58,818 INFO - Importing work item: [externalId='2036', summary='[RF-IA-RUT-02] Aceptar, rechazar o solicitar alternativa']
+2026-08-21 19:34:59,662 INFO - Importing work item: [externalId='2037', summary='[RF-IA-RUT-03] Revisar recomendación de rutina']
+2026-08-21 19:35:00,558 INFO - Importing work item: [externalId='2038', summary='[RF-IA-ABA-01] Calcular riesgo de inactividad']
+2026-08-21 19:35:01,574 INFO - Importing work item: [externalId='2039', summary='[RF-IA-ABA-02] Mostrar alertas de riesgo']
+2026-08-21 19:35:02,571 INFO - Importing work item: [externalId='2040', summary='[RF-IA-ABA-03] Registrar seguimiento de alerta']
+2026-08-21 19:35:03,648 INFO - 55 work items successfully created
+2026-08-21 19:35:03,648 INFO - 0 out of 55 work items successfully updated
+2026-08-21 19:35:03,655 INFO - ------------------------------
+2026-08-21 19:35:03,655 INFO - Finished Importing : Work Items
+2026-08-21 19:35:03,656 INFO - ------------------------------
+2026-08-21 19:35:03,703 INFO - ------------------------------
+2026-08-21 19:35:03,703 INFO - Importing: Work item 
+2026-08-21 19:35:03,703 INFO - ------------------------------
+2026-08-21 19:35:03,703 INFO - Only new items will be imported
+2026-08-21 19:35:03,710 INFO - ------------------------------
+2026-08-21 19:35:03,710 INFO - Finished Importing : Work item 
+2026-08-21 19:35:03,710 INFO - ------------------------------
+2026-08-21 19:35:03,711 INFO - ------------------------------
+2026-08-21 19:35:03,711 INFO - Importing: Work item remote links
+2026-08-21 19:35:03,711 INFO - ------------------------------
+2026-08-21 19:35:03,711 INFO - Only new items will be imported
+2026-08-21 19:35:03,719 INFO - ------------------------------
+2026-08-21 19:35:03,719 INFO - Finished Importing : Work item remote links
+2026-08-21 19:35:03,719 INFO - ------------------------------
