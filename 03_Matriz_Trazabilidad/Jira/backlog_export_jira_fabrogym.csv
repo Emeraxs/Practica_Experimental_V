@@ -1,0 +1,776 @@
+﻿Resumen,Clave de incidencia,ID de la incidencia,Tipo de Incidencia,Estado,Clave del proyecto,Nombre del proyecto,Tipo de proyecto,Responsable del proyecto,ID del responsable del proyecto,Descripción del proyecto,Prioridad,Resolución,Persona asignada,ID de la persona asignada,Informador,ID del informador,Creador,ID del creador,Creada,Actualizada,Vista por Última Vez,Resuelta,Fecha de vencimiento,Votos,Etiquetas,Descripción,Entorno,Interesados,ID de los interesados,Estimación original,Trabajo restante estimado,Tiempo Trabajado,Relación de trabajo,Σ Estimación original,Σ Trabajo restante estimado,Σ Tiempo empleado,Nivel de Seguridad,Campo personalizado (Actual end),Campo personalizado (Actual start),Campo personalizado (Aprobaciones),Campo personalizado (Change reason),Campo personalizado (Change risk),Campo personalizado (Change type),Campo personalizado (Clasificación),Campo personalizado (Color de la incidencia),Campo personalizado (Epic Color),Campo personalizado (Estado de epic),Campo personalizado (Estado de verificación),Campo personalizado (External issue ID),Campo personalizado (Fecha de inicio),Campo personalizado (Formularios abiertos),Campo personalizado (Formularios bloqueados),Campo personalizado (Formularios enviados),Campo personalizado (Fuente del requisito),Campo personalizado (Impact),Campo personalizado (Metas),Campo personalizado (Nombre de epic),Campo personalizado (Prioridad MoSCoW),Campo personalizado (Project overview key),Campo personalizado (Project overview status),Campo personalizado (Request Type),Campo personalizado (Request participants),Campo personalizado (Sentiment),Campo personalizado (Story Points),Campo personalizado (Story point estimate),Campo personalizado (Target end),Campo personalizado (Target start),Campo personalizado (Team),Campo personalizado (Total de formularios),Campo personalizado (Vulnerabilidad),Campo personalizado (Work item created forms),Campo personalizado ([CHART] Date of First Response),Campo personalizado ([CHART] Time in Status),Campo personalizado (development),Campo personalizado (Áreas de enfoque),Categoría de estado,Categoría de estado cambiada,Principal,Clave principal,Parent summary
+FabroGym - Acceso y seguridad,FABRO-1,10179,Epic,Por hacer,FABRO,FabroGym — Sistema de gestión administrativa y operativa para gimnasio,software,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,,,,,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,21/ago/26 2:34 PM,21/ago/26 2:34 PM,,,,0,fabrogym-pe5,Épica del PFC FabroGym para el módulo «Acceso y seguridad». Agrupa 3 requisito(s) funcional(es) trazados en la ERS/SRS PE5 v2.0.3.,,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,0|i00147:,,,,,1001,,,,,,,,,,,,,,,,,,,,,,,,,,,Por hacer,21/ago/26 2:34 PM,,,
+FabroGym - Clientes,FABRO-2,10180,Epic,Por hacer,FABRO,FabroGym — Sistema de gestión administrativa y operativa para gimnasio,software,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,,,,,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,21/ago/26 2:34 PM,21/ago/26 2:34 PM,,,,0,fabrogym-pe5,Épica del PFC FabroGym para el módulo «Clientes». Agrupa 3 requisito(s) funcional(es) trazados en la ERS/SRS PE5 v2.0.3.,,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,0|i0014f:,,,,,1002,,,,,,,,,,,,,,,,,,,,,,,,,,,Por hacer,21/ago/26 2:34 PM,,,
+FabroGym - Membresías,FABRO-3,10181,Epic,Por hacer,FABRO,FabroGym — Sistema de gestión administrativa y operativa para gimnasio,software,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,,,,,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,21/ago/26 2:34 PM,21/ago/26 2:34 PM,,,,0,fabrogym-pe5,Épica del PFC FabroGym para el módulo «Membresías». Agrupa 5 requisito(s) funcional(es) trazados en la ERS/SRS PE5 v2.0.3.,,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,0|i0014n:,,,,,1003,,,,,,,,,,,,,,,,,,,,,,,,,,,Por hacer,21/ago/26 2:34 PM,,,
+FabroGym - Pagos,FABRO-4,10182,Epic,Por hacer,FABRO,FabroGym — Sistema de gestión administrativa y operativa para gimnasio,software,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,,,,,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,21/ago/26 2:34 PM,21/ago/26 2:34 PM,,,,0,fabrogym-pe5,Épica del PFC FabroGym para el módulo «Pagos». Agrupa 3 requisito(s) funcional(es) trazados en la ERS/SRS PE5 v2.0.3.,,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,0|i0014v:,,,,,1004,,,,,,,,,,,,,,,,,,,,,,,,,,,Por hacer,21/ago/26 2:34 PM,,,
+FabroGym - Asistencias,FABRO-5,10183,Epic,Por hacer,FABRO,FabroGym — Sistema de gestión administrativa y operativa para gimnasio,software,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,,,,,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,21/ago/26 2:34 PM,21/ago/26 2:34 PM,,,,0,fabrogym-pe5,Épica del PFC FabroGym para el módulo «Asistencias». Agrupa 2 requisito(s) funcional(es) trazados en la ERS/SRS PE5 v2.0.3.,,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,0|i00153:,,,,,1005,,,,,,,,,,,,,,,,,,,,,,,,,,,Por hacer,21/ago/26 2:34 PM,,,
+FabroGym - Inventario,FABRO-6,10184,Epic,Por hacer,FABRO,FabroGym — Sistema de gestión administrativa y operativa para gimnasio,software,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,,,,,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,21/ago/26 2:34 PM,21/ago/26 2:34 PM,,,,0,fabrogym-pe5,Épica del PFC FabroGym para el módulo «Inventario». Agrupa 5 requisito(s) funcional(es) trazados en la ERS/SRS PE5 v2.0.3.,,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,0|i0015b:,,,,,1006,,,,,,,,,,,,,,,,,,,,,,,,,,,Por hacer,21/ago/26 2:34 PM,,,
+FabroGym - Ventas,FABRO-7,10185,Epic,Por hacer,FABRO,FabroGym — Sistema de gestión administrativa y operativa para gimnasio,software,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,,,,,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,21/ago/26 2:34 PM,21/ago/26 2:34 PM,,,,0,fabrogym-pe5,Épica del PFC FabroGym para el módulo «Ventas». Agrupa 1 requisito(s) funcional(es) trazados en la ERS/SRS PE5 v2.0.3.,,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,0|i0015j:,,,,,1007,,,,,,,,,,,,,,,,,,,,,,,,,,,Por hacer,21/ago/26 2:34 PM,,,
+FabroGym - Caja,FABRO-8,10186,Epic,Por hacer,FABRO,FabroGym — Sistema de gestión administrativa y operativa para gimnasio,software,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,,,,,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,21/ago/26 2:34 PM,21/ago/26 2:34 PM,,,,0,fabrogym-pe5,Épica del PFC FabroGym para el módulo «Caja». Agrupa 1 requisito(s) funcional(es) trazados en la ERS/SRS PE5 v2.0.3.,,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,0|i0015r:,,,,,1008,,,,,,,,,,,,,,,,,,,,,,,,,,,Por hacer,21/ago/26 2:34 PM,,,
+FabroGym - Novedades,FABRO-9,10187,Epic,Por hacer,FABRO,FabroGym — Sistema de gestión administrativa y operativa para gimnasio,software,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,,,,,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,21/ago/26 2:34 PM,21/ago/26 2:34 PM,,,,0,fabrogym-pe5,Épica del PFC FabroGym para el módulo «Novedades». Agrupa 1 requisito(s) funcional(es) trazados en la ERS/SRS PE5 v2.0.3.,,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,0|i0015z:,,,,,1009,,,,,,,,,,,,,,,,,,,,,,,,,,,Por hacer,21/ago/26 2:34 PM,,,
+FabroGym - Instructores,FABRO-10,10188,Epic,Por hacer,FABRO,FabroGym — Sistema de gestión administrativa y operativa para gimnasio,software,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,,,,,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,21/ago/26 2:34 PM,21/ago/26 2:34 PM,,,,0,fabrogym-pe5,Épica del PFC FabroGym para el módulo «Instructores». Agrupa 1 requisito(s) funcional(es) trazados en la ERS/SRS PE5 v2.0.3.,,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,0|i00167:,,,,,1010,,,,,,,,,,,,,,,,,,,,,,,,,,,Por hacer,21/ago/26 2:34 PM,,,
+FabroGym - Rutinas,FABRO-11,10189,Epic,Por hacer,FABRO,FabroGym — Sistema de gestión administrativa y operativa para gimnasio,software,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,,,,,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,21/ago/26 2:34 PM,21/ago/26 2:34 PM,,,,0,fabrogym-pe5,Épica del PFC FabroGym para el módulo «Rutinas». Agrupa 4 requisito(s) funcional(es) trazados en la ERS/SRS PE5 v2.0.3.,,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,0|i0016f:,,,,,1011,,,,,,,,,,,,,,,,,,,,,,,,,,,Por hacer,21/ago/26 2:34 PM,,,
+FabroGym - Reportes,FABRO-12,10190,Epic,Por hacer,FABRO,FabroGym — Sistema de gestión administrativa y operativa para gimnasio,software,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,,,,,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,21/ago/26 2:34 PM,21/ago/26 2:34 PM,,,,0,fabrogym-pe5,Épica del PFC FabroGym para el módulo «Reportes». Agrupa 1 requisito(s) funcional(es) trazados en la ERS/SRS PE5 v2.0.3.,,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,0|i0016n:,,,,,1012,,,,,,,,,,,,,,,,,,,,,,,,,,,Por hacer,21/ago/26 2:34 PM,,,
+FabroGym - Configuración,FABRO-13,10191,Epic,Por hacer,FABRO,FabroGym — Sistema de gestión administrativa y operativa para gimnasio,software,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,,,,,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,21/ago/26 2:34 PM,21/ago/26 2:34 PM,,,,0,fabrogym-pe5,Épica del PFC FabroGym para el módulo «Configuración». Agrupa 2 requisito(s) funcional(es) trazados en la ERS/SRS PE5 v2.0.3.,,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,0|i0016v:,,,,,1013,,,,,,,,,,,,,,,,,,,,,,,,,,,Por hacer,21/ago/26 2:34 PM,,,
+FabroGym - Continuidad,FABRO-14,10192,Epic,Por hacer,FABRO,FabroGym — Sistema de gestión administrativa y operativa para gimnasio,software,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,,,,,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,21/ago/26 2:34 PM,21/ago/26 2:34 PM,,,,0,fabrogym-pe5,Épica del PFC FabroGym para el módulo «Continuidad». Agrupa 2 requisito(s) funcional(es) trazados en la ERS/SRS PE5 v2.0.3.,,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,0|i00173:,,,,,1014,,,,,,,,,,,,,,,,,,,,,,,,,,,Por hacer,21/ago/26 2:34 PM,,,
+FabroGym - Inteligencia artificial,FABRO-15,10193,Epic,Por hacer,FABRO,FabroGym — Sistema de gestión administrativa y operativa para gimnasio,software,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,,,,,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,21/ago/26 2:34 PM,21/ago/26 2:34 PM,,,,0,fabrogym-pe5,Épica del PFC FabroGym para el módulo «Inteligencia artificial». Agrupa 6 requisito(s) funcional(es) trazados en la ERS/SRS PE5 v2.0.3.,,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,0|i0017b:,,,,,1015,,,,,,,,,,,,,,,,,,,,,,,,,,,Por hacer,21/ago/26 2:34 PM,,,
+[RF-AUT-01] Autenticar usuario,FABRO-16,10194,Historia,Por hacer,FABRO,FabroGym — Sistema de gestión administrativa y operativa para gimnasio,software,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,High,,,,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,21/ago/26 2:34 PM,21/ago/26 2:34 PM,,,,0,fabrogym-pe5,"RF: RF-AUT-01
+
+Historia de usuario:
+Como Personal autorizado, quiero autenticar usuario para proteger las operaciones y conservar trazabilidad.
+
+Enunciado verificable:
+El sistema deberá permitir iniciar y cerrar sesión mediante credenciales individuales no biométricas.
+
+Criterio de aceptación (BDD):
+Dado un usuario con credenciales válidas, cuando inicie sesión, entonces el sistema deberá autenticarlo y habilitar únicamente las opciones permitidas para su rol; cuando cierre sesión, deberá invalidar la sesión activa.
+
+Trazabilidad:
+- Fuente: EV-ENTR02-07
+- Caso de uso: CU-01
+- Caso de prueba: CP-01
+- Componente: Acceso y seguridad
+- Estado de traza: Completa
+- Estado en ERS: Aprobado en baseline v2.0
+- Prioridad MoSCoW: Must",,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,0|i0017j:,,,,,2001,,,,,,,,,,,,,,,,,,,,,,,,,,,Por hacer,21/ago/26 2:34 PM,10179,FABRO-1,FabroGym - Acceso y seguridad
+[RF-AUT-02] Aplicar permisos por rol,FABRO-17,10195,Historia,Por hacer,FABRO,FabroGym — Sistema de gestión administrativa y operativa para gimnasio,software,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,High,,,,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,21/ago/26 2:34 PM,21/ago/26 2:34 PM,,,,0,fabrogym-pe5,"RF: RF-AUT-02
+
+Historia de usuario:
+Como Administrador, quiero aplicar permisos por rol para proteger las operaciones y conservar trazabilidad.
+
+Enunciado verificable:
+El sistema deberá autorizar cada operación según los roles Superadministrador, Dueño, Recepcionista, Instructor y Cliente, y deberá denegar por defecto toda operación no asignada.
+
+Criterio de aceptación (BDD):
+Dado un usuario autenticado con un rol definido, cuando intente ejecutar una operación, entonces el sistema deberá permitirla solo si el permiso está asignado a ese rol y deberá denegarla en caso contrario.
+
+Trazabilidad:
+- Fuente: EV-ENTR02-07;EV-ENTR03-06;EV-ENTR08-04
+- Caso de uso: CU-02
+- Caso de prueba: CP-02
+- Componente: Acceso y seguridad
+- Estado de traza: Completa
+- Estado en ERS: Aprobado en baseline v2.0
+- Prioridad MoSCoW: Must",,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,0|i0017r:,,,,,2002,,,,,,,,,,,,,,,,,,,,,,,,,,,Por hacer,21/ago/26 2:34 PM,10179,FABRO-1,FabroGym - Acceso y seguridad
+[RF-AUT-03] Auditar cambios criticos,FABRO-18,10196,Historia,Por hacer,FABRO,FabroGym — Sistema de gestión administrativa y operativa para gimnasio,software,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,Medium,,,,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,21/ago/26 2:34 PM,21/ago/26 2:34 PM,,,,0,fabrogym-pe5,"RF: RF-AUT-03
+
+Historia de usuario:
+Como Administrador, quiero auditar cambios criticos para proteger las operaciones y conservar trazabilidad.
+
+Enunciado verificable:
+El sistema deberá registrar eventos de auditoría para cambios críticos en pagos, ventas, inventario, membresías, precios y permisos, incluyendo actor, fecha, acción, valor anterior y valor nuevo.
+
+Criterio de aceptación (BDD):
+Dado un cambio crítico confirmado, cuando el sistema lo registre, entonces deberá conservar en auditoría el actor, fecha, acción, valor anterior y valor nuevo asociados al cambio.
+
+Trazabilidad:
+- Fuente: EV-ENTR02-04;EV-ENTR02-07;EV-ENTR03-06
+- Caso de uso: CU-20
+- Caso de prueba: CP-20
+- Componente: Acceso y seguridad
+- Estado de traza: Completa
+- Estado en ERS: Aprobado en baseline v2.0
+- Prioridad MoSCoW: Should",,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,0|i0017z:,,,,,2003,,,,,,,,,,,,,,,,,,,,,,,,,,,Por hacer,21/ago/26 2:34 PM,10179,FABRO-1,FabroGym - Acceso y seguridad
+[RF-CLI-01] Registrar cliente minimo,FABRO-19,10197,Historia,Por hacer,FABRO,FabroGym — Sistema de gestión administrativa y operativa para gimnasio,software,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,High,,,,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,21/ago/26 2:34 PM,21/ago/26 2:34 PM,,,,0,fabrogym-pe5,"RF: RF-CLI-01
+
+Historia de usuario:
+Como Recepcion, quiero registrar cliente minimo para mantener registros únicos y consultables.
+
+Enunciado verificable:
+El sistema deberá registrar un cliente con código interno, nombre de uso y un medio de contacto, sin recopilar datos de salud, biometría, dirección domiciliaria ni imagen corporal.
+
+Criterio de aceptación (BDD):
+Dado un formulario con código interno, nombre de uso y al menos un medio de contacto válido, cuando Recepción confirme el registro, entonces el sistema deberá crear un único cliente y no deberá solicitar datos de salud, biometría, dirección domiciliaria ni imagen corporal.
+
+Trazabilidad:
+- Fuente: EV-ENTR01-02;EV-ENTR02-02;EV-ENTR03-02;EV-ENTR08-01
+- Caso de uso: CU-03
+- Caso de prueba: CP-03
+- Componente: Clientes
+- Estado de traza: Completa
+- Estado en ERS: Aprobado en baseline v2.0
+- Prioridad MoSCoW: Must",,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,0|i00187:,,,,,2004,,,,,,,,,,,,,,,,,,,,,,,,,,,Por hacer,21/ago/26 2:34 PM,10180,FABRO-2,FabroGym - Clientes
+[RF-CLI-02] Buscar y consultar cliente,FABRO-20,10198,Historia,Por hacer,FABRO,FabroGym — Sistema de gestión administrativa y operativa para gimnasio,software,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,High,,,,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,21/ago/26 2:34 PM,21/ago/26 2:34 PM,,,,0,fabrogym-pe5,"RF: RF-CLI-02
+
+Historia de usuario:
+Como Recepcion, quiero buscar y consultar cliente para mantener registros únicos y consultables.
+
+Enunciado verificable:
+El sistema deberá buscar clientes por código, nombre normalizado o contacto y deberá mostrar membresía, último pago, asistencia y novedades de acuerdo con los permisos del usuario.
+
+Criterio de aceptación (BDD):
+Dado un criterio de búsqueda válido, cuando Recepción consulte un cliente, entonces el sistema deberá devolver las coincidencias y mostrar únicamente membresía, último pago, asistencia y novedades autorizadas por el rol.
+
+Trazabilidad:
+- Fuente: EV-ENTR02-03;EV-ENTR02-08;EV-ENTR08-05
+- Caso de uso: CU-04
+- Caso de prueba: CP-04
+- Componente: Clientes
+- Estado de traza: Completa
+- Estado en ERS: Aprobado en baseline v2.0
+- Prioridad MoSCoW: Must",,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,0|i0018f:,,,,,2005,,,,,,,,,,,,,,,,,,,,,,,,,,,Por hacer,21/ago/26 2:34 PM,10180,FABRO-2,FabroGym - Clientes
+[RF-CLI-03] Actualizar o reactivar sin duplicar,FABRO-21,10199,Historia,Por hacer,FABRO,FabroGym — Sistema de gestión administrativa y operativa para gimnasio,software,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,High,,,,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,21/ago/26 2:34 PM,21/ago/26 2:34 PM,,,,0,fabrogym-pe5,"RF: RF-CLI-03
+
+Historia de usuario:
+Como Recepcion, quiero actualizar o reactivar sin duplicar para mantener registros únicos y consultables.
+
+Enunciado verificable:
+El sistema deberá actualizar o reactivar un registro existente y deberá advertir coincidencias antes de crear un cliente nuevo.
+
+Criterio de aceptación (BDD):
+Dado que existe un cliente coincidente por código o contacto, cuando Recepción intente registrar o reactivar el perfil, entonces el sistema deberá advertir la coincidencia y permitir actualizar o reactivar el registro existente sin crear un duplicado.
+
+Trazabilidad:
+- Fuente: EV-ENTR02-02;EV-ENTR03-02;EV-ENTR04-01;EV-ENTR05-02
+- Caso de uso: CU-05
+- Caso de prueba: CP-05
+- Componente: Clientes
+- Estado de traza: Completa
+- Estado en ERS: Aprobado en baseline v2.0
+- Prioridad MoSCoW: Must",,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,0|i0018n:,,,,,2006,,,,,,,,,,,,,,,,,,,,,,,,,,,Por hacer,21/ago/26 2:34 PM,10180,FABRO-2,FabroGym - Clientes
+[RF-MEM-01] Configurar planes y promociones,FABRO-22,10200,Historia,Por hacer,FABRO,FabroGym — Sistema de gestión administrativa y operativa para gimnasio,software,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,High,,,,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,21/ago/26 2:34 PM,21/ago/26 2:34 PM,,,,0,fabrogym-pe5,"RF: RF-MEM-01
+
+Historia de usuario:
+Como Administrador, quiero configurar planes y promociones para controlar la vigencia del servicio.
+
+Enunciado verificable:
+El sistema deberá administrar el nombre, duración, precio, vigencia y estado de los planes y promociones.
+
+Criterio de aceptación (BDD):
+Dado un usuario autorizado y los datos obligatorios de un plan o promoción, cuando guarde la configuración, entonces el sistema deberá conservar nombre, duración, precio, vigencia y estado y deberá mostrar el registro actualizado.
+
+Trazabilidad:
+- Fuente: EV-ENTR02-01;EV-ENTR04-01
+- Caso de uso: CU-06
+- Caso de prueba: CP-06
+- Componente: Membresías
+- Estado de traza: Completa
+- Estado en ERS: Aprobado en baseline v2.0
+- Prioridad MoSCoW: Must",,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,0|i0018v:,,,,,2007,,,,,,,,,,,,,,,,,,,,,,,,,,,Por hacer,21/ago/26 2:34 PM,10181,FABRO-3,FabroGym - Membresías
+[RF-MEM-02] Activar o renovar membresia,FABRO-23,10201,Historia,Por hacer,FABRO,FabroGym — Sistema de gestión administrativa y operativa para gimnasio,software,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,High,,,,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,21/ago/26 2:34 PM,21/ago/26 2:34 PM,,,,0,fabrogym-pe5,"RF: RF-MEM-02
+
+Historia de usuario:
+Como Recepcion, quiero activar o renovar membresia para controlar la vigencia del servicio.
+
+Enunciado verificable:
+El sistema deberá activar o renovar una membresía calculando las fechas de inicio y vencimiento a partir de un plan vigente y un pago confirmado.
+
+Criterio de aceptación (BDD):
+Dado un plan vigente y un pago confirmado, cuando Recepción active o renueve la membresía, entonces el sistema deberá calcular y guardar las fechas de inicio y vencimiento según la duración del plan.
+
+Trazabilidad:
+- Fuente: EV-ENTR01-02;EV-ENTR02-04;EV-ENTR03-01;EV-ENTR04-03
+- Caso de uso: CU-07
+- Caso de prueba: CP-07
+- Componente: Membresías
+- Estado de traza: Completa
+- Estado en ERS: Aprobado en baseline v2.0
+- Prioridad MoSCoW: Must",,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,0|i00193:,,,,,2008,,,,,,,,,,,,,,,,,,,,,,,,,,,Por hacer,21/ago/26 2:34 PM,10181,FABRO-3,FabroGym - Membresías
+[RF-MEM-03] Consultar vigencia,FABRO-24,10202,Historia,Por hacer,FABRO,FabroGym — Sistema de gestión administrativa y operativa para gimnasio,software,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,High,,,,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,21/ago/26 2:34 PM,21/ago/26 2:34 PM,,,,0,fabrogym-pe5,"RF: RF-MEM-03
+
+Historia de usuario:
+Como Personal autorizado, quiero consultar vigencia para controlar la vigencia del servicio.
+
+Enunciado verificable:
+El sistema deberá mostrar el estado, plan, fecha de inicio y fecha de vencimiento de la membresía.
+
+Criterio de aceptación (BDD):
+Dado un cliente con membresía registrada, cuando un usuario autorizado consulte su vigencia, entonces el sistema deberá mostrar estado, plan, fecha de inicio y fecha de vencimiento de la membresía seleccionada.
+
+Trazabilidad:
+- Fuente: EV-ENTR01-03;EV-ENTR02-03;EV-ENTR03-03;EV-ENTR08-02
+- Caso de uso: CU-08
+- Caso de prueba: CP-08
+- Componente: Membresías
+- Estado de traza: Completa
+- Estado en ERS: Aprobado en baseline v2.0
+- Prioridad MoSCoW: Must",,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,0|i0019b:,,,,,2009,,,,,,,,,,,,,,,,,,,,,,,,,,,Por hacer,21/ago/26 2:34 PM,10181,FABRO-3,FabroGym - Membresías
+[RF-MEM-04] Alertar vencimientos,FABRO-25,10203,Historia,Por hacer,FABRO,FabroGym — Sistema de gestión administrativa y operativa para gimnasio,software,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,High,,,,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,21/ago/26 2:34 PM,21/ago/26 2:34 PM,,,,0,fabrogym-pe5,"RF: RF-MEM-04
+
+Historia de usuario:
+Como Recepcion, quiero alertar vencimientos para controlar la vigencia del servicio.
+
+Enunciado verificable:
+El sistema deberá listar diariamente las membresías que vencen en los próximos tres días y las membresías vencidas, sin enviar mensajes externos automáticamente.
+
+Criterio de aceptación (BDD):
+Dado que existen membresías próximas a vencer o vencidas, cuando se ejecute la consulta diaria, entonces el sistema deberá separar las que vencen dentro de tres días de las ya vencidas y no deberá enviar mensajes externos de forma automática.
+
+Trazabilidad:
+- Fuente: EV-ENTR01-03;EV-ENTR05-02;EV-ENTR07-02
+- Caso de uso: CU-09
+- Caso de prueba: CP-09
+- Componente: Membresías
+- Estado de traza: Completa
+- Estado en ERS: Aprobado en baseline v2.0
+- Prioridad MoSCoW: Must",,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,0|i0019j:,,,,,2010,,,,,,,,,,,,,,,,,,,,,,,,,,,Por hacer,21/ago/26 2:34 PM,10181,FABRO-3,FabroGym - Membresías
+[RF-PAG-01] Registrar pago y comprobante,FABRO-26,10204,Historia,Por hacer,FABRO,FabroGym — Sistema de gestión administrativa y operativa para gimnasio,software,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,High,,,,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,21/ago/26 2:34 PM,21/ago/26 2:34 PM,,,,0,fabrogym-pe5,"RF: RF-PAG-01
+
+Historia de usuario:
+Como Recepcion, quiero registrar pago y comprobante para mantener pagos verificables.
+
+Enunciado verificable:
+El sistema deberá registrar monto, concepto, medio, referencia y fecha de un pago, y deberá generar un comprobante interno.
+
+Criterio de aceptación (BDD):
+Dado un pago con monto, concepto, medio, referencia y fecha válidos, cuando Recepción confirme el registro, entonces el sistema deberá guardar el pago y generar un comprobante interno vinculado al cliente.
+
+Trazabilidad:
+- Fuente: EV-ENTR01-02;EV-ENTR02-04;EV-ENTR03-04;EV-ENTR07-02;EV-ENTR08-03
+- Caso de uso: CU-10
+- Caso de prueba: CP-10
+- Componente: Pagos
+- Estado de traza: Completa
+- Estado en ERS: Aprobado en baseline v2.0
+- Prioridad MoSCoW: Must",,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,0|i0019r:,,,,,2011,,,,,,,,,,,,,,,,,,,,,,,,,,,Por hacer,21/ago/26 2:34 PM,10182,FABRO-4,FabroGym - Pagos
+[RF-PAG-02] Resolver pago pendiente,FABRO-27,10205,Historia,Por hacer,FABRO,FabroGym — Sistema de gestión administrativa y operativa para gimnasio,software,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,Medium,,,,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,21/ago/26 2:34 PM,21/ago/26 2:34 PM,,,,0,fabrogym-pe5,"RF: RF-PAG-02
+
+Historia de usuario:
+Como Administrador, quiero resolver pago pendiente para mantener pagos verificables.
+
+Enunciado verificable:
+El sistema deberá permitir confirmar, rechazar o corregir un pago pendiente, conservando el motivo y el registro de auditoría.
+
+Criterio de aceptación (BDD):
+Dado un pago con estado pendiente, cuando un Administrador lo confirme, rechace o corrija, entonces el sistema deberá actualizar el estado y conservar el motivo y la evidencia de auditoría de la decisión.
+
+Trazabilidad:
+- Fuente: EV-ENTR02-04;EV-ENTR03-04;EV-ENTR07-07
+- Caso de uso: CU-21
+- Caso de prueba: CP-21
+- Componente: Pagos
+- Estado de traza: Completa
+- Estado en ERS: Aprobado en baseline v2.0
+- Prioridad MoSCoW: Should",,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,0|i0019z:,,,,,2012,,,,,,,,,,,,,,,,,,,,,,,,,,,Por hacer,21/ago/26 2:34 PM,10182,FABRO-4,FabroGym - Pagos
+[RF-ASI-01] Registrar asistencia,FABRO-28,10206,Historia,Por hacer,FABRO,FabroGym — Sistema de gestión administrativa y operativa para gimnasio,software,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,High,,,,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,21/ago/26 2:34 PM,21/ago/26 2:34 PM,,,,0,fabrogym-pe5,"RF: RF-ASI-01
+
+Historia de usuario:
+Como Recepcion, quiero registrar asistencia para registrar el uso del gimnasio.
+
+Enunciado verificable:
+El sistema deberá registrar asistencia mediante código QR como flujo normal y deberá disponer de registro manual como contingencia autorizada, conservando método, responsable, fecha y motivo.
+
+Criterio de aceptación (BDD):
+Dado un cliente identificado, cuando Recepción registre la asistencia por QR, entonces el sistema deberá guardar fecha, hora y método QR; si se utiliza contingencia manual, deberá exigir responsable y motivo.
+
+Trazabilidad:
+- Fuente: EV-ENTR02-03;EV-ENTR03-03;EV-ENTR04-02;EV-ENTR07-07;EV-ENTR08-02
+- Caso de uso: CU-11
+- Caso de prueba: CP-11
+- Componente: Asistencias
+- Estado de traza: Completa
+- Estado en ERS: Aprobado en baseline v2.0
+- Prioridad MoSCoW: Must",,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,0|i001a7:,,,,,2013,,,,,,,,,,,,,,,,,,,,,,,,,,,Por hacer,21/ago/26 2:34 PM,10183,FABRO-5,FabroGym - Asistencias
+[RF-ASI-02] Consultar asistencia,FABRO-29,10207,Historia,Por hacer,FABRO,FabroGym — Sistema de gestión administrativa y operativa para gimnasio,software,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,High,,,,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,21/ago/26 2:34 PM,21/ago/26 2:34 PM,,,,0,fabrogym-pe5,"RF: RF-ASI-02
+
+Historia de usuario:
+Como Personal autorizado, quiero consultar asistencia para registrar el uso del gimnasio.
+
+Enunciado verificable:
+El sistema deberá filtrar asistencias por cliente, fecha y turno, y deberá mostrar los conteos operativos correspondientes.
+
+Criterio de aceptación (BDD):
+Dado un filtro por cliente, fecha o turno, cuando un usuario autorizado consulte asistencias, entonces el sistema deberá mostrar únicamente los registros que cumplan el filtro y los conteos correspondientes.
+
+Trazabilidad:
+- Fuente: EV-ENTR03-01;EV-ENTR07-01;EV-ENTR08-05;EV-ENTR09-06
+- Caso de uso: CU-12
+- Caso de prueba: CP-12
+- Componente: Asistencias
+- Estado de traza: Completa
+- Estado en ERS: Aprobado en baseline v2.0
+- Prioridad MoSCoW: Must",,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,0|i001af:,,,,,2014,,,,,,,,,,,,,,,,,,,,,,,,,,,Por hacer,21/ago/26 2:34 PM,10183,FABRO-5,FabroGym - Asistencias
+[RF-INV-01] Administrar productos,FABRO-30,10208,Historia,Por hacer,FABRO,FabroGym — Sistema de gestión administrativa y operativa para gimnasio,software,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,High,,,,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,21/ago/26 2:34 PM,21/ago/26 2:34 PM,,,,0,fabrogym-pe5,"RF: RF-INV-01
+
+Historia de usuario:
+Como Administrador, quiero administrar productos para mantener existencias consistentes.
+
+Enunciado verificable:
+El sistema deberá registrar productos con código, nombre, precio, unidad, stock mínimo y estado.
+
+Criterio de aceptación (BDD):
+Dado un producto con código, nombre, precio, unidad, stock mínimo y estado válidos, cuando el Administrador confirme el registro, entonces el sistema deberá guardar el producto y permitir su consulta posterior.
+
+Trazabilidad:
+- Fuente: EV-ENTR01-01;EV-ENTR02-05
+- Caso de uso: CU-13
+- Caso de prueba: CP-13
+- Componente: Inventario
+- Estado de traza: Completa
+- Estado en ERS: Aprobado en baseline v2.0
+- Prioridad MoSCoW: Must",,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,0|i001an:,,,,,2015,,,,,,,,,,,,,,,,,,,,,,,,,,,Por hacer,21/ago/26 2:34 PM,10184,FABRO-6,FabroGym - Inventario
+[RF-INV-02] Registrar movimientos de stock,FABRO-31,10209,Historia,Por hacer,FABRO,FabroGym — Sistema de gestión administrativa y operativa para gimnasio,software,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,High,,,,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,21/ago/26 2:34 PM,21/ago/26 2:34 PM,,,,0,fabrogym-pe5,"RF: RF-INV-02
+
+Historia de usuario:
+Como Personal autorizado, quiero registrar movimientos de stock para mantener existencias consistentes.
+
+Enunciado verificable:
+El sistema deberá registrar entradas y ajustes de inventario con cantidad, motivo, responsable y saldo resultante.
+
+Criterio de aceptación (BDD):
+Dado un producto existente y un movimiento válido, cuando un usuario autorizado registre una entrada o ajuste, entonces el sistema deberá actualizar el saldo y conservar cantidad, motivo, responsable y saldo resultante.
+
+Trazabilidad:
+- Fuente: EV-ENTR01-04;EV-ENTR04-04;EV-ENTR07-03
+- Caso de uso: CU-14
+- Caso de prueba: CP-14
+- Componente: Inventario
+- Estado de traza: Completa
+- Estado en ERS: Aprobado en baseline v2.0
+- Prioridad MoSCoW: Must",,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,0|i001av:,,,,,2016,,,,,,,,,,,,,,,,,,,,,,,,,,,Por hacer,21/ago/26 2:34 PM,10184,FABRO-6,FabroGym - Inventario
+[RF-VEN-01] Registrar venta,FABRO-32,10210,Historia,Por hacer,FABRO,FabroGym — Sistema de gestión administrativa y operativa para gimnasio,software,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,High,,,,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,21/ago/26 2:34 PM,21/ago/26 2:34 PM,,,,0,fabrogym-pe5,"RF: RF-VEN-01
+
+Historia de usuario:
+Como Recepcion, quiero registrar venta para integrar venta, pago y stock.
+
+Enunciado verificable:
+El sistema deberá registrar una venta con sus ítems y medio de pago, y deberá descontar las existencias en la misma transacción.
+
+Criterio de aceptación (BDD):
+Dado que todos los ítems de una venta tienen stock suficiente, cuando Recepción confirme la venta, entonces el sistema deberá registrar la venta y descontar las existencias en una única transacción; si falla una operación, no deberá aplicar cambios parciales.
+
+Trazabilidad:
+- Fuente: EV-ENTR02-05;EV-ENTR03-01;EV-ENTR04-04;EV-ENTR07-03;EV-ENTR08-03
+- Caso de uso: CU-15
+- Caso de prueba: CP-15
+- Componente: Ventas
+- Estado de traza: Completa
+- Estado en ERS: Aprobado en baseline v2.0
+- Prioridad MoSCoW: Must",,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,0|i001b3:,,,,,2017,,,,,,,,,,,,,,,,,,,,,,,,,,,Por hacer,21/ago/26 2:34 PM,10185,FABRO-7,FabroGym - Ventas
+[RF-INV-03] Alertar stock y rotacion,FABRO-33,10211,Historia,Por hacer,FABRO,FabroGym — Sistema de gestión administrativa y operativa para gimnasio,software,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,Medium,,,,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,21/ago/26 2:34 PM,21/ago/26 2:34 PM,,,,0,fabrogym-pe5,"RF: RF-INV-03
+
+Historia de usuario:
+Como Administrador, quiero alertar stock y rotacion para mantener existencias consistentes.
+
+Enunciado verificable:
+El sistema deberá listar los productos cuyo stock sea igual o inferior al stock mínimo y deberá resumir entradas, salidas y ventas por período.
+
+Criterio de aceptación (BDD):
+Dado un período de consulta, cuando el Administrador solicite el control de stock, entonces el sistema deberá listar los productos con stock igual o inferior al mínimo y resumir entradas, salidas y ventas del período.
+
+Trazabilidad:
+- Fuente: EV-ENTR01-04;EV-ENTR02-05;EV-ENTR05-04;EV-ENTR06-04
+- Caso de uso: CU-22
+- Caso de prueba: CP-22
+- Componente: Inventario
+- Estado de traza: Completa
+- Estado en ERS: Aprobado en baseline v2.0
+- Prioridad MoSCoW: Should",,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,0|i001bb:,,,,,2018,,,,,,,,,,,,,,,,,,,,,,,,,,,Por hacer,21/ago/26 2:34 PM,10184,FABRO-6,FabroGym - Inventario
+[RF-CAJ-01] Cerrar turno y conciliar caja,FABRO-34,10212,Historia,Por hacer,FABRO,FabroGym — Sistema de gestión administrativa y operativa para gimnasio,software,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,High,,,,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,21/ago/26 2:34 PM,21/ago/26 2:34 PM,,,,0,fabrogym-pe5,"RF: RF-CAJ-01
+
+Historia de usuario:
+Como Recepcion, quiero cerrar turno y conciliar caja para cerrar el turno con diferencias visibles.
+
+Enunciado verificable:
+El sistema deberá calcular pagos y ventas por medio de pago, comparar los valores declarados y registrar las diferencias y la entrega de turno.
+
+Criterio de aceptación (BDD):
+Dado un turno con pagos y ventas registrados, cuando Recepción ejecute el cierre, entonces el sistema deberá totalizar por medio de pago, comparar contra los valores declarados y registrar cualquier diferencia junto con la entrega del turno.
+
+Trazabilidad:
+- Fuente: EV-ENTR02-01;EV-ENTR02-06;EV-ENTR03-05;EV-ENTR04-05;EV-ENTR07-03;EV-ENTR08-04
+- Caso de uso: CU-16
+- Caso de prueba: CP-16
+- Componente: Caja
+- Estado de traza: Completa
+- Estado en ERS: Aprobado en baseline v2.0
+- Prioridad MoSCoW: Must",,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,0|i001bj:,,,,,2019,,,,,,,,,,,,,,,,,,,,,,,,,,,Por hacer,21/ago/26 2:34 PM,10186,FABRO-8,FabroGym - Caja
+[RF-NOV-01] Gestionar novedades internas,FABRO-35,10213,Historia,Por hacer,FABRO,FabroGym — Sistema de gestión administrativa y operativa para gimnasio,software,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,High,,,,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,21/ago/26 2:34 PM,21/ago/26 2:34 PM,,,,0,fabrogym-pe5,"RF: RF-NOV-01
+
+Historia de usuario:
+Como Personal autorizado, quiero gestionar novedades internas para dar seguimiento a incidencias.
+
+Enunciado verificable:
+El sistema deberá crear una novedad con categoría, detalle mínimo, responsable, vencimiento y uno de los estados: pendiente, en proceso, resuelta o cancelada.
+
+Criterio de aceptación (BDD):
+Dado un usuario autorizado y una novedad con categoría, detalle, responsable y vencimiento, cuando la registre, entonces el sistema deberá crearla con un estado válido y conservar los cambios posteriores de estado.
+
+Trazabilidad:
+- Fuente: EV-ENTR02-01;EV-ENTR02-08;EV-ENTR03-07;EV-ENTR04-06;EV-ENTR05-01
+- Caso de uso: CU-17
+- Caso de prueba: CP-17
+- Componente: Novedades
+- Estado de traza: Completa
+- Estado en ERS: Aprobado en baseline v2.0
+- Prioridad MoSCoW: Must",,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,0|i001br:,,,,,2020,,,,,,,,,,,,,,,,,,,,,,,,,,,Por hacer,21/ago/26 2:34 PM,10187,FABRO-9,FabroGym - Novedades
+[RF-INS-01] Gestionar horario y disponibilidad de instructor,FABRO-36,10214,Historia,Por hacer,FABRO,FabroGym — Sistema de gestión administrativa y operativa para gimnasio,software,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,Medium,,,,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,21/ago/26 2:34 PM,21/ago/26 2:34 PM,,,,0,fabrogym-pe5,"RF: RF-INS-01
+
+Historia de usuario:
+Como Administrador, quiero gestionar horario y disponibilidad de instructor para coordinar la disponibilidad del personal.
+
+Enunciado verificable:
+El sistema deberá registrar turnos, capacidad, disponibilidad y novedades operativas del instructor, sin recopilar datos de salud.
+
+Criterio de aceptación (BDD):
+Dado un instructor registrado, cuando el Administrador actualice su operación, entonces el sistema deberá guardar turnos, capacidad, disponibilidad y novedades operativas sin solicitar datos de salud.
+
+Trazabilidad:
+- Fuente: EV-ENTR07-06;EV-ENTR09-03;EV-ENTR10-02
+- Caso de uso: CU-23
+- Caso de prueba: CP-23
+- Componente: Instructores
+- Estado de traza: Completa
+- Estado en ERS: Aprobado en baseline v2.0
+- Prioridad MoSCoW: Should",,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,0|i001bz:,,,,,2021,,,,,,,,,,,,,,,,,,,,,,,,,,,Por hacer,21/ago/26 2:34 PM,10188,FABRO-10,FabroGym - Instructores
+[RF-RUT-01] Crear y asignar rutina,FABRO-37,10215,Historia,Por hacer,FABRO,FabroGym — Sistema de gestión administrativa y operativa para gimnasio,software,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,High,,,,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,21/ago/26 2:34 PM,21/ago/26 2:34 PM,,,,0,fabrogym-pe5,"RF: RF-RUT-01
+
+Historia de usuario:
+Como Instructor, quiero crear y asignar rutina para personalizar y consultar el entrenamiento.
+
+Enunciado verificable:
+El sistema deberá crear una rutina con objetivo operativo, ejercicios, series, repeticiones, descanso y días de ejecución, y deberá asignarla a un cliente autorizado.
+
+Criterio de aceptación (BDD):
+Dado un cliente autorizado y un catálogo de ejercicios disponible, cuando el Instructor cree una rutina, entonces el sistema deberá guardar objetivo operativo, ejercicios, series, repeticiones, descanso y días, y deberá asignarla al cliente seleccionado.
+
+Trazabilidad:
+- Fuente: EV-ENTR01-05;EV-ENTR05-04;EV-ENTR09-01;EV-ENTR09-02;EV-ENTR09-03
+- Caso de uso: CU-18
+- Caso de prueba: CP-18
+- Componente: Rutinas
+- Estado de traza: Completa
+- Estado en ERS: Aprobado en baseline v2.0
+- Prioridad MoSCoW: Must",,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,0|i001c7:,,,,,2022,,,,,,,,,,,,,,,,,,,,,,,,,,,Por hacer,21/ago/26 2:34 PM,10189,FABRO-11,FabroGym - Rutinas
+[RF-RUT-02] Versionar y ajustar rutina,FABRO-38,10216,Historia,Por hacer,FABRO,FabroGym — Sistema de gestión administrativa y operativa para gimnasio,software,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,High,,,,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,21/ago/26 2:34 PM,21/ago/26 2:34 PM,,,,0,fabrogym-pe5,"RF: RF-RUT-02
+
+Historia de usuario:
+Como Instructor, quiero versionar y ajustar rutina para personalizar y consultar el entrenamiento.
+
+Enunciado verificable:
+El sistema deberá crear una nueva versión cuando se modifiquen ejercicios o parámetros de una rutina y deberá conservar las versiones anteriores en modo de solo lectura.
+
+Criterio de aceptación (BDD):
+Dado una rutina existente, cuando el Instructor modifique ejercicios o parámetros y confirme el cambio, entonces el sistema deberá crear una nueva versión y mantener las versiones anteriores en solo lectura.
+
+Trazabilidad:
+- Fuente: EV-ENTR01-05;EV-ENTR09-01;EV-ENTR09-04;EV-ENTR10-01;EV-ENTR10-03
+- Caso de uso: CU-19
+- Caso de prueba: CP-19
+- Componente: Rutinas
+- Estado de traza: Completa
+- Estado en ERS: Aprobado en baseline v2.0
+- Prioridad MoSCoW: Must",,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,0|i001cf:,,,,,2023,,,,,,,,,,,,,,,,,,,,,,,,,,,Por hacer,21/ago/26 2:34 PM,10189,FABRO-11,FabroGym - Rutinas
+[RF-RUT-03] Registrar seguimiento operativo,FABRO-39,10217,Historia,Por hacer,FABRO,FabroGym — Sistema de gestión administrativa y operativa para gimnasio,software,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,Medium,,,,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,21/ago/26 2:34 PM,21/ago/26 2:34 PM,,,,0,fabrogym-pe5,"RF: RF-RUT-03
+
+Historia de usuario:
+Como Instructor, quiero registrar seguimiento operativo para personalizar y consultar el entrenamiento.
+
+Enunciado verificable:
+El sistema deberá registrar fecha, cumplimiento de ejercicios, repeticiones y observación operativa, excluyendo diagnósticos, lesiones, peso y medidas corporales reales.
+
+Criterio de aceptación (BDD):
+Dado una rutina activa, cuando el Instructor registre seguimiento, entonces el sistema deberá guardar fecha, cumplimiento, repeticiones y observación operativa y deberá rechazar campos destinados a diagnósticos, lesiones, peso o medidas corporales reales.
+
+Trazabilidad:
+- Fuente: EV-ENTR09-04;EV-ENTR09-05;EV-ENTR09-06;EV-ENTR10-03;EV-ENTR10-04
+- Caso de uso: CU-24
+- Caso de prueba: CP-24
+- Componente: Rutinas
+- Estado de traza: Completa
+- Estado en ERS: Aprobado en baseline v2.0
+- Prioridad MoSCoW: Should",,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,0|i001cn:,,,,,2024,,,,,,,,,,,,,,,,,,,,,,,,,,,Por hacer,21/ago/26 2:34 PM,10189,FABRO-11,FabroGym - Rutinas
+[RF-REP-01] Consultar panel y reportes,FABRO-40,10218,Historia,Por hacer,FABRO,FabroGym — Sistema de gestión administrativa y operativa para gimnasio,software,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,Medium,,,,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,21/ago/26 2:34 PM,21/ago/26 2:34 PM,,,,0,fabrogym-pe5,"RF: RF-REP-01
+
+Historia de usuario:
+Como Administrador, quiero consultar panel y reportes para tomar decisiones con información reproducible.
+
+Enunciado verificable:
+El sistema deberá mostrar indicadores filtrables de clientes, membresías, ventas, asistencias, uso y promociones por período, calculados exclusivamente con datos almacenados y exportables a CSV.
+
+Criterio de aceptación (BDD):
+Dado un período y filtros válidos, cuando el Administrador consulte el panel o reporte, entonces el sistema deberá calcular los indicadores con datos almacenados, mostrar los resultados filtrados y permitir exportarlos a CSV.
+
+Trazabilidad:
+- Fuente: EV-ENTR01-05;EV-ENTR05-05;EV-ENTR06-04;EV-ENTR07-04;EV-ENTR08-05;EV-ENTR09-05
+- Caso de uso: CU-25
+- Caso de prueba: CP-25
+- Componente: Reportes
+- Estado de traza: Completa
+- Estado en ERS: Aprobado en baseline v2.0
+- Prioridad MoSCoW: Should",,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,0|i001cv:,,,,,2025,,,,,,,,,,,,,,,,,,,,,,,,,,,Por hacer,21/ago/26 2:34 PM,10190,FABRO-12,FabroGym - Reportes
+[RF-MEM-05] Consultar mi membresía,FABRO-41,10219,Historia,Por hacer,FABRO,FabroGym — Sistema de gestión administrativa y operativa para gimnasio,software,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,High,,,,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,21/ago/26 2:34 PM,21/ago/26 2:34 PM,,,,0,fabrogym-pe5,"RF: RF-MEM-05
+
+Historia de usuario:
+Como Cliente, quiero consultar mi membresía para controlar la vigencia del servicio.
+
+Enunciado verificable:
+El sistema deberá permitir al cliente autenticado consultar el estado, plan y vigencia de su propia membresía en modo de solo lectura.
+
+Criterio de aceptación (BDD):
+Dado un Cliente autenticado, cuando consulte su membresía, entonces el sistema deberá mostrar únicamente el estado, plan y vigencia de su propia membresía y no deberá habilitar edición.
+
+Trazabilidad:
+- Fuente: EV-VT-T02-12; MU-63
+- Caso de uso: CU-26
+- Caso de prueba: CP-26
+- Componente: Membresías
+- Estado de traza: Completa
+- Estado en ERS: Aprobado en baseline v2.0
+- Prioridad MoSCoW: Must",,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,0|i001d3:,,,,,2026,,,,,,,,,,,,,,,,,,,,,,,,,,,Por hacer,21/ago/26 2:34 PM,10181,FABRO-3,FabroGym - Membresías
+[RF-PAG-03] Consultar mis pagos,FABRO-42,10220,Historia,Por hacer,FABRO,FabroGym — Sistema de gestión administrativa y operativa para gimnasio,software,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,High,,,,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,21/ago/26 2:34 PM,21/ago/26 2:34 PM,,,,0,fabrogym-pe5,"RF: RF-PAG-03
+
+Historia de usuario:
+Como Cliente, quiero consultar mis pagos para mantener pagos verificables.
+
+Enunciado verificable:
+El sistema deberá permitir al cliente autenticado consultar sus pagos registrados y el estado contextual de cada pago en modo de solo lectura.
+
+Criterio de aceptación (BDD):
+Dado un Cliente autenticado, cuando consulte sus pagos, entonces el sistema deberá mostrar únicamente sus registros de pago y el estado de cada uno en modo de solo lectura.
+
+Trazabilidad:
+- Fuente: EV-VT-T02-12
+- Caso de uso: CU-27
+- Caso de prueba: CP-27
+- Componente: Pagos
+- Estado de traza: Completa
+- Estado en ERS: Aprobado en baseline v2.0
+- Prioridad MoSCoW: Must",,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,0|i001db:,,,,,2027,,,,,,,,,,,,,,,,,,,,,,,,,,,Por hacer,21/ago/26 2:34 PM,10182,FABRO-4,FabroGym - Pagos
+[RF-RUT-04] Consultar mi rutina e historial,FABRO-43,10221,Historia,Por hacer,FABRO,FabroGym — Sistema de gestión administrativa y operativa para gimnasio,software,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,High,,,,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,21/ago/26 2:34 PM,21/ago/26 2:34 PM,,,,0,fabrogym-pe5,"RF: RF-RUT-04
+
+Historia de usuario:
+Como Cliente, quiero consultar mi rutina e historial para personalizar y consultar el entrenamiento.
+
+Enunciado verificable:
+El sistema deberá permitir al cliente autenticado consultar su rutina activa, sus versiones y el seguimiento operativo autorizado, sin modificar la rutina vigente.
+
+Criterio de aceptación (BDD):
+Dado un Cliente autenticado con una rutina asignada, cuando consulte su rutina, entonces el sistema deberá mostrar la versión activa, las versiones históricas y el seguimiento autorizado sin permitir modificar la rutina vigente.
+
+Trazabilidad:
+- Fuente: EV-VT-T01-06; EV-VT-T01-08; EV-VT-T02-04
+- Caso de uso: CU-28
+- Caso de prueba: CP-28
+- Componente: Rutinas
+- Estado de traza: Completa
+- Estado en ERS: Aprobado en baseline v2.0
+- Prioridad MoSCoW: Must",,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,0|i001dj:,,,,,2028,,,,,,,,,,,,,,,,,,,,,,,,,,,Por hacer,21/ago/26 2:34 PM,10189,FABRO-11,FabroGym - Rutinas
+[RF-INV-04] Gestionar categorías de productos,FABRO-44,10222,Historia,Por hacer,FABRO,FabroGym — Sistema de gestión administrativa y operativa para gimnasio,software,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,Medium,,,,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,21/ago/26 2:34 PM,21/ago/26 2:34 PM,,,,0,fabrogym-pe5,"RF: RF-INV-04
+
+Historia de usuario:
+Como Dueño, quiero gestionar categorías de productos para mantener existencias consistentes.
+
+Enunciado verificable:
+El sistema deberá permitir al usuario autorizado registrar, consultar, editar y desactivar categorías de productos.
+
+Criterio de aceptación (BDD):
+Dado un usuario autorizado, cuando registre, edite o desactive una categoría, entonces el sistema deberá guardar el cambio y reflejar el estado actualizado en las consultas de categorías.
+
+Trazabilidad:
+- Fuente: EV-VT-T03-06
+- Caso de uso: CU-29
+- Caso de prueba: CP-29
+- Componente: Inventario
+- Estado de traza: Completa
+- Estado en ERS: Aprobado en baseline v2.0
+- Prioridad MoSCoW: Should",,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,0|i001dr:,,,,,2029,,,,,,,,,,,,,,,,,,,,,,,,,,,Por hacer,21/ago/26 2:34 PM,10184,FABRO-6,FabroGym - Inventario
+[RF-INV-05] Gestionar proveedores,FABRO-45,10223,Historia,Por hacer,FABRO,FabroGym — Sistema de gestión administrativa y operativa para gimnasio,software,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,Medium,,,,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,21/ago/26 2:34 PM,21/ago/26 2:34 PM,,,,0,fabrogym-pe5,"RF: RF-INV-05
+
+Historia de usuario:
+Como Dueño, quiero gestionar proveedores para mantener existencias consistentes.
+
+Enunciado verificable:
+El sistema deberá permitir al usuario autorizado registrar, consultar, editar y desactivar proveedores utilizados en inventario.
+
+Criterio de aceptación (BDD):
+Dado un usuario autorizado, cuando registre, edite o desactive un proveedor, entonces el sistema deberá guardar el cambio y reflejar el estado actualizado en las consultas de proveedores.
+
+Trazabilidad:
+- Fuente: EV-VT-T03-06; EV-VT-T01-10
+- Caso de uso: CU-30
+- Caso de prueba: CP-30
+- Componente: Inventario
+- Estado de traza: Completa
+- Estado en ERS: Aprobado en baseline v2.0
+- Prioridad MoSCoW: Should",,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,0|i001dz:,,,,,2030,,,,,,,,,,,,,,,,,,,,,,,,,,,Por hacer,21/ago/26 2:34 PM,10184,FABRO-6,FabroGym - Inventario
+[RF-CFG-01] Configurar tratamiento de IVA,FABRO-46,10224,Historia,Por hacer,FABRO,FabroGym — Sistema de gestión administrativa y operativa para gimnasio,software,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,High,,,,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,21/ago/26 2:34 PM,21/ago/26 2:34 PM,,,,0,fabrogym-pe5,"RF: RF-CFG-01
+
+Historia de usuario:
+Como Dueño, quiero configurar tratamiento de iva para adaptar reglas sin modificar código.
+
+Enunciado verificable:
+El sistema deberá permitir configurar el porcentaje general de IVA y definir por producto si el impuesto aplica, conservando el historial de cambios.
+
+Criterio de aceptación (BDD):
+Dado un porcentaje de IVA válido y la configuración tributaria de un producto, cuando el Dueño confirme el cambio, entonces el sistema deberá aplicar la nueva configuración a operaciones posteriores y conservar el valor anterior, el nuevo valor, el actor y la fecha.
+
+Trazabilidad:
+- Fuente: EV-VT-T03-05
+- Caso de uso: CU-31
+- Caso de prueba: CP-31
+- Componente: Configuración
+- Estado de traza: Completa
+- Estado en ERS: Aprobado en baseline v2.0
+- Prioridad MoSCoW: Must",,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,0|i001e7:,,,,,2031,,,,,,,,,,,,,,,,,,,,,,,,,,,Por hacer,21/ago/26 2:34 PM,10191,FABRO-13,FabroGym - Configuración
+[RF-BCK-01] Generar respaldo,FABRO-47,10225,Historia,Por hacer,FABRO,FabroGym — Sistema de gestión administrativa y operativa para gimnasio,software,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,Medium,,,,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,21/ago/26 2:34 PM,21/ago/26 2:34 PM,,,,0,fabrogym-pe5,"RF: RF-BCK-01
+
+Historia de usuario:
+Como Superadministrador, quiero generar respaldo para recuperar la operación ante fallos.
+
+Enunciado verificable:
+El sistema deberá permitir iniciar un respaldo cifrado y consultar su estado y fecha de finalización.
+
+Criterio de aceptación (BDD):
+Dado un Superadministrador autenticado, cuando solicite un respaldo, entonces el sistema deberá iniciar el proceso cifrado, asignar un identificador y mostrar el estado y la fecha de finalización cuando concluya.
+
+Trazabilidad:
+- Fuente: EV-VT-T03-10
+- Caso de uso: CU-32
+- Caso de prueba: CP-32
+- Componente: Continuidad
+- Estado de traza: Completa
+- Estado en ERS: Aprobado en baseline v2.0
+- Prioridad MoSCoW: Should",,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,0|i001ef:,,,,,2032,,,,,,,,,,,,,,,,,,,,,,,,,,,Por hacer,21/ago/26 2:34 PM,10192,FABRO-14,FabroGym - Continuidad
+[RF-BCK-02] Restaurar respaldo,FABRO-48,10226,Historia,Por hacer,FABRO,FabroGym — Sistema de gestión administrativa y operativa para gimnasio,software,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,Medium,,,,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,21/ago/26 2:34 PM,21/ago/26 2:34 PM,,,,0,fabrogym-pe5,"RF: RF-BCK-02
+
+Historia de usuario:
+Como Superadministrador, quiero restaurar respaldo para recuperar la operación ante fallos.
+
+Enunciado verificable:
+El sistema deberá permitir restaurar un respaldo seleccionado mediante confirmación explícita, verificación de integridad y registro de auditoría.
+
+Criterio de aceptación (BDD):
+Dado un respaldo íntegro seleccionado, cuando el Superadministrador confirme explícitamente la restauración, entonces el sistema deberá verificar su integridad, ejecutar la restauración y registrar la operación en auditoría; si la verificación falla, no deberá restaurar.
+
+Trazabilidad:
+- Fuente: EV-VT-T03-10
+- Caso de uso: CU-33
+- Caso de prueba: CP-33
+- Componente: Continuidad
+- Estado de traza: Completa
+- Estado en ERS: Aprobado en baseline v2.0
+- Prioridad MoSCoW: Should",,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,0|i001en:,,,,,2033,,,,,,,,,,,,,,,,,,,,,,,,,,,Por hacer,21/ago/26 2:34 PM,10192,FABRO-14,FabroGym - Continuidad
+[RF-CFG-02] Configurar horario de atención,FABRO-49,10227,Historia,Por hacer,FABRO,FabroGym — Sistema de gestión administrativa y operativa para gimnasio,software,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,Low,,,,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,21/ago/26 2:34 PM,21/ago/26 2:34 PM,,,,0,fabrogym-pe5,"RF: RF-CFG-02
+
+Historia de usuario:
+Como Dueño, quiero configurar horario de atención para adaptar reglas sin modificar código.
+
+Enunciado verificable:
+El sistema deberá permitir configurar los días y horas de atención del gimnasio y deberá mostrarlos al cliente.
+
+Criterio de aceptación (BDD):
+Dado un Dueño autenticado y una configuración válida de días y horas, cuando guarde el horario, entonces el sistema deberá actualizarlo y mostrar al Cliente únicamente el horario vigente.
+
+Trazabilidad:
+- Fuente: IND-14; V7
+- Caso de uso: CU-34
+- Caso de prueba: CP-34
+- Componente: Configuración
+- Estado de traza: Completa
+- Estado en ERS: Aprobado en baseline v2.0
+- Prioridad MoSCoW: Could",,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,0|i001ev:,,,,,2034,,,,,,,,,,,,,,,,,,,,,,,,,,,Por hacer,21/ago/26 2:34 PM,10191,FABRO-13,FabroGym - Configuración
+[RF-IA-RUT-01] Generar recomendación de rutina,FABRO-50,10228,Historia,Por hacer,FABRO,FabroGym — Sistema de gestión administrativa y operativa para gimnasio,software,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,High,,,,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,21/ago/26 2:34 PM,21/ago/26 2:34 PM,,,,0,fabrogym-pe5,"RF: RF-IA-RUT-01
+
+Historia de usuario:
+Como Cliente/Instructor, quiero generar recomendación de rutina para apoyar decisiones sin sustituir al usuario.
+
+Enunciado verificable:
+El sistema deberá generar hasta tres alternativas de rutina a partir del objetivo declarado, la disponibilidad semanal, el historial operativo no sensible y el catálogo de ejercicios autorizado.
+
+Criterio de aceptación (BDD):
+Dado un objetivo operativo, disponibilidad semanal, historial no sensible y catálogo autorizado, cuando se solicite una recomendación, entonces el componente deberá devolver como máximo tres alternativas ordenadas de rutina y una explicación de los factores utilizados.
+
+Trazabilidad:
+- Fuente: EV-VT-T02-05; H03; PE5-OE3
+- Caso de uso: CU-35
+- Caso de prueba: CP-35
+- Componente: Inteligencia artificial
+- Estado de traza: Completa
+- Estado en ERS: Aprobado como requisito PE5; implementación pendiente
+- Prioridad MoSCoW: Must",,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,0|i001f3:,,,,,2035,,,,,,,,,,,,,,,,,,,,,,,,,,,Por hacer,21/ago/26 2:34 PM,10193,FABRO-15,FabroGym - Inteligencia artificial
+"[RF-IA-RUT-02] Aceptar, rechazar o solicitar alternativa",FABRO-51,10229,Historia,Por hacer,FABRO,FabroGym — Sistema de gestión administrativa y operativa para gimnasio,software,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,High,,,,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,21/ago/26 2:34 PM,21/ago/26 2:34 PM,,,,0,fabrogym-pe5,"RF: RF-IA-RUT-02
+
+Historia de usuario:
+Como Cliente, quiero aceptar, rechazar o solicitar alternativa para apoyar decisiones sin sustituir al usuario.
+
+Enunciado verificable:
+El sistema deberá permitir aceptar, rechazar o solicitar una alternativa antes de incorporar una recomendación a la propuesta de rutina.
+
+Criterio de aceptación (BDD):
+Dado que el Cliente visualiza una recomendación de rutina, cuando seleccione aceptar, rechazar o solicitar alternativa, entonces el sistema deberá registrar la decisión y no deberá activar automáticamente la recomendación.
+
+Trazabilidad:
+- Fuente: Decisión del equipo; PE5-OE3
+- Caso de uso: CU-36
+- Caso de prueba: CP-36
+- Componente: Inteligencia artificial
+- Estado de traza: Completa
+- Estado en ERS: Aprobado como requisito PE5; implementación pendiente
+- Prioridad MoSCoW: Must",,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,0|i001fb:,,,,,2036,,,,,,,,,,,,,,,,,,,,,,,,,,,Por hacer,21/ago/26 2:34 PM,10193,FABRO-15,FabroGym - Inteligencia artificial
+[RF-IA-RUT-03] Revisar recomendación de rutina,FABRO-52,10230,Historia,Por hacer,FABRO,FabroGym — Sistema de gestión administrativa y operativa para gimnasio,software,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,High,,,,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,21/ago/26 2:34 PM,21/ago/26 2:34 PM,,,,0,fabrogym-pe5,"RF: RF-IA-RUT-03
+
+Historia de usuario:
+Como Instructor, quiero revisar recomendación de rutina para apoyar decisiones sin sustituir al usuario.
+
+Enunciado verificable:
+El sistema deberá exigir la revisión del instructor antes de activar una rutina recomendada y deberá conservar la decisión y el motivo.
+
+Criterio de aceptación (BDD):
+Dado una recomendación aceptada por el Cliente, cuando el Instructor la revise, entonces el sistema deberá permitir aprobarla o rechazarla con motivo; únicamente una aprobación explícita podrá habilitar su activación.
+
+Trazabilidad:
+- Fuente: EV-VT-T01-07; EV-VT-T01-08; H02
+- Caso de uso: CU-37
+- Caso de prueba: CP-37
+- Componente: Inteligencia artificial
+- Estado de traza: Completa
+- Estado en ERS: Aprobado como requisito PE5; implementación pendiente
+- Prioridad MoSCoW: Must",,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,0|i001fj:,,,,,2037,,,,,,,,,,,,,,,,,,,,,,,,,,,Por hacer,21/ago/26 2:35 PM,10193,FABRO-15,FabroGym - Inteligencia artificial
+[RF-IA-ABA-01] Calcular riesgo de inactividad,FABRO-53,10231,Historia,Por hacer,FABRO,FabroGym — Sistema de gestión administrativa y operativa para gimnasio,software,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,Medium,,,,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,21/ago/26 2:35 PM,21/ago/26 2:35 PM,,,,0,fabrogym-pe5,"RF: RF-IA-ABA-01
+
+Historia de usuario:
+Como Dueño, quiero calcular riesgo de inactividad para apoyar decisiones sin sustituir al usuario.
+
+Enunciado verificable:
+El sistema deberá calcular semanalmente un nivel de riesgo bajo, medio o alto usando únicamente asistencia, vigencia de membresía y frecuencia histórica.
+
+Criterio de aceptación (BDD):
+Dado el historial de asistencia, vigencia de membresía y frecuencia histórica de un cliente, cuando se ejecute el cálculo semanal, entonces el componente deberá asignar un nivel bajo, medio o alto y registrar la fecha del cálculo.
+
+Trazabilidad:
+- Fuente: PE5-OE3; decisión de diseño
+- Caso de uso: CU-38
+- Caso de prueba: CP-38
+- Componente: Inteligencia artificial
+- Estado de traza: Completa
+- Estado en ERS: Aprobado como requisito PE5; implementación pendiente
+- Prioridad MoSCoW: Should",,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,0|i001fr:,,,,,2038,,,,,,,,,,,,,,,,,,,,,,,,,,,Por hacer,21/ago/26 2:35 PM,10193,FABRO-15,FabroGym - Inteligencia artificial
+[RF-IA-ABA-02] Mostrar alertas de riesgo,FABRO-54,10232,Historia,Por hacer,FABRO,FabroGym — Sistema de gestión administrativa y operativa para gimnasio,software,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,Medium,,,,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,21/ago/26 2:35 PM,21/ago/26 2:35 PM,,,,0,fabrogym-pe5,"RF: RF-IA-ABA-02
+
+Historia de usuario:
+Como Dueño/Recepcionista, quiero mostrar alertas de riesgo para apoyar decisiones sin sustituir al usuario.
+
+Enunciado verificable:
+El sistema deberá mostrar los clientes con riesgo medio o alto, los factores principales y la fecha del cálculo, sin ejecutar acciones automáticas.
+
+Criterio de aceptación (BDD):
+Dado que existen clientes clasificados con riesgo medio o alto, cuando Dueño o Recepcionista consulte las alertas, entonces el sistema deberá mostrar el nivel, la fecha y los principales factores de cada alerta sin ejecutar acciones automáticas.
+
+Trazabilidad:
+- Fuente: PE5-OE3; decisión de diseño
+- Caso de uso: CU-39
+- Caso de prueba: CP-39
+- Componente: Inteligencia artificial
+- Estado de traza: Completa
+- Estado en ERS: Aprobado como requisito PE5; implementación pendiente
+- Prioridad MoSCoW: Should",,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,0|i001fz:,,,,,2039,,,,,,,,,,,,,,,,,,,,,,,,,,,Por hacer,21/ago/26 2:35 PM,10193,FABRO-15,FabroGym - Inteligencia artificial
+[RF-IA-ABA-03] Registrar seguimiento de alerta,FABRO-55,10233,Historia,Por hacer,FABRO,FabroGym — Sistema de gestión administrativa y operativa para gimnasio,software,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,Medium,,,,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,21/ago/26 2:35 PM,21/ago/26 2:35 PM,,,,0,fabrogym-pe5,"RF: RF-IA-ABA-03
+
+Historia de usuario:
+Como Recepcionista, quiero registrar seguimiento de alerta para apoyar decisiones sin sustituir al usuario.
+
+Enunciado verificable:
+El sistema deberá permitir registrar el contacto, aplazamiento o descarte de una alerta y deberá conservar la decisión humana para auditoría.
+
+Criterio de aceptación (BDD):
+Dado una alerta de riesgo visible, cuando Recepción registre contacto, aplazamiento o descarte, entonces el sistema deberá guardar la acción, responsable, fecha y observación para auditoría.
+
+Trazabilidad:
+- Fuente: PE5-OE3; decisión de diseño
+- Caso de uso: CU-40
+- Caso de prueba: CP-40
+- Componente: Inteligencia artificial
+- Estado de traza: Completa
+- Estado en ERS: Aprobado como requisito PE5; implementación pendiente
+- Prioridad MoSCoW: Should",,ALEX JOSE MORA DUARTE,712020:44a76b3c-0dee-421d-a928-779efe4d4b24,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,0|i001g7:,,,,,2040,,,,,,,,,,,,,,,,,,,,,,,,,,,Por hacer,21/ago/26 2:35 PM,10193,FABRO-15,FabroGym - Inteligencia artificial
