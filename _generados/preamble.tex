@@ -1,0 +1,23 @@
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{babel}
+\babelprovide[main,import]{spanish}
+\usepackage{lmodern}
+\usepackage[a4paper,margin=2.1cm,headheight=15pt]{geometry}
+\usepackage{microtype,graphicx,longtable,booktabs,tabularx,array,xcolor,enumitem,hyperref,fancyhdr,caption,float,pdflscape,seqsplit,cite}
+\usepackage[most]{tcolorbox}
+\definecolor{Navy}{HTML}{17365D}
+\definecolor{Teal}{HTML}{1F7A8C}
+\definecolor{Light}{HTML}{EAF2F8}
+\definecolor{Green}{HTML}{D9EAD3}
+\definecolor{Amber}{HTML}{FFF2CC}
+\hypersetup{colorlinks=true,linkcolor=Navy,urlcolor=Teal,citecolor=Navy,pdftitle={PE5 FabroGym - Integracion, metricas y defensa}}
+\graphicspath{{../assets/}}
+\pagestyle{fancy}\fancyhf{}\fancyhead[L]{\small PE5 - FabroGym}\fancyhead[R]{\small Equipo F (PE5) - 2026}\fancyfoot[C]{\thepage}
+\setlength{\parindent}{0pt}\setlength{\parskip}{5pt}\setlist{nosep}
+\renewcommand{\arraystretch}{1.15}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\newtcolorbox{reqbox}[2][]{enhanced,breakable,colback=white,colframe=Navy,title={#2},fonttitle=\bfseries,coltitle=white,boxrule=.7pt,arc=1mm,left=5pt,right=5pt,top=4pt,bottom=4pt,#1}
+\newtcolorbox{alertbox}[1][]{enhanced,breakable,colback=Amber,colframe=Teal,boxrule=.7pt,arc=1mm,left=6pt,right=6pt,top=5pt,bottom=5pt,#1}
+\captionsetup{font=small,labelfont=bf}
