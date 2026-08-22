@@ -1,0 +1,261 @@
+\documentclass[11pt,a4paper]{article}
+\input{../_generados/preamble.tex}
+\begin{document}
+\hypersetup{pageanchor=false}
+
+\begin{titlepage}
+\centering
+{\Large\bfseries UNIVERSIDAD TÉCNICA ESTATAL DE QUEVEDO\par}
+\vspace{.25cm}{\large Facultad de Ciencias de la Computación\par}{\large Carrera de Ingeniería de Software\par}
+\vspace{.6cm}{\large Ingeniería de Requerimientos (ISR-401)\par}
+\vspace{.8cm}{\LARGE\bfseries PRÁCTICA EXPERIMENTAL PE5\par}
+\vspace{.25cm}{\Large Integración, métricas y defensa del Proyecto Integrador\par}
+\vspace{.5cm}{\LARGE\bfseries FabroGym\par}{\large Sistema de gestión administrativa y operativa para gimnasios\par}
+\vspace{.7cm}
+\begin{tabularx}{\textwidth}{|>{\bfseries}p{4cm}|Y|}\hline
+Equipo PFC & Equipo F - FabroGym \\\hline
+Integrantes & \begin{minipage}[t]{\linewidth}
+Alvia Villegas Erick Adalberto\\
+Mera Arias Erick Jhair\\
+Mora Duarte Alex José\\
+Ponce Rivera Mery Helenmey\\
+Vaca Romero David Octavio
+\end{minipage} \\\hline
+Docente & Guerrero Ulloa Gleiston Cicerón, PhD \\\hline
+Periodo & 2026--2027 PPA \\\hline
+Versión & 2.0.3 - cierre de modelos y evidencia reproducible M6 \\\hline
+Fecha & 20 de agosto de 2026 \\\hline
+Repositorio PE5 & \url{https://github.com/Emeraxs/Practica_Experimental_v} \\\hline
+\end{tabularx}
+\vfill{\large Quevedo, Ecuador - 2026\par}
+\end{titlepage}
+\hypersetup{pageanchor=true}
+\pagenumbering{roman}
+\section*{Resumen}
+FabroGym es un sistema web propuesto para integrar clientes, membresías, pagos, asistencia, inventario, ventas, caja, rutinas y reportes de un gimnasio. Esta práctica consolida el trabajo de Ingeniería de Requisitos mediante una auditoría reproducible, trazabilidad end-to-end y especificación responsable de componentes de inteligencia artificial. Se analizaron la ERS v1.5.8, veinticinco requisitos funcionales, quince no funcionales, diecinueve casos de uso, tres sesiones técnicas y el prototipo V7. La validación aportó treinta y nueve fragmentos codificados, dieciocho hallazgos y ocho discrepancias de revisión. Después de las correcciones, la línea base v2.0 contiene cuarenta requisitos funcionales y veintisiete no funcionales, cada uno con fuente, prioridad, criterio BDD y caso de prueba conceptual. La completitud, consistencia, verificabilidad, trazabilidad, modificabilidad y corrección alcanzan los umbrales pedagógicos establecidos. Se especificaron un recomendador asistivo de rutinas y un detector de riesgo de inactividad, ambos con rendimiento, equidad, explicabilidad, privacidad, supervisión humana y monitoreo. No se declara que la IA, el backend ni la restauración estén implementados. Asimismo, permanecen pendientes los walkthroughs no técnicos. El resultado es un paquete LaTeX reproducible, con matrices editables y decisiones trazables que evita presentar simulaciones o evidencias inexistentes como resultados concluidos. Facilita la revisión docente y futuras iteraciones del proyecto.
+
+\textbf{Palabras clave:} ingeniería de requisitos, trazabilidad, métricas, inteligencia artificial, gimnasio.
+
+\section*{Abstract}
+FabroGym is a proposed web system that integrates customers, memberships, payments, attendance, inventory, sales, cash closing, routines, and management reports for a gym. This practice consolidates the Requirements Engineering work through a reproducible audit, end-to-end traceability, and responsible specification of artificial intelligence components. The analysis covered SRS version 1.5.8, twenty-five functional requirements, fifteen non-functional requirements, nineteen use cases, three technical sessions, and prototype V7. Validation produced thirty-nine coded fragments, eighteen consolidated findings, and eight conflicts. After corrective actions, baseline version 2.0 contains forty functional and twenty-seven non-functional requirements, each with a source, priority, BDD acceptance criterion, and conceptual test case. Completeness, consistency, verifiability, traceability, modifiability, and correctness reach the pedagogical thresholds established by the practice guide. Two artificial intelligence components were specified: an assistive routine recommender and an inactivity-risk detector. Both include measurable performance, fairness, explainability, privacy, human oversight, and monitoring requirements. The report does not claim that artificial intelligence, the backend, or database restoration has been implemented. Non-technical walkthroughs also remain pending. The resulting package provides reproducible LaTeX sources, editable matrices, and explicit engineering decisions, preventing simulated functions or unavailable evidence from being reported as completed results. It supports instructor review and future project iterations.
+
+\textbf{Keywords:} requirements engineering, traceability, metrics, artificial intelligence, gym management.
+
+\tableofcontents\listoftables\listoffigures\clearpage\pagenumbering{arabic}
+
+\section{Introducción}
+FabroGym surge de la necesidad de centralizar procesos que en gimnasios de operación semejante suelen mantenerse en registros dispersos. La presente PE5 corresponde al Proyecto Fin de Curso del Equipo F, integrado por Alvia Villegas Erick Adalberto, Mera Arias Erick Jhair, Mora Duarte Alex José, Ponce Rivera Mery Helenmey y Vaca Romero David Octavio. El objetivo de la práctica es integrar la especificación, medir su calidad, cerrar la trazabilidad y preparar una línea base defendible del propio PFC. La norma ISO/IEC/IEEE 29148 establece procesos e ítems de información para requisitos \cite{iso29148}; ISO/IEC 25010 aporta un modelo de calidad del producto \cite{iso25010}. Los valores de referencia empleados son umbrales pedagógicos de la guía PE5, no porcentajes impuestos literalmente por la norma.
+
+El informe diferencia tres estados: especificado, prototipado e implementado. Esta distinción es esencial porque V7 demuestra interacción en HTML/JavaScript, pero no dispone de backend ni base de datos real. En consecuencia, ninguna simulación se usa como prueba de operación terminal.
+
+\section{Metodología de Ingeniería de Requisitos}
+El proceso integró delimitación, elicitación, análisis, especificación, modelado, validación, gestión y medición, siguiendo el carácter iterativo de la Ingeniería de Requisitos descrito por Pohl y SWEBOK \cite{pohl,swebok}. La articulación con el ciclo de vida se contrastó con ISO/IEC/IEEE 12207:2017 y con la gestión de trazabilidad de ISO/IEC/IEEE 15288:2023 \cite{iso12207,iso15288}; además, se utilizó IREB CPRE como referencia complementaria para documentación y gestión de requisitos \cite{ireb}. Las entrevistas y encuesta aportaron evidencia de negocio; la ERS v1.5.8 constituyó la línea base de entrada; los modelos UML y mockups permitieron contrastar comportamiento; y tres sesiones técnicas permitieron identificar defectos y solicitudes de cambio. La gestión se apoya en versionado semántico, matriz editable y backlog propuesto, coherente con la Semana 13 \cite{sem13} y con los principios de gestión del proyecto de PMBOK \cite{pmbok}.
+
+\begin{figure}[H]\centering\includegraphics[width=.94\textwidth]{contexto.png}\caption{Contexto y frontera de FabroGym en la línea base de entrada.}\end{figure}
+
+\section{ERS/SRS final integrado}
+\subsection{Alcance y actores}
+La línea base v2.0 incluye Superadministrador, Dueño, Recepcionista, Instructor y Cliente. Se incorporan consultas de autoservicio, configuración de IVA, categorías, proveedores, respaldo/restauración como requisitos de backend y dos componentes de IA como especificación futura. Permanecen fuera del alcance los diagnósticos, prescripciones médicas, biometría, peso y medidas corporales reales, nómina, banca y facturación electrónica integrada.
+
+\subsection{Requisitos funcionales}
+\input{../_generados/catalogo_rf.tex}
+\subsection{Requisitos no funcionales}
+\input{../_generados/catalogo_rnf.tex}
+
+\section{Modelos UML}
+La actualización de la línea base incrementó el catálogo desde 19 hasta 40 casos de uso. Para conservar legibilidad y correspondencia con los requisitos, el modelo se divide en cuatro vistas modulares. La partición es únicamente gráfica: los identificadores permanecen globales y cada caso aparece una sola vez en el catálogo y en la matriz de trazabilidad. Las asociaciones muestran qué actor inicia o participa en cada comportamiento, sin implicar que las funciones de backend o IA estén implementadas.
+
+\begin{figure}[H]\centering\includegraphics[width=.96\textwidth,height=.79\textheight,keepaspectratio]{casos_uso_v2_1.pdf}\caption{Casos de uso v2.0: acceso, clientes, membresías y pagos (CU-01 a CU-10, CU-20 y CU-21).}\end{figure}
+\begin{figure}[H]\centering\includegraphics[width=.96\textwidth,height=.77\textheight,keepaspectratio]{casos_uso_v2_2.pdf}\caption{Casos de uso v2.0: asistencia, inventario, ventas, caja y operación (CU-11 a CU-17, CU-22 y CU-23).}\end{figure}
+\begin{figure}[H]\centering\includegraphics[width=.96\textwidth,height=.79\textheight,keepaspectratio]{casos_uso_v2_3.pdf}\caption{Casos de uso v2.0: rutinas, reportes, autoservicio, respaldo y configuración (CU-18, CU-19 y CU-24 a CU-34).}\end{figure}
+\begin{figure}[H]\centering\includegraphics[width=.96\textwidth,height=.61\textheight,keepaspectratio]{casos_uso_v2_4_ia.pdf}\caption{Casos de uso v2.0 correspondientes a los componentes de IA especificados (CU-35 a CU-40).}\end{figure}
+
+La primera vista concentra autenticación, autorización, clientes, membresías y pagos; la segunda reúne la operación diaria; la tercera presenta rutinas, reportes, autoservicio y configuración; y la cuarta separa los componentes de IA para hacer visible su carácter futuro y supervisado. Esta organización elimina la contradicción que existía entre el diagrama de entrada y el catálogo v2.0, especialmente para los CU-20 a CU-40.
+\input{../_generados/casos_uso.tex}
+\begin{figure}[H]\centering\includegraphics[width=.96\textwidth,height=.76\textheight,keepaspectratio]{clases.png}\caption{Modelo de clases disponible como base de dominio.}\end{figure}
+\begin{figure}[H]\centering\includegraphics[width=.9\textwidth]{componentes.png}\caption{Vista de componentes de FabroGym.}\end{figure}
+\begin{figure}[H]\centering\includegraphics[width=.98\textwidth]{despliegue_v2_propuesto.pdf}\caption{Diagrama de despliegue v2.0: separación entre el prototipo disponible y la arquitectura propuesta.}\end{figure}
+
+El despliegue distingue deliberadamente dos niveles de madurez. El navegador y la aplicación HTML/JavaScript corresponden al prototipo V7 disponible. La API, la persistencia, el repositorio de respaldo y los servicios IA-01/IA-02 representan nodos especificados para desarrollo posterior. Por tanto, el diagrama documenta la arquitectura objetivo sin convertirla en evidencia de ejecución.
+\begin{figure}[H]\centering\includegraphics[width=.86\textwidth]{actividad_rutina.png}\caption{Actividad de rutina y seguimiento, relevante para IA-01.}\end{figure}
+
+
+
+\subsection{Modelo funcional mediante DFD}
+La matriz final utiliza procesos P-01 a P-15 como eslabón explícito de trazabilidad. Para que esa columna disponga también de una representación visual auditable, la PE5 incorpora un DFD de contexto y un DFD de nivel 1 regenerados desde la línea base final. El DFD no constituye evidencia de implementación: representa el movimiento lógico de información y diferencia mediante trazo discontinuo los procesos de respaldo e IA que permanecen especificados como arquitectura objetivo.
+\begin{figure}[H]\centering\includegraphics[width=.94\textwidth]{DFD_N0_FabroGym.pdf}\caption{DFD Nivel 0 de FabroGym: actores externos y frontera funcional del sistema.}\end{figure}
+\begin{landscape}\begin{figure}[H]\centering\includegraphics[width=.98\linewidth,height=.82\textheight,keepaspectratio]{DFD_N1_FabroGym.pdf}\caption{DFD Nivel 1 de FabroGym: procesos P-01 a P-15 y almacenes de datos relacionados con la matriz final.}\end{figure}\end{landscape}
+
+\subsection{Máquinas de estados recuperadas y alineadas a la línea base final}
+El PFC ya había modelado entidades con ciclo de vida no trivial en versiones anteriores. Para evitar que el paquete PE5 pierda esa perspectiva, se regeneran cuatro máquinas de estados coherentes con los requisitos y con la columna Estado/transición de la matriz: Membresía, Pago, Novedad y Rutina. La regeneración actualiza etiquetas y transiciones al catálogo v2.0 sin introducir nuevos requisitos.
+\begin{figure}[H]\centering\includegraphics[width=.88\textwidth]{DE_01_Membresia_v2_0_3.pdf}\caption{Máquina de estados de Membresía alineada con RF-MEM-02, RF-MEM-03 y RF-MEM-04.}\end{figure}
+\begin{figure}[H]\centering\includegraphics[width=.84\textwidth]{DE_02_Pago_v2_0_3.pdf}\caption{Máquina de estados de Pago alineada con RF-PAG-01 y RF-PAG-02.}\end{figure}
+\begin{figure}[H]\centering\includegraphics[width=.84\textwidth]{DE_03_Novedad_v2_0_3.pdf}\caption{Máquina de estados de Novedad alineada con RF-NOV-01.}\end{figure}
+\begin{figure}[H]\centering\includegraphics[width=.84\textwidth]{DE_04_Rutina_v2_0_3.pdf}\caption{Máquina de estados de Rutina alineada con RF-RUT-01, RF-RUT-02 y RF-RUT-04.}\end{figure}
+
+\subsection{Secuencias representativas}
+La línea base histórica de FabroGym ya contemplaba secuencias para requisitos Must. En PE5 se incorporan tres secuencias representativas actualizadas para autenticación, pagos y ventas, seleccionadas por cubrir seguridad, actualización de estado y consistencia transaccional. Son modelos conceptuales derivados de RF y BDD; no se presentan como traza de ejecución de un backend inexistente.
+\begin{figure}[H]\centering\includegraphics[width=.96\textwidth]{DS_01_RF-AUT-01_v2_0_3.pdf}\caption{Secuencia conceptual de RF-AUT-01: autenticar usuario.}\end{figure}
+\begin{figure}[H]\centering\includegraphics[width=.96\textwidth]{DS_10_RF-PAG-01_v2_0_3.pdf}\caption{Secuencia conceptual de RF-PAG-01: registrar pago y comprobante.}\end{figure}
+\begin{figure}[H]\centering\includegraphics[width=.96\textwidth]{DS_15_RF-VEN-01_v2_0_3.pdf}\caption{Secuencia conceptual de RF-VEN-01: registrar venta y actualizar inventario.}\end{figure}
+
+\subsection{Evidencia visual del prototipo V7}
+Las pantallas siguientes demuestran cobertura visual y navegación del prototipo, no persistencia terminal. Su integración permite contrastar requisitos y modelos con la interfaz disponible, manteniendo la diferencia entre prototipado e implementación.
+\begin{figure}[H]\centering\includegraphics[width=.92\textwidth]{dashboard.png}\caption{Dashboard del prototipo V7 usado para contrastar paneles y reportes.}\end{figure}
+\begin{figure}[H]\centering\includegraphics[width=.92\textwidth]{reporte_asistencia.png}\caption{Vista del reporte de asistencia del prototipo V7.}\end{figure}
+\begin{figure}[H]\centering\includegraphics[width=.92\textwidth]{rutinas.png}\caption{Vista de gestión de rutinas del prototipo V7.}\end{figure}
+
+\section{Validación}
+\input{../_generados/validacion.tex}
+
+\subsection{Protocolo de walkthrough con perfiles no técnicos}
+Para una validación posterior con usuarios del dominio se define un protocolo moderado centrado en tareas observables. El propósito es comprobar comprensión del lenguaje, navegación, mensajes y correspondencia entre las tareas del gimnasio y las funciones especificadas. Este instrumento no modifica los resultados de las tres validaciones técnicas ni se contabiliza como sesión ejecutada.
+
+\begin{longtable}{|p{2.7cm}|p{5.2cm}|p{4.2cm}|p{3.2cm}|}
+\caption{Protocolo preparado para walkthrough no técnico.}\\\hline
+\textbf{Perfil objetivo} & \textbf{Tareas propuestas} & \textbf{Criterio observable} & \textbf{Registro previsto}\\\hline\endfirsthead
+\hline\textbf{Perfil objetivo} & \textbf{Tareas propuestas} & \textbf{Criterio observable} & \textbf{Registro previsto}\\\hline\endhead
+Responsable del gimnasio & Consultar panel, revisar membresías, inventario y reportes & Completa al menos 9 de 10 tareas críticas sin ayuda & Observaciones, tiempo, errores y comentario final\\\hline
+Recepción & Registrar cliente, activar membresía, pago, asistencia y venta & Identifica estados y mensajes sin explicación técnica & Secuencia seguida, dudas y propuestas de vocabulario\\\hline
+Instructor & Crear, asignar, ajustar y consultar una rutina & Distingue versión vigente, historial y seguimiento & Incidencias, expectativas y decisión sobre cada hallazgo\\\hline
+\end{longtable}
+
+Cada sesión deberá ejecutarse sobre la misma versión del prototipo, utilizar un guion estable y convertir cada observación en un hallazgo trazable. Una recomendación solo se incorporará si el equipo documenta requisito afectado, decisión, responsable y cambio aplicado; este control evita transformar opiniones aisladas en requisitos aprobados.
+
+\section{Gestión y trazabilidad}
+El paquete documental PE5 se identifica como v2.0.3; los requisitos conservan el estado de aprobación de la línea base funcional v2.0. Cada RF dispone de una historia sincronizada y cada historia apunta a un RF existente, por lo que la sincronización documental del backlog propuesto es $40/40=100\%$. Este resultado no afirma que existiera previamente un tablero histórico; el archivo se entrega como reconstrucción controlada desde la ERS. La cadena mínima se verificó de acuerdo con la guía PE5 y con los principios de trazabilidad de ISO/IEC/IEEE 29148 e ISO/IEC/IEEE 15288 \cite{iso29148,iso15288}.
+\input{../_generados/trazabilidad.tex}
+
+\subsection{Control explícito de huérfanos y cadenas rotas}
+\begin{longtable}{|p{4.1cm}|p{2.1cm}|p{5.1cm}|p{4.2cm}|}\hline
+\textbf{Patología} & \textbf{Cantidad final} & \textbf{Criterio de revisión} & \textbf{Acción al cierre}\\\hline
+Requisitos sin fuente & 0 & Toda fila RF conserva evidencia, norma o decisión de diseño en la columna Fuente. & No aplica; cobertura $40/40$.\\\hline
+RF sin realización posterior & 0 & Todo RF enlaza CU, clase, proceso/estado, BDD y CP. & No aplica; M4 adelante $40/40$.\\\hline
+Artefactos huérfanos de CU & 0 & CU-01 a CU-40 están vinculados uno a uno con RF del catálogo. & No aplica; catálogo sincronizado.\\\hline
+Cadenas rotas & 0 & La columna Estado de traza no contiene estados ``rota'' ni ``huérfana''. & Cadenas incompletas de la línea base anterior fueron enlazadas o delimitadas.\\\hline
+\end{longtable}
+
+
+\begin{landscape}
+\begin{figure}[H]\centering
+\includegraphics[width=.98\linewidth]{matriz_trazabilidad_vista.png}
+\caption{Vista numerada de la matriz de trazabilidad final. La versión completa de 67 filas permanece en el archivo Excel y en el anexo paginado.}
+\end{figure}
+\end{landscape}
+
+La figura permite reconocer la estructura Fuente $\rightarrow$ RF $\rightarrow$ actor $\rightarrow$ CU $\rightarrow$ clase $\rightarrow$ proceso $\rightarrow$ estado $\rightarrow$ BDD $\rightarrow$ CP $\rightarrow$ historia. Para verificar valores concretos debe utilizarse la matriz editable, porque una captura panorámica no reemplaza las celdas auditables ni sus fórmulas.
+
+\section{Requisitos de inteligencia artificial}
+\input{../_generados/ia.tex}
+\begin{figure}[H]\centering\includegraphics[width=.88\textwidth]{portal_rutina.png}\caption{Portal de consulta de rutina usado como referencia de interfaz para IA-01; no demuestra implementación del modelo.}\end{figure}
+
+\section{Métricas de calidad}
+\input{../_generados/metricas.tex}
+
+\section{Retrospectiva}
+\begin{longtable}{|p{2.2cm}|p{8.2cm}|p{4.2cm}|}\caption{Retrospectiva Start--Stop--Continue.}\\\hline
+\textbf{Categoría} & \textbf{Elemento} & \textbf{Responsable}\\\hline\endfirsthead
+\hline\textbf{Categoría} & \textbf{Elemento} & \textbf{Responsable}\\\hline\endhead
+Start & Vincular cada cambio a un identificador desde su descubrimiento & Alvia Villegas Erick Adalberto \\ \hline
+Start & Ejecutar walkthroughs no técnicos antes de cerrar la línea base & Ponce Rivera Mery Helenmey \\ \hline
+Start & Mantener criterios BDD y casos de prueba en la misma iteración & Mera Arias Erick Jhair \\ \hline
+Stop & Incorporar pantallas sin actualizar alcance y trazabilidad & Mora Duarte Alex José \\ \hline
+Stop & Usar etiquetas genéricas como estado o vigencia & Vaca Romero David Octavio \\ \hline
+Stop & Confundir prototipo simulado con implementación terminal & Alvia Villegas Erick Adalberto \\ \hline
+Continue & Anonimizar evidencias y aplicar minimización de datos & Ponce Rivera Mery Helenmey \\ \hline
+Continue & Contrastar RF, mockups y modelos antes de publicar & Mora Duarte Alex José \\ \hline
+Continue & Registrar hallazgos, decisiones y limitaciones verificables & Mera Arias Erick Jhair \\ \hline
+\end{longtable}
+
+\section{Conclusiones}
+
+\begin{enumerate}
+\item La Unidad I permitió delimitar FabroGym como sistema administrativo y operativo, excluyendo salud, biometría y facturación electrónica integrada; esta frontera evitó que los mockups ampliaran silenciosamente el alcance.
+\item La Unidad II evidenció que entrevistas, encuesta y documentos organizacionales aportaron fuentes complementarias; la trazabilidad conserva esos orígenes y diferencia evidencia empírica de decisiones internas del equipo.
+\item La Unidad III transformó necesidades en 40 RF y 27 RNF verificables, con cinco actores y cuarenta casos de uso conceptuales; la precisión semántica resolvió confusiones sobre estado, vigencia y roles.
+\item La Unidad IV mostró que validar no equivale a aprobar todo: tres sesiones técnicas produjeron 18 hallazgos y ocho discrepancias que quedaron cerradas documentalmente; los walkthroughs no técnicos y el backend continúan como limitaciones explícitas, no como conflictos abiertos.
+\item La Unidad V integró métricas, trazabilidad e IA responsable: las seis métricas —incluidas las submétricas de completitud y trazabilidad— alcanzan sus umbrales documentales después del saneamiento y los dos componentes de IA conservan control humano, explicación y prohibición de usar datos sensibles.
+\end{enumerate}
+
+
+\section*{Referencias}\addcontentsline{toc}{section}{Referencias}
+
+\begin{thebibliography}{99}
+\bibitem{iso29148} ISO/IEC/IEEE, \emph{ISO/IEC/IEEE 29148:2018 Systems and software engineering---Life cycle processes---Requirements engineering}, 2018. [En línea]. Disponible en: \url{https://www.iso.org/standard/72089.html}
+\bibitem{iso25010} ISO/IEC, \emph{ISO/IEC 25010:2023 Systems and software engineering---SQuaRE---Product quality model}, 2023. [En línea]. Disponible en: \url{https://www.iso.org/standard/78176.html}
+\bibitem{iso15288} ISO/IEC/IEEE, \emph{ISO/IEC/IEEE 15288:2023 Systems and software engineering---System life cycle processes}, 2023. [En línea]. Disponible en: \url{https://www.iso.org/standard/81702.html}
+\bibitem{iso12207} ISO/IEC/IEEE, \emph{ISO/IEC/IEEE 12207:2017 Systems and software engineering---Software life cycle processes}, 2017. [En línea]. Disponible en: \url{https://www.iso.org/standard/63712.html}
+
+\bibitem{pohl} K. Pohl, \emph{Requirements Engineering: Fundamentals, Principles, and Techniques}, 2.a ed. Berlin, Alemania: Springer, 2025. ISBN 978-3-662-69204-2.
+\bibitem{swebok} IEEE Computer Society, \emph{Guide to the Software Engineering Body of Knowledge, Version 4.0}, 2024. [En línea]. Disponible en: \url{https://www.computer.org/education/bodies-of-knowledge/software-engineering}
+\bibitem{ireb} S. Bühne y M. Glinz, \emph{IREB Certified Professional for Requirements Engineering - Foundation Level Syllabus}, versión 3.3.0, International Requirements Engineering Board, 2026. [En línea]. Disponible en: \url{https://cpre.ireb.org/en/downloads-and-resources/downloads}
+\bibitem{lopdp} Asamblea Nacional del Ecuador, \emph{Ley Orgánica de Protección de Datos Personales}, Registro Oficial No. 459, Quinto Suplemento, 26 mayo 2021. [En línea]. Disponible en: \url{https://www.asambleanacional.gob.ec/es/multimedios-legislativos/63464-ley-organica-de-proteccion-de-datos}
+\bibitem{spdp} Superintendencia de Protección de Datos Personales, \emph{Consultas y criterios sobre bases de legitimación de la LOPDP}, 2025--2026. [En línea]. Disponible en: \url{https://spdp.gob.ec/consultas2025/}
+\bibitem{aiact} Parlamento Europeo y Consejo de la Unión Europea, \emph{Reglamento (UE) 2024/1689 por el que se establecen normas armonizadas en materia de inteligencia artificial}, 2024. [En línea]. Disponible en: \url{https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng}
+\bibitem{vogelsang} A. Vogelsang y M. Borg, “Requirements engineering for machine learning: Perspectives from data scientists,” en \emph{2019 IEEE 27th International Requirements Engineering Conference Workshops}, 2019, pp. 245--251, doi: 10.1109/REW.2019.00050.
+\bibitem{pmbok} Project Management Institute, \emph{A Guide to the Project Management Body of Knowledge}, 7.a ed. Newtown Square, PA, EE. UU.: PMI, 2021. ISBN 978-1-62825-664-2.
+\bibitem{guiaPE5} Universidad Técnica Estatal de Quevedo, \emph{Guía ampliada de práctica experimental PE5: Integración, métricas y defensa del Proyecto Integrador de Ingeniería de Requisitos}, 2026, documento académico suministrado en la asignatura.
+\bibitem{sem11} Universidad Técnica Estatal de Quevedo, \emph{Semana 11: Validación de requisitos}, 2026, material de cátedra.
+\bibitem{sem13} Universidad Técnica Estatal de Quevedo, \emph{Semana 13: Herramientas CASE y estándares para IR}, 2026, material de cátedra.
+\end{thebibliography}
+
+
+\appendix
+\section{Instrumento de auditoría}
+La hoja editable \texttt{03\_Matriz\_Trazabilidad/PE5\_Matrices\_FabroGym.xlsx} contiene requisitos, trazabilidad, métricas con fórmulas, backlog, hallazgos, conflictos, modificabilidad, retrospectiva y aportes.
+\input{../_generados/metricas.tex}
+
+\section{Banco de preguntas de defensa}
+\begin{enumerate}
+\item ¿Cuál es la frontera de FabroGym y qué se excluye deliberadamente?
+\item Muestre un RF e identifique la evidencia concreta que lo originó.
+\item ¿Qué diferencia existe entre requisito, historia, caso de uso y prueba?
+\item ¿Qué métrica obtuvo el peor resultado antes de la corrección?
+\item ¿Por qué V7 no se presenta como MVP terminal?
+\item ¿Qué decide IA-01 y qué ocurre si falla?
+\item ¿Cómo se controla la equidad de IA-02?
+\item ¿Qué limitaciones permanecen abiertas y por qué no se ocultaron?
+\end{enumerate}
+
+\section{Product backlog propuesto}
+\input{../_generados/backlog.tex}
+
+\section{Aportes individuales de la actividad PE5}
+\begin{longtable}{|p{4cm}|p{6.2cm}|p{4.3cm}|}\hline
+\textbf{Integrante} & \textbf{Aporte asignado en la actividad} & \textbf{Evidencia verificable en Git}\\\hline
+Alvia Villegas Erick Adalberto & Integración metodológica, control de alcance y consolidación del informe & \texttt{01\_Informe\_Final/}; \texttt{05\_Gestion/Backlog\_Propuesto.md} \\ \hline
+Mera Arias Erick Jhair & Auditoría de métricas, trazabilidad end-to-end y control de cobertura & \texttt{03\_Matriz\_Trazabilidad/}; \texttt{04\_Auditoria\_Metricas/}; \texttt{\_generados/metricas.tex}; \texttt{\_generados/trazabilidad.tex} \\ \hline
+Mora Duarte Alex José & Modelos UML, casos de uso y consistencia entre modelos y ERS & \texttt{diagramas\_fuente/}; \texttt{assets/}; \texttt{\_generados/casos\_uso.tex} \\ \hline
+Ponce Rivera Mery Helenmey & Validación, consolidación de hallazgos y re-inspección del ERS & \texttt{05\_Gestion/Validacion/}; \texttt{\_generados/validacion.tex} \\ \hline
+Vaca Romero David Octavio & Gestión documental, backlog, retrospectiva y reproducibilidad & \texttt{README.md}; \texttt{05\_Gestion/}; \texttt{CHANGELOG.md} \\ \hline
+\end{longtable}
+La presente PE5 corresponde al PFC FabroGym del Equipo F. La contribución individual se verifica mediante el historial real del repositorio de la actividad, los archivos modificados y las fechas de los commits. La distribución indicada identifica responsabilidades de cierre y no atribuye commits que todavía no existan; antes de congelar la línea base, cada integrante debe comprobar que su declaración coincide con el historial Git.
+
+\section{Declaración de uso de IA}
+De conformidad con la Guía Ampliada de la PE5, el uso de inteligencia artificial se declara \textbf{por sección}, identificando la herramienta empleada, el tipo de asistencia y el método utilizado para validar el contenido. Se utilizó \textbf{ChatGPT (OpenAI)} como herramienta de apoyo. La IA no se utilizó como fuente de evidencia empírica ni para atribuir entrevistas, actas, implementaciones, resultados de pruebas, métricas o commits inexistentes. En las secciones evaluativas, la asistencia se limitó a apoyo de redacción, organización, revisión de consistencia y generación de código o tablas; las afirmaciones técnicas se contrastaron con los artefactos disponibles; antes de la entrega, el Equipo F debe revisar, comprender y asumir la versión final del contenido.
+
+{\footnotesize\begin{longtable}{|p{2.4cm}|p{2.0cm}|p{3.6cm}|p{5.9cm}|}
+\caption{Declaración verificable del uso de IA por sección del informe.}\\\hline
+\textbf{Sección} & \textbf{Herramienta} & \textbf{Tipo de asistencia} & \textbf{Método de validación}\\\hline
+\endfirsthead
+\hline\textbf{Sección} & \textbf{Herramienta} & \textbf{Tipo de asistencia} & \textbf{Método de validación}\\\hline
+\endhead
+Carátula y preliminares & ChatGPT & Revisión de formato y consistencia de datos. & Contraste de nombres, asignatura, periodo, versión y URL con los datos de la actividad y el repositorio de la actividad PE5.\\\hline
+Resumen y Abstract & ChatGPT & Redacción asistida y traducción del resumen al inglés. & Verificación de cifras, alcance y limitaciones contra el cuerpo del informe, la ERS final y la matriz; revisión final del sentido técnico exigida al equipo antes de entregar.\\\hline
+1. Introducción & ChatGPT & Redacción asistida y revisión de estilo. & Contraste del contexto, alcance y conformación del Equipo F con los artefactos de FabroGym y las condiciones de la actividad PE5.\\\hline
+2. Metodología de IR & ChatGPT & Estructuración, redacción asistida y revisión de consistencia. & Comprobación contra ISO/IEC/IEEE 29148:2018, SWEBOK, Pohl, materiales de las semanas 11 y 13 y las técnicas realmente documentadas en el paquete.\\\hline
+3. ERS/SRS final & ChatGPT & Revisión editorial, saneamiento lingüístico, reformulación de criterios BDD y apoyo con código LaTeX. & Contraste de identificadores, fuentes, prioridades, BDD y casos de prueba con la ERS de entrada, la ERS v2.0.3 y la matriz de trazabilidad; no se añadieron evidencias de campo inexistentes.\\\hline
+4. Modelos UML & ChatGPT & Organización de vistas y apoyo en código reproducible LaTeX/Graphviz para DFD, estados y secuencias. & Verificación de actores, CU, procesos P-01--P-15, estados e identificadores contra la ERS y la matriz; revisión visual de los PDF generados; los modelos no se presentan como evidencia de backend.\\\hline
+5. Validación & ChatGPT & Síntesis, redacción asistida y revisión de consistencia. & Contraste con el informe y la matriz consolidados de validación disponibles; la evidencia identificable se resguarda fuera del repositorio público. Los walkthroughs no técnicos se mantienen expresamente como no ejecutados y no se contabilizan como evidencia.\\\hline
+6. Gestión y trazabilidad & ChatGPT & Estructuración de tablas, revisión de enlaces y apoyo para fórmulas/hojas de cálculo. & Revisión fila por fila de la cadena Fuente--RF--CU--Clase--DFD--Estado--BDD--CP y contraste con el backlog y la ERS; comprobación de fórmulas en el archivo Excel.\\\hline
+7. Requisitos de IA & ChatGPT & Generación de propuestas, redacción asistida y revisión de requisitos medibles. & Validación de pertinencia con el dominio FabroGym, trazabilidad con RF existentes y contraste normativo con la LOPDP y el Reglamento (UE) 2024/1689. Los componentes se declaran como especificados, no implementados.\\\hline
+8. Métricas de calidad & ChatGPT & Apoyo en aritmética, tablas, fórmulas y script de re-inspección documental. & Recuento sobre la misma ERS entregada, contraste con Excel y ejecución reproducible de M6 sobre 40 RF + 27 RNF con registro del SHA-256 de la ERS.\\\hline
+9. Retrospectiva & ChatGPT & Organización y redacción asistida del formato Start--Stop--Continue. & Contraste de acciones y responsables con las limitaciones y decisiones documentadas; el equipo debe confirmar su pertinencia antes de entregar.\\\hline
+10. Conclusiones & ChatGPT & Apoyo de síntesis y mejora de redacción. & Cada conclusión se contrastó con los resultados de las Unidades I--V y con los artefactos citados; el equipo debe revisar, comprender y asumir su formulación final antes de entregar.\\\hline
+Referencias & ChatGPT & Normalización de formato IEEE y revisión bibliográfica. & Verificación de normas en sitios oficiales y de DOI/ISBN cuando corresponde; eliminación de referencias no utilizadas o no verificables.\\\hline
+Anexos & ChatGPT & Generación de tablas, revisión de formato y organización documental. & Contraste con archivos fuente del paquete, matrices editables, registros de validación y manifiesto SHA-256; los anexos no sustituyen evidencia ausente.\\\hline
+\end{longtable}
+
+\textbf{Criterio de responsabilidad.} El equipo reconoce que declarar el uso de IA no sustituye la autoría ni la comprensión exigidas en la defensa. Por ello, cualquier afirmación, decisión de ingeniería, resultado de métrica o conclusión incluida en la entrega debe poder ser explicada y respaldada mediante la ERS, la matriz, los modelos o los anexos correspondientes.
+
+\end{document}
