@@ -5,7 +5,7 @@
 **Asignatura:** Ingeniería de Requerimientos (ISR-401)  
 **Actividad:** Práctica Experimental PE5 - Integración, métricas y defensa del Proyecto Integrador  
 **PFC:** FabroGym  
-**Repositorio de la actividad:** https://github.com/Emeraxs/Practica_Experimental_v
+**Repositorio de la actividad:** https://github.com/Emeraxs/Practica_Experimental_V.git
 
 ## Integrantes
 
@@ -22,6 +22,7 @@
 - `03_Matriz_Trazabilidad/`: libro Excel con requisitos, trazabilidad, métricas, backlog, hallazgos, retrospectiva y aportes.
 - `04_Auditoria_Metricas/`: guía de auditoría y ubicación de los conteos verificables.
 - `05_Gestion/`: backlog, retrospectiva, aportes, declaración de uso de IA y documentación de validación no identificable.
+- `05_Gestion/Jira/`: CSV de importación FabroGym, configuración reutilizable del importador y guías de mapeo.
 - `_generados/`: fragmentos LaTeX cargados por el informe y la ERS.
 - `assets/`: figuras empleadas en los documentos.
 - `diagramas_fuente/`: fuentes LaTeX de los diagramas.
@@ -60,8 +61,8 @@ Desde la raíz del repositorio:
 
 ```bash
 cd 01_Informe_Final
-pdflatex -interaction=nonstopmode -jobname=PE5_U5_PFC_Final_ALVIA_MERA_MORA_PONCE_VACA main.tex
-pdflatex -interaction=nonstopmode -jobname=PE5_U5_PFC_Final_ALVIA_MERA_MORA_PONCE_VACA main.tex
+pdflatex -interaction=nonstopmode -jobname=PE5_U5_PFC_Final_ALVIA_MERA_MORA_PONCE_VACA informe_main.tex
+pdflatex -interaction=nonstopmode -jobname=PE5_U5_PFC_Final_ALVIA_MERA_MORA_PONCE_VACA informe_main.tex
 ```
 
 Salida esperada:
